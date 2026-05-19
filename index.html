@@ -104,6 +104,15 @@
         .material-symbols-outlined[data-weight="fill"] {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            pointer-events: none;
+        }
         .molecule-float {
             animation: float 6s ease-in-out infinite;
         }
@@ -149,14 +158,12 @@
 </div>
 </nav>
 <!-- Hero Section -->
-<section class="hero-section relative min-h-screen flex items-center overflow-hidden bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoeLCNB9pvjB3INmGq7KYep9tHZf1okIdEAbT7vrPmYiN8O7eWoAFpTJMWsTTEpMsHzI6n9zRzQKg4Clzv39r5yDMLhaDkRLE5CaoSd2-W8LBZ_iraCLVPeu0vF-VHboBUESAleFqWq1GwB6LU8vvihvggJOVI0zAyHp6T9g29EdNYuaJqnmka5n1ve-lHDtyctun6rPYTs8N1IdX7h9EOI8XtoVT7Mt8xj-kOoL_HoGMXlGyYq1QVNN1MRclMjIk9ysSb_brOSVI');">
+<section class="hero-section relative min-h-screen flex items-center overflow-hidden">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="./assets/videos/pharma-bg.mp4" type="video/mp4">
+    </video>
     <!-- Subtle Dark Overlay for Readability -->
-    <div class="absolute inset-0 bg-black/25"></div>
-<div class="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10">
-<svg class="molecule-float" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-<path d="M47.7,-62.4C61.4,-56.3,71.8,-42.1,76.4,-26.8C80.9,-11.5,79.5,4.9,74.1,19.6C68.7,34.2,59.3,47.1,47.1,56.9C34.9,66.7,20,73.4,4.2,77.7C-11.6,81.9,-28.4,83.8,-42.6,77.6C-56.8,71.3,-68.5,57,-75.2,40.9C-81.9,24.8,-83.7,6.9,-79.8,-9.5C-75.9,-25.9,-66.2,-40.7,-53.4,-47.1C-40.6,-53.5,-24.8,-51.5,-10.1,-58.5C4.7,-65.4,19.3,-81.4,33.9,-79.9C48.5,-78.4,63.1,-59.5,47.7,-62.4Z" fill="#002868" transform="translate(200 200)"></path>
-</svg>
-</div>
+    <div class="absolute inset-0 bg-black/25 z-[1]"></div>
 <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
 <div class="reveal-up">
 <span class="inline-block py-1.5 px-5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-upper text-label-upper mb-8 font-bold tracking-wider">
