@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Exports | Mediruit Lifesciences Pvt. Ltd.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=IBM+Plex+Sans:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 30px 60px -12px rgba(0, 30, 64, 0.04);
+        }
+        .gold-anchor {
+            width: 40px;
+            height: 3px;
+            background: #bb9650; /* Elegant Gold */
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.33); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        .animate-pulse-ring {
+            animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#001b3c",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "on-tertiary-fixed-variant": "#5d4201",
+                      "on-secondary-fixed": "#001b3c",
+                      "on-surface-variant": "#43474f",
+                      "surface-container-high": "#e6e8ea",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#004689",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#e9c176",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "error": "#ba1a1a",
+                      "background": "#f7f9fb",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#003d79",
+                      "surface-bright": "#f7f9fb",
+                      "primary-fixed": "#d5e3ff",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-container": "#453000",
+                      "inverse-primary": "#a7c8ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#2a1c00",
+                      "surface-container-low": "#f2f4f6",
+                      "on-surface": "#191c1e",
+                      "on-primary-container": "#799dd6",
+                      "on-tertiary-container": "#bb9650",
+                      "secondary-container": "#72aafe",
+                      "secondary-fixed": "#d5e3ff",
+                      "on-background": "#191c1e",
+                      "on-tertiary-fixed": "#261900",
+                      "outline-variant": "#c3c6d1",
+                      "inverse-surface": "#2d3133",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed": "#ffdea5",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary": "#175ead",
+                      "primary": "#001e40",
+                      "surface": "#f7f9fb",
+                      "primary-container": "#003366",
+                      "surface-tint": "#3a5f94",
+                      "outline": "#737780",
+                      "surface-dim": "#d8dadc",
+                      "secondary-fixed-dim": "#a8c8ff",
+                      "surface-container": "#eceef0",
+                      "surface-variant": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "gutter": "24px",
+                      "stack-lg": "48px",
+                      "margin-mobile": "20px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "body-md": ["Work Sans"],
+                      "display-lg": ["Manrope"],
+                      "label-upper": ["IBM Plex Sans"],
+                      "headline-lg": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "headline-lg-mobile": ["Manrope"],
+                      "body-sm": ["Work Sans"],
+                      "button": ["Work Sans"],
+                      "body-lg": ["Work Sans"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-upper": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="text-headline-sm font-headline-sm font-bold text-white">
+                Mediruit
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="about.html">About Us</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="products.html">Products</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="innovation.html">Innovation</a>
+<a class="font-label-upper text-label-upper text-white border-b-2 border-white pb-1" href="export.html">Exports</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="contact.html">Contact Us</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-upper text-label-upper hover:scale-[1.02] active:scale-95 transition-all shadow-md">
+                Enquiry Now
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-primary/20 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="A cinematic, low-angle shot of a high-tech pharmaceutical warehouse with automated robotic arms handling medicine pallets. The scene is bathed in a futuristic deep blue and cool white light, creating a professional and technologically advanced atmosphere. Soft depth-of-field effects highlight the precision of the medical logistics infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHrA6gag-0UphM0Xx4Suz-6w8rhqWQ3MA45eWHclFaSqOx4UeVWYnLEdo_AAEr_2OKROLYRxNDoFfjMGZKw3khU7LlSne1fRpvAO4vZNV2WZqNLqlGdcxg22tLVZywRSx4oXhS4_hItEB2kxfho6ATc81vSJw8bzDxmrjwQ-SH52-P6VMwWADFlVwf-LkZXz4zNcFqbkOr9Ucq49llBUPgy5SYRe7tGtvCqQMkab4YXSahyNLvDaRHpN4Vd0bg6umWdoWxkXna_D-g"/>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 grid lg:grid-cols-2 gap-stack-lg items-center py-stack-lg">
+<div class="space-y-stack-md text-on-primary">
+<div class="flex items-center gap-4">
+<div class="gold-anchor"></div>
+<span class="font-label-upper text-label-upper tracking-widest text-on-tertiary-container uppercase">Global Healthcare Expansion</span>
+</div>
+<h1 class="font-display-lg text-display-lg leading-tight lg:text-6xl">
+                        Delivering Trusted Pharmaceutical Solutions Across Global Markets
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-xl">
+                        Mediruit Lifesciences Pvt. Ltd. is committed to expanding healthcare access globally through innovative drug delivery systems and unwavering clinical integrity.
+                    </p>
+<div class="flex flex-wrap gap-stack-md pt-4">
+<a href="contact.html" class="bg-on-tertiary-container text-tertiary-container px-8 py-4 font-button text-button rounded-xl hover:scale-105 transition-transform flex items-center justify-center">
+                            Become a Distribution Partner
+                        </a>
+<a href="contact.html" class="border border-on-primary/30 text-on-primary px-8 py-4 font-button text-button rounded-xl hover:bg-on-primary/10 transition-colors backdrop-blur-sm flex items-center justify-center">
+                            Contact Export Team
+                        </a>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="relative w-full aspect-square glass-card rounded-full flex items-center justify-center p-12 border-primary-container/20">
+<!-- Animated World Map Concept -->
+<div class="absolute inset-0 bg-no-repeat bg-center opacity-40 animate-pulse" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASRInVkj1WibCRTPaU469BUW_iBbFlQjL9nSO6nyD_Hl3vkcKKyMhoA820TdmQjWKFGWy4tkyd_NZLp1JXji4DQei-F4mR-FvcEMdhKwzkw0w_AYpKwoXlUOfTvtnjcu4mdcZM-vACqzNACK4E7G-7VK7LC35Rk01ObGiV8RJn7D-0eVJYtCXGTmQPDnfHOm1Cgc6bshnSp693JkpTcMuwJjJFjNjKzzoNpUL9oEl5weOz9_f4E3fryr15am2Ka8kooCgAbM3tvg8R'); filter: invert(1);"></div>
+<div class="relative z-10 text-center space-y-4">
+<div class="text-on-primary-container font-headline-lg text-headline-lg">Global Logistics Hub</div>
+<div class="flex justify-center gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1">language</span>
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1">public</span>
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1">flight_takeoff</span>
+</div>
+</div>
+<!-- Connection Dots -->
+<div class="absolute top-1/4 left-1/3 w-3 h-3 bg-on-tertiary-container rounded-full animate-pulse">
+<div class="absolute inset-0 bg-on-tertiary-container rounded-full animate-pulse-ring"></div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 w-3 h-3 bg-on-tertiary-container rounded-full animate-pulse">
+<div class="absolute inset-0 bg-on-tertiary-container rounded-full animate-pulse-ring"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Presence -->
+<section class="py-stack-lg bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 lg:order-1">
+<div class="relative rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-auto" data-alt="A detailed digital map of the world displayed on a high-resolution dark monitor in a logistics control room. Glowing blue lines connect major international cities, representing trade routes and pharmaceutical distribution networks. The aesthetic is clean, corporate, and high-tech, with sharp detail and professional, moody lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrb_5hffygW-ofFNDS92lPxvhPL_FFOhEt8o5Q99rIb-jwixE3-qu4qb6ARJQg1ydRhBtxjV2o8PIJmEjO5oWIPuYfq3xUgeRIiaG5IB_la3ZfSWtRd__Kgg99-IbIOONcHxGvqXbBSKEvDrdGD_Tiw1EMHuzj8GF9eoI750jCm9FCkEDFYeWhCIbHw91C7g_jOsgHGT3eaygmjuwXxDHBtVR1cR43GZojepm758g3LUSwaRvmwnRjJQz0vmxjJuVYyiWZ5gcaZUlJ"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/60 to-transparent"></div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-stack-md">
+<span class="text-secondary font-label-upper text-label-upper tracking-widest uppercase">Expanding Footprint</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Strategic Global Presence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our international reach spans across continents, bringing specialized pharmaceutical products to emerging and established markets alike. We leverage a sophisticated logistics network to ensure timely delivery and product efficacy regardless of destination.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">Optimized cross-border logistics and warehousing</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">Compliance with diverse international health authorities</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md">Dedicated export support and customs coordination</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Mediruit Competitive Edge</h2>
+<div class="gold-anchor mx-auto mb-6"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elite expertise paired with institutional reliability for our global B2B partners.</p>
+</div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-stack-md">
+<!-- Card 1 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Quality-driven</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adherence to WHO-GMP standards ensures the highest efficacy for every batch exported.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">public</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Int'l Readiness</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Structured business models ready for immediate deployment in diverse global markets.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">inventory_2</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Reliable Supply</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">End-to-end supply chain visibility from our production floor to your distribution hub.</p>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">science</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Pharma Expertise</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Decades of cumulative experience in formulation, stability, and therapeutic delivery.</p>
+</div>
+<!-- Card 5 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">lightbulb</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Product Innovation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuously evolving portfolio focusing on critical care and specialized treatments.</p>
+</div>
+<!-- Card 6 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">handshake</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Strategic Partner</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We don't just sell; we build collaborative frameworks for long-term regional growth.</p>
+</div>
+<!-- Card 7 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">description</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Docs Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete regulatory dossiers and registration assistance for local health authorities.</p>
+</div>
+<!-- Card 8 -->
+<div class="glass-card p-stack-md rounded-xl hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Collaboration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A transparency-first mindset that prioritizes clear communication and shared milestones.</p>
+</div>
+</div>
+</section>
+<!-- Export Product Portfolio -->
+<section class="py-stack-lg bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end gap-stack-md mb-stack-lg">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Export Product Portfolio</h2>
+<div class="gold-anchor"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Our high-demand formulations specifically curated for international market standards.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product Cards -->
+<script>
+                        const products = [
+                            { name: "Neosave", cat: "Critical Care" },
+                            { name: "Neosave Forte", cat: "Specialized Therapeutic" },
+                            { name: "Neosave Plus", cat: "Enhanced Recovery" },
+                            { name: "Neosoda 1G", cat: "Metabolic Health" },
+                            { name: "SEVPHOS-400", cat: "Renal Care" },
+                            { name: "Carniride", cat: "Energy Supplement" },
+                            { name: "Megaklas", cat: "Anti-Infective" },
+                            { name: "Polyklas", cat: "Broad Spectrum" },
+                            { name: "Polyklas-LP", cat: "Long-Acting Antibiotic" }
+                        ];
+                        
+                        document.write(products.map(p => `
+                            <div class="group relative bg-surface-container-low p-8 rounded-xl border border-transparent hover:border-secondary/30 transition-all hover:shadow-xl">
+                                <div class="mb-6 h-48 bg-white/50 rounded-lg flex items-center justify-center overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80" data-alt="A professional pharmaceutical product shot of a sleek, white medicine box with clean typography and a professional blue and gold accent stripe. The product is placed on a reflective glass surface with soft laboratory lighting in the background, conveying clinical purity and high manufacturing standards." class="w-full h-full object-contain opacity-80 group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <span class="font-label-upper text-label-upper text-secondary uppercase tracking-wider">${p.cat}</span>
+                                <h4 class="font-headline-md text-headline-md text-primary mt-2 mb-6">${p.name}</h4>
+                                <button class="w-full py-3 bg-primary text-on-primary font-button text-button rounded hover:bg-secondary transition-colors">Inquiry / Partner</button>
+                            </div>
+                        `).join(''));
+                    </script>
+</div>
+</div>
+</section>
+<!-- Quality & Compliance -->
+<section class="py-stack-lg bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'wght' 100">verified_user</span>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="max-w-2xl mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg mb-6">Rigorous Compliance. Uncompromised Quality.</h2>
+<p class="font-body-lg text-body-lg text-on-primary/70">We maintain international standard certifications and follow strict audit protocols to ensure every unit of medicine meets the stringent requirements of global health agencies.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-stack-md">
+<div class="border-l border-on-primary/20 pl-6 py-4 hover:bg-on-primary/5 transition-colors">
+<div class="text-tertiary-fixed font-bold mb-2">01</div>
+<h5 class="font-headline-md text-headline-md text-sm mb-2">Quality Assurance</h5>
+<p class="text-xs text-on-primary/60">Strict testing at every stage of the production cycle.</p>
+</div>
+<div class="border-l border-on-primary/20 pl-6 py-4 hover:bg-on-primary/5 transition-colors">
+<div class="text-tertiary-fixed font-bold mb-2">02</div>
+<h5 class="font-headline-md text-headline-md text-sm mb-2">Regulatory Support</h5>
+<p class="text-xs text-on-primary/60">Comprehensive documentation for local registrations.</p>
+</div>
+<div class="border-l border-on-primary/20 pl-6 py-4 hover:bg-on-primary/5 transition-colors">
+<div class="text-tertiary-fixed font-bold mb-2">03</div>
+<h5 class="font-headline-md text-headline-md text-sm mb-2">Product Consistency</h5>
+<p class="text-xs text-on-primary/60">Automated systems ensure batch-to-batch uniformity.</p>
+</div>
+<div class="border-l border-on-primary/20 pl-6 py-4 hover:bg-on-primary/5 transition-colors">
+<div class="text-tertiary-fixed font-bold mb-2">04</div>
+<h5 class="font-headline-md text-headline-md text-sm mb-2">Pro Packaging</h5>
+<p class="text-xs text-on-primary/60">Export-grade packaging for long-distance stability.</p>
+</div>
+<div class="border-l border-on-primary/20 pl-6 py-4 hover:bg-on-primary/5 transition-colors">
+<div class="text-tertiary-fixed font-bold mb-2">05</div>
+<h5 class="font-headline-md text-headline-md text-sm mb-2">Reliable Supply</h5>
+<p class="text-xs text-on-primary/60">Disruption-free logistics network across all borders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Export Process Timeline -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Streamlined Export Workflow</h2>
+<div class="gold-anchor mx-auto"></div>
+</div>
+<div class="relative pt-10">
+<div class="absolute top-1/2 left-0 w-full h-px bg-outline-variant hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-stack-md relative">
+<!-- Step 1 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">1</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Inquiry</h6>
+<p class="text-xs text-on-surface-variant">Submit requirements via our portal or direct mail.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">2</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Selection</h6>
+<p class="text-xs text-on-surface-variant">Technical review and product portfolio finalization.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">3</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Coordination</h6>
+<p class="text-xs text-on-surface-variant">Regulatory alignment and compliance check.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">4</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Agreement</h6>
+<p class="text-xs text-on-surface-variant">Formalizing terms and distribution logistics.</p>
+</div>
+<!-- Step 5 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">5</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Dispatch</h6>
+<p class="text-xs text-on-surface-variant">Secure packaging and priority shipping dispatch.</p>
+</div>
+<!-- Step 6 -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30 text-center relative hover:-translate-y-2 transition-all">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center mx-auto mb-4 font-bold relative z-10">6</div>
+<h6 class="font-headline-md text-base text-primary mb-2">Support</h6>
+<p class="text-xs text-on-surface-variant">Ongoing marketing and post-delivery assistance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partnership Section -->
+<section class="py-stack-lg bg-surface-container-high overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Partner With Mediruit Lifesciences for Global Healthcare Growth</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We are seeking visionary distributors and business partners to join our global network. By partnering with us, you gain access to an elite portfolio of critical care pharmaceuticals and a team dedicated to your local success.</p>
+<form class="space-y-4 glass-card p-8 rounded-xl border-secondary/10">
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 text-body-sm focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" placeholder="Full Name" type="text"/>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 text-body-sm focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" placeholder="Business Email" type="email"/>
+</div>
+<input class="w-full bg-white border-outline-variant rounded-lg p-3 text-body-sm focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" placeholder="Company Name &amp; Region" type="text"/>
+<textarea class="w-full bg-white border-outline-variant rounded-lg p-3 text-body-sm focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" placeholder="Tell us about your distribution experience..." rows="3"></textarea>
+<button class="w-full py-4 bg-secondary text-on-secondary font-button text-button rounded-lg hover:bg-primary transition-all shadow-md">Apply for Partnership</button>
+</form>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-all"></div>
+<img class="relative rounded-2xl shadow-2xl z-10 w-full h-auto grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="A professional interaction between two healthcare business leaders in a modern, sunlit medical facility. They are shaking hands with confidence and a sense of shared purpose. In the background, clean architectural lines and clinical glass partitions emphasize a sense of professional corporate medicine and high-level enterprise partnership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBphYTPH_DFPAfNfhUlMZ2t6zoMDXK4VxkY4K2geU-B_j6yp9btjIVHxzYmGsTbwOXNAfQqG5eVg5L4fJ0qY4r7RVu9ZXkAtYk0bI1iK-ngjLEvA3yd7Ee9yuD8l7eENZx_UNt_VZirxSK99NdxlYZi6_3hIoiaQ9yBiWogG5tDJvrbLZW3z-iuxbgI6yA83QLsR80Buf724AfZTYh_cwKQ30lXvI17P86rwX_2a7ENKlC0jJH0XM3bcQ5nQUt5MYsNqrCXzeKNNawx"/>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-stack-lg bg-white">
+<div class="max-w-3xl mx-auto px-gutter">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Export Queries &amp; FAQs</h2>
+<div class="gold-anchor mx-auto"></div>
+</div>
+<div class="space-y-4">
+<!-- FAQ Items -->
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 bg-surface-container-low text-left font-headline-md text-base text-primary" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            What certifications do you hold for export markets?
+                            <span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="p-6 font-body-sm text-body-sm text-on-surface-variant hidden border-t border-outline-variant/30">
+                            Our manufacturing facilities are WHO-GMP certified, and we strictly adhere to international ICH guidelines. We also maintain ISO certifications relevant to pharmaceutical production and logistics.
+                        </div>
+</div>
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 bg-surface-container-low text-left font-headline-md text-base text-primary" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            What is the typical lead time for international orders?
+                            <span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="p-6 font-body-sm text-body-sm text-on-surface-variant hidden border-t border-outline-variant/30">
+                            Lead times vary based on the destination and order size, but typically range between 4 to 8 weeks, including production, quality clearance, and sea/air freight booking.
+                        </div>
+</div>
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 bg-surface-container-low text-left font-headline-md text-base text-primary" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            Do you provide regulatory dossier support?
+                            <span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="p-6 font-body-sm text-body-sm text-on-surface-variant hidden border-t border-outline-variant/30">
+                            Yes, our dedicated regulatory affairs team provides complete dossier support (CTD/eCTD formats) to facilitate smooth registration with your local health authorities.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-lg bg-primary relative overflow-hidden text-center">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-6">Expand Healthcare Beyond Borders With Mediruit</h2>
+<p class="font-body-lg text-body-lg text-on-primary/70 mb-stack-lg max-w-2xl mx-auto">Join a global movement dedicated to pharmaceutical excellence and accessible healthcare solutions.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-5 font-button text-button rounded-full hover:scale-105 transition-transform shadow-xl">Start Your Export Inquiry</button>
+<button class="border-2 border-on-primary/30 text-on-primary px-10 py-5 font-button text-button rounded-full hover:bg-on-primary/10 transition-colors">Download Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
+                    Mediruit
+                </div>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nephrology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cardiology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Global Presence</h4>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md mb-4">Exporting quality to 15+ countries across continents.</p>
+<div class="space-y-2 text-sm text-primary-fixed/80">
+<p>Terms of Service</p>
+<p>Privacy Policy</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-lg max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Simple scroll reveal effect for cards
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+
+        // Sticky Navbar logic
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl', 'h-16', 'bg-black/90');
+                nav.classList.remove('h-20', 'bg-black/60');
+            } else {
+                nav.classList.remove('shadow-xl', 'h-16', 'bg-black/90');
+                nav.classList.add('h-20', 'bg-black/60');
+            }
+        });
+
+        // Simple scroll reveal effect for cards

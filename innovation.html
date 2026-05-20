@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Innovation | Mediruit Lifesciences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "secondary-container": "#72aafe",
+                    "primary-container": "#003366",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "secondary-fixed-dim": "#a8c8ff",
+                    "primary": "#001e40",
+                    "surface": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#453000",
+                    "secondary-fixed": "#d5e3ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#003d79",
+                    "on-tertiary-fixed": "#261900",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c3c6d1",
+                    "on-primary-container": "#799dd6",
+                    "on-tertiary-container": "#bb9650",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary": "#175ead",
+                    "outline": "#737780",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-container-low": "#f3f4f5",
+                    "on-surface": "#191c1d",
+                    "tertiary": "#2a1c00",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-surface-variant": "#43474f",
+                    "surface-container": "#edeeef",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#004689",
+                    "on-secondary-fixed": "#001b3c",
+                    "surface-tint": "#3a5f94",
+                    "inverse-primary": "#a7c8ff",
+                    "background": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "headline-sm": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 51, 102, 0.05);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(167, 200, 255, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(233, 193, 118, 0.1), transparent);
+        }
+        .ambient-glow {
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #175ead 0%, #e9c176 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all h-20">
+<div class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto h-full">
+<div class="text-headline-md font-bold text-white">
+                Mediruit
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-white transition-colors" href="about.html">About Us</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-white transition-colors" href="products.html">Products</a>
+<a class="font-label-md text-label-md text-white border-b-2 border-white pb-1" href="innovation.html">Innovation</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-white transition-colors" href="#">Exports</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-white transition-colors" href="contact.html">Contact Us</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-md text-label-md hover:scale-[1.02] active:scale-95 transition-all shadow-md">
+                Enquiry Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-xl overflow-hidden hero-gradient min-h-screen flex items-center">
+<div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-md items-center relative z-10">
+<div class="space-y-md">
+<div class="inline-block px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps">
+                    ESTABLISHED TRUST. FUTURE DRIVEN.
+                </div>
+<h1 class="font-display-lg text-display-lg text-primary max-w-xl">
+                    Innovation Driving the <span class="text-secondary">Future</span> of Healthcare
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    At Mediruit Lifesciences, innovation is at the heart of everything we do—developing advanced pharmaceutical solutions that address evolving healthcare challenges with science, precision, and trust.
+                </p>
+<div class="flex flex-wrap gap-base pt-sm">
+<a href="products.html" class="bg-secondary text-on-secondary px-8 py-4 font-button text-button uppercase tracking-widest hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        Explore Our Products
+                    </a>
+<a href="contact.html" class="bg-transparent border border-tertiary-fixed-dim text-on-tertiary-fixed-variant px-8 py-4 font-button text-button uppercase tracking-widest hover:bg-tertiary-fixed-dim/10 transition-all duration-300 flex items-center justify-center">
+                        Partner With Us
+                    </a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-secondary-container/20 rounded-full ambient-glow"></div>
+<div class="glass-panel p-2 rounded-xl relative overflow-hidden group">
+<img alt="Molecular Science" class="w-full h-[500px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic pharmaceutical laboratory visualization featuring high-definition 3D molecular structures suspended in a digital interface. The lighting is crisp and cool, dominated by trust blue and surgical white tones with golden sparks of data connectivity. Professional lab equipment is blurred in the background, creating a high-end enterprise atmosphere of scientific excellence and clinical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoj31sjUIShRbEbJFsgmaiEfXad8o25KDau37po0Hm0PIhWZrWVH3C07j6vcubD2PUxA-_UVoxgp-DU3P1Ly3-S3GNfDpWmuhQ5cofunidfA1jyYiZ5qWcs9aey8YzDAf-VcbiGklTqG1QyWpLQ6LsZENvYE49SM0kFSfD0aJiec-X6h-7ny27Fn060hZ9WWPsQooQr0zFbD0f86B8eKU29AsuM2A2CO1NrUvJvoTcE57lrIrzCt1wrzKaDXgDEHGFCLhnkKCRv5p9"/>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-panel p-6 rounded-lg max-w-[240px] animate-bounce">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="biotech">biotech</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">R&amp;D LEADERSHIP</p>
+<p class="font-headline-sm text-headline-sm text-primary">Advanced</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovation Philosophy -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid md:grid-cols-2 gap-lg items-center">
+<div class="reveal">
+<img alt="Precision Medicine" class="w-full aspect-[4/3] object-cover rounded-xl shadow-2xl" data-alt="Close-up of a high-tech medical scanner or lab automation system in a pristine clinical environment. The scene is bathed in soft, bright light, emphasizing the sterile white surfaces and precision-engineered metal components. Subtle blue and gold light reflections play off the glass and polished metal, evoking a sense of luxury science and enterprise-grade technological advancement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsdyTVJPf6lOC6xnf3kw_FBbUyUBjdn2LpIbJ1k0WNC5uMrJwAv-Pl9xbSst1z4R9ftjp3tuxiDEDIdBvlBQF0afo4cCeQOiYkajUEgroXZF-qLC60ne-zTUpxJRkHId8g8p8k2o9pFwn-_aeLs-Ew-6cC6YDyzzAH2DzsYYWOkTPolgtrySy1bNeyizzoKGFZIw6n16J7_63BOnflNb7w6kPhLvNOfEqjKrAz1hsrC-iUWTvw4XrEjYETpiSXcbxV87CU25JssxY"/>
+</div>
+<div class="space-y-md reveal">
+<div class="w-16 h-1 bg-tertiary-fixed-dim"></div>
+<h2 class="font-headline-md text-headline-md text-primary">Combining Expertise with Visionary Thinking</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic border-l-4 border-secondary-fixed-dim pl-6 py-2">
+                        "At Mediruit, we don't just develop medicine; we engineer precision solutions for human health."
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Combining scientific expertise with modern pharmaceutical thinking to transform unmet needs into effective formulations. Our approach integrates rigorous research with an agile mindset, ensuring that every product meets the highest global standards of efficacy and safety.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- R&D Pillars -->
+<section class="py-xl bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl reveal">
+<h2 class="font-headline-md text-headline-md text-primary">The Pillars of Our R&amp;D</h2>
+<p class="text-on-surface-variant mt-sm max-w-2xl mx-auto">Foundational excellence in science and technology driving global pharmaceutical standards.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Pillar Card -->
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-secondary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="science">science</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Advanced Formulation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">State-of-the-art delivery systems and complex chemistry integration.</p>
+</div>
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="query_stats">query_stats</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Science-Led Research</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Data-driven insights guiding the discovery of next-gen molecules.</p>
+</div>
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-primary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="verified">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Quality-Driven</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stringent validation protocols exceeding international regulatory norms.</p>
+</div>
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-secondary-container">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="diversity_3">diversity_3</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Patient-Centric</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Designing healthcare solutions with the end-user's well-being at focus.</p>
+</div>
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-tertiary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="medication_liquid">medication_liquid</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Therapeutic Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Achieving clinical superiority across diverse medical specializations.</p>
+</div>
+<div class="glass-panel p-md rounded-xl hover:-translate-y-2 transition-all duration-300 reveal border-b-4 border-b-secondary">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Future-Focused</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Anticipating the next decade of healthcare challenges today.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="py-xl bg-primary-container text-on-primary">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-md text-headline-md text-on-primary text-center mb-xl">Our Innovation Lifecycle</h2>
+<div class="relative pt-lg">
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-secondary-fixed/20 -translate-y-1/2"></div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-md relative">
+<!-- Step -->
+<div class="flex flex-col items-center text-center group reveal">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">1</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 01</h4>
+<p class="font-body-md font-bold">Need Analysis</p>
+</div>
+<div class="flex flex-col items-center text-center group reveal" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">2</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 02</h4>
+<p class="font-body-md font-bold">Research &amp; Planning</p>
+</div>
+<div class="flex flex-col items-center text-center group reveal" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">3</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 03</h4>
+<p class="font-body-md font-bold">Formulation</p>
+</div>
+<div class="flex flex-col items-center text-center group reveal" style="transition-delay: 300ms;">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">4</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 04</h4>
+<p class="font-body-md font-bold">Quality Validation</p>
+</div>
+<div class="flex flex-col items-center text-center group reveal" style="transition-delay: 400ms;">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">5</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 05</h4>
+<p class="font-body-md font-bold">Regulatory Focus</p>
+</div>
+<div class="flex flex-col items-center text-center group reveal" style="transition-delay: 500ms;">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-lg mb-sm z-10 group-hover:scale-125 transition-transform">6</div>
+<h4 class="font-label-caps text-label-caps text-tertiary-fixed mb-xs">Step 06</h4>
+<p class="font-body-md font-bold">Market-Ready Solutions</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Therapeutic Showcase -->
+<section class="py-xl bg-surface-container overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-lg reveal">
+<h2 class="font-headline-md text-headline-md text-primary">Therapeutic Excellence</h2>
+<div class="w-24 h-1 bg-secondary mt-xs"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<!-- Product Card -->
+<div class="glass-panel group cursor-pointer overflow-hidden rounded-xl reveal">
+<div class="h-48 overflow-hidden">
+<img alt="Renal Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A macro photograph of professional pharmaceutical packaging for renal care products, showcased in a modern, brightly lit clinical studio. The design is elegant, featuring trust blue and silver accents. Soft depth-of-field focuses on the precision of the label typography. The overall atmosphere is premium, pharmaceutical, and high-end enterprise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI7TO1TQKRpgldT5x0Z7r8DmUPbOryJ3I9kz8mZ-71RBnI1G853wPJBUXoCpm2lI0BYe9S6JxTQYo8tpsqPpfBROQtT5gh0ioL1z3MyadsUAEpeMOzgQGMiQxmAU1_UKeqs8YwuPim50Wd_iqBLMzmhkLvsF62IfVQhhVwUKA4jHSLRM5eUFf4Oc2JqSEEKbZeKZPMZRC7MyMtMquIO9HXnhFh3sTRkMWotQLwRKwn0HvXowpYQBSVS5nSlR-3-E1LMMAsIp386f-c"/>
+</div>
+<div class="p-md">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Renal Care</h4>
+<p class="text-secondary font-bold mb-sm">Neosave / Neosave Forte</p>
+<p class="text-on-surface-variant font-body-md">Pioneering advancements in kidney health and therapeutic maintenance.</p>
+</div>
+</div>
+<div class="glass-panel group cursor-pointer overflow-hidden rounded-xl reveal" style="transition-delay: 100ms;">
+<div class="h-48 overflow-hidden">
+<img alt="Metabolic Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="High-tech scientific visualization of metabolic processes, rendered as a glowing web of interconnected digital nodes and fluid motion. The color palette uses deep navy and vibrant gold. The scene suggests systemic healthcare innovation and precision monitoring, perfect for a high-end pharmaceutical corporate context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKtRtGy9J1Su3vIr0EnkosyTIVKPkk1TBr4vDoWC5N3tT-trRM_PgZ28yXD3bQPwyn3-vGfMeo7ZJoyZMcFzl9Ya2cMRyyQ5jbz3SnidWakineh9SJOOsjrih8Dy0tscRzg8yeK_mXlud2pZw-3oaRVTnrGY9ki_uQDpXpv7KXx7RJhfP1jaohBib9hFaBf8JxECcmVsn5A8pw0ocQytL1ZV1vF3Vewx1qmT59bWQRAZjRq6zmiFmQMWAStQXB-vWQ7WoXbibdgmKt"/>
+</div>
+<div class="p-md">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Metabolic Care</h4>
+<p class="text-secondary font-bold mb-sm">Neosoda 1G</p>
+<p class="text-on-surface-variant font-body-md">Specialized formulations for complex metabolic balancing and health.</p>
+</div>
+</div>
+<div class="glass-panel group cursor-pointer overflow-hidden rounded-xl reveal" style="transition-delay: 200ms;">
+<div class="h-48 overflow-hidden">
+<img alt="Specialty Injectables" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of a sterile glass vial containing a crystal-clear liquid, resting on a reflective white surface with soft blue ambient lighting. In the background, blurred scientific instruments create a laboratory atmosphere of high-end clinical precision. The focus is sharp on the vial's metallic cap and light refraction, conveying enterprise pharmaceutical quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV7D9HlddHE5UCrqwRRxp6lkeAslct1sSSlWjFmFUrSrIW-ppFbjRYjtvxhtP1ecqJv9sZIclCpq0Fz1k-qTgIFMCjVLGG0q05A8gwE3D7bsC7Uy9ojJnC5IeTjaiiK3bBhUJG3ZE43KBfVcm0QcMykI4PmOiXGtxK_oMp0BG-UrH-8R1ClsLzLjrgYEdTXF-ox6VhrC0ygwwddoXJQ8yGI2uXmFSgfnajmOl99qkMzagcFcwa-s9q56Y8eFqQ13jhGdWBh8lJsT_"/>
+</div>
+<div class="p-md">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Injectables</h4>
+<p class="text-secondary font-bold mb-sm">Carniride / Polyklas</p>
+<p class="text-on-surface-variant font-body-md">High-precision critical care solutions delivered with therapeutic excellence.</p>
+</div>
+</div>
+<div class="glass-panel group cursor-pointer overflow-hidden rounded-xl reveal" style="transition-delay: 300ms;">
+<div class="h-48 overflow-hidden">
+<img alt="Nutritional Therapeutics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A bright and airy image of premium nutritional supplement ingredients, such as botanical extracts and purified powders, arranged in minimalist glass petri dishes. The lighting is high-key and fresh, with gold-toned highlights suggesting premium quality and scientific wellness. The overall aesthetic is clean, medical, and high-end pharmaceutical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJcKs1hblJPUwn29O5voIZzjWO950qgdjRyzF73s9TQnxgs4t8WgNqozB4J5IBGIKwAQkjb3efBsWtrwvwWnF69fnopweIG5lo-NYjEaIs9-r0NXfCpzLohr77OaRjNw6Y4hPt10f0A_C-dPXuFKDzb5fq8e1MIXR14AuGSfUVfVuqo_AVemNU0HMmavhkamYBQqX-2Mm7p5bKS9iQwmDm0gvxzDbTaNrndpBav50wtd7lld41SwwKZShDaaRhVVbgt6_0ac1TUJTT"/>
+</div>
+<div class="p-md">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Nutritional</h4>
+<p class="text-secondary font-bold mb-sm">Polyklas-LP / Megaklas</p>
+<p class="text-on-surface-variant font-body-md">Revolutionizing supplemental health through science-backed nutrition.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology & Future -->
+<section class="relative py-xl bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent scale-150"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-md">Building Tomorrow’s <span class="text-tertiary-fixed">Pharmaceutical</span> Solutions</h2>
+<div class="flex flex-col md:flex-row gap-lg items-center justify-center mt-xl">
+<div class="text-center group reveal">
+<div class="mb-sm text-6xl opacity-40 group-hover:opacity-100 transition-opacity">01</div>
+<h5 class="font-headline-sm text-headline-sm text-on-primary">Nanotech Delivery</h5>
+<p class="text-surface-variant/70 mt-xs">Microscopic precision for maximum efficacy.</p>
+</div>
+<div class="w-px h-20 bg-secondary-fixed/20 hidden md:block"></div>
+<div class="text-center group reveal" style="transition-delay: 100ms;">
+<div class="mb-sm text-6xl opacity-40 group-hover:opacity-100 transition-opacity">02</div>
+<h5 class="font-headline-sm text-headline-sm text-on-primary">Biotech Synthesis</h5>
+<p class="text-surface-variant/70 mt-xs">Nature-inspired, laboratory-perfected molecules.</p>
+</div>
+<div class="w-px h-20 bg-secondary-fixed/20 hidden md:block"></div>
+<div class="text-center group reveal" style="transition-delay: 200ms;">
+<div class="mb-sm text-6xl opacity-40 group-hover:opacity-100 transition-opacity">03</div>
+<h5 class="font-headline-sm text-headline-sm text-on-primary">AI Validation</h5>
+<p class="text-surface-variant/70 mt-xs">Predictive modeling for faster, safer discovery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Innovation Matters -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-xl">Why Innovation Matters</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-md">
+<div class="flex flex-col items-center text-center reveal">
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex items-center justify-center mb-sm shadow-sm group hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary text-4xl" data-icon="patient_list">patient_list</span>
+</div>
+<p class="font-body-md font-bold text-primary">Better Patient Outcomes</p>
+</div>
+<div class="flex flex-col items-center text-center reveal" style="transition-delay: 50ms;">
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex items-center justify-center mb-sm shadow-sm group hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary text-4xl" data-icon="psychology">psychology</span>
+</div>
+<p class="font-body-md font-bold text-primary">Smarter Solutions</p>
+</div>
+<div class="flex flex-col items-center text-center reveal" style="transition-delay: 100ms;">
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex items-center justify-center mb-sm shadow-sm group hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary text-4xl" data-icon="bolt">bolt</span>
+</div>
+<p class="font-body-md font-bold text-primary">Improved Effectiveness</p>
+</div>
+<div class="flex flex-col items-center text-center reveal" style="transition-delay: 150ms;">
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex items-center justify-center mb-sm shadow-sm group hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary text-4xl" data-icon="award_star">award_star</span>
+</div>
+<p class="font-body-md font-bold text-primary">High-Quality Advancement</p>
+</div>
+<div class="flex flex-col items-center text-center reveal" style="transition-delay: 200ms;">
+<div class="w-20 h-20 rounded-xl bg-surface-container-high flex items-center justify-center mb-sm shadow-sm group hover:bg-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary text-4xl" data-icon="public">public</span>
+</div>
+<p class="font-body-md font-bold text-primary">Global Readiness</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Collaboration CTA -->
+<section class="py-xl bg-tertiary-container relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="glass-panel p-lg md:p-xl rounded-2xl border-white/10 flex flex-col md:flex-row items-center justify-between gap-lg bg-white/5">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md text-tertiary-fixed mb-sm">Let’s Innovate Healthcare Together</h2>
+<p class="text-on-tertiary font-body-lg">Partner with Mediruit Lifesciences to explore new frontiers in pharmaceutical research and bring life-changing products to global markets.</p>
+</div>
+<div class="flex flex-wrap gap-md shrink-0">
+<a href="contact.html" class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-4 font-button text-button uppercase tracking-widest hover:bg-tertiary-fixed-dim transition-all flex items-center justify-center">
+                        Contact Us
+                    </a>
+<a href="contact.html" class="bg-transparent border border-tertiary-fixed text-tertiary-fixed px-8 py-4 font-button text-button uppercase tracking-widest hover:bg-tertiary-fixed/10 transition-all flex items-center justify-center">
+                        Partner With Mediruit
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
+                    Mediruit
+                </div>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nephrology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cardiology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Global Presence</h4>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md mb-4">Exporting quality to 15+ countries across continents.</p>
+<div class="space-y-2 text-sm text-primary-fixed/80">
+<p>Terms of Service</p>
+<p>Privacy Policy</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-lg max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+    // Reveal on scroll logic
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Sticky Navbar logic
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-xl', 'h-16', 'bg-black/90');
+            nav.classList.remove('h-20', 'bg-black/60');
+        } else {
+            nav.classList.remove('shadow-xl', 'h-16', 'bg-black/90');
+            nav.classList.add('h-20', 'bg-black/60');
+        }
+    });
+
+    // Simple mouse tracking for hero subtle movement
+    document.addEventListener('mousemove', (e) => {
+        const glow = document.querySelector('.ambient-glow');
+        if(glow) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            glow.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+        }
+    });
+</script>
+</body></html>

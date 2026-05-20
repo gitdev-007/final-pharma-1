@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Mediruit Lifesciences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001b3f",
+                        "primary-container": "#002d62",
+                        "outline": "#747781",
+                        "tertiary-fixed": "#e0e3e5",
+                        "primary": "#00193c",
+                        "inverse-primary": "#abc7ff",
+                        "outline-variant": "#c4c6d1",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "secondary": "#735c00",
+                        "on-surface-variant": "#43474f",
+                        "surface-tint": "#3e5e95",
+                        "on-background": "#0d1c2e",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#d5e3fc",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "secondary-container": "#fed65b",
+                        "surface-variant": "#d5e3fc",
+                        "on-primary-fixed-variant": "#24467c",
+                        "tertiary-container": "#2b2f31",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d7e2ff",
+                        "surface": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#0d1c2e",
+                        "tertiary": "#171a1c",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "inverse-surface": "#233144",
+                        "on-primary-container": "#7796d1",
+                        "on-tertiary-container": "#939698",
+                        "primary-fixed-dim": "#abc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-container": "#e6eeff",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "background": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-dim": "#ccdbf3",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(0, 45, 98, 0.04);
+        }
+        .molecular-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300193c' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .entrance-anim {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .entrance-anim.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="text-headline-sm font-headline-sm font-bold text-white">
+                Mediruit
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="about.html">About Us</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="products.html">Products</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="innovation.html">Innovation</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="export.html">Exports</a>
+<a class="font-label-upper text-label-upper text-white border-b-2 border-white pb-1" href="contact.html">Contact Us</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-upper text-label-upper hover:scale-[1.02] active:scale-95 transition-all shadow-md">
+                Enquiry Now
+            </button>
+</div>
+</nav>
+<main class="molecular-bg pt-20">
+<section class="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Premium laboratory background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwmj0rKWYO6XHgY9Mfi7y9zjj3jYIszqEsgE4__VWNzRuFnHnleWUJcVV1XxioB9KqhoPp1QxX9STcrdV-1M-0pRR4LAB6nJNYqSYT31pDRLEDQQvVWIWetPCf5fyvgOmaFATQnue-SGfLk_r6ZbNf_bt-fjQYA48Vfb-WRj1nyqBBhsSFo-fCxxXYxBqPNHVlatInpR3kyO7yBGK2uoRqMUIRwhbr1mk2XHBpXfq2YiugJZKYcpB63IEjoAs5DEwK-IHcuOr6o9uw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl entrance-anim">
+<h1 class="text-display-lg text-white mb-6 leading-tight">Let’s Connect for Better Healthcare Solutions</h1>
+<p class="text-body-lg text-white/80 mb-10 leading-relaxed">
+                        Whether you have product inquiries, partnership opportunities, export discussions, or healthcare collaboration ideas, Mediruit Lifesciences is ready to connect with you.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-label-md hover:bg-secondary-container transition-all shadow-lg flex items-center gap-2 group">
+                            Send Inquiry
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<a href="products.html" class="bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-label-md transition-all backdrop-blur-sm flex items-center justify-center">
+                            Explore Products
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ... rest of main content ... -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Nexus pharmaceuticals headquarters building" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyanwTNnuBY-HeBJH7ntXriu96nnj2AcUzmeBjrQAmYaqyv86A0SN8blHSg_jm7NDTJpgfjVZrr0dJL_euhwshI77C0tWcBG-uWmkLCOmM6NuypWPdZ44li-T-1f2rQ3uJSmTN0WP9Kd3pUyyDdEP3VLwn4ntbiQmxtx4Cfey12lu1pGIdSwYzDKHA1s5dg5x0w7Gyh0x41ScgEUCpJaiBtNjavqPGCr6nQaKpJ69RZO-EBTl_OD-OXcQComvO1D_R2FLvCK4gF03C"/>
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-3xl mx-auto entrance-anim">
+<h2 class="text-display-lg-mobile md:text-display-lg text-white mb-8">Start Your Healthcare Business Conversation Today</h2>
+<p class="text-body-lg text-white/70 mb-12">
+                        Partner with a global pharmaceutical authority. Let's build a healthier future through collaboration and innovation.
+                    </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-lg font-label-md hover:bg-secondary-container transition-all shadow-xl active:scale-95">
+                            Contact Team
+                        </button>
+<a href="products.html" class="bg-white/10 text-white border border-white/20 px-10 py-4 rounded-lg font-label-md hover:bg-white/20 transition-all backdrop-blur-md flex items-center justify-center">
+                            View Products
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
+                    Mediruit
+                </div>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nephrology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cardiology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Global Presence</h4>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md mb-4">Exporting quality to 15+ countries across continents.</p>
+<div class="space-y-2 text-sm text-primary-fixed/80">
+<p>Terms of Service</p>
+<p>Privacy Policy</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-lg max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Entrance Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.entrance-anim').forEach(el => observer.observe(el));
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.group').forEach(el => el.classList.remove('active'));
+            
+            // Toggle current
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Sticky Navbar logic
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl', 'h-16', 'bg-black/90');
+                nav.classList.remove('h-20', 'bg-black/60');
+            } else {
+                nav.classList.remove('shadow-xl', 'h-16', 'bg-black/90');
+                nav.classList.add('h-20', 'bg-black/60');
+            }
+        });
+    </script>
+</body></html>

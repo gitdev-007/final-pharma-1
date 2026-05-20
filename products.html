@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | Mediruit Lifesciences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-error": "#ffffff",
+                "inverse-surface": "#263142",
+                "surface": "#f9f9ff",
+                "secondary-fixed-dim": "#e9c349",
+                "surface-container-low": "#f0f3ff",
+                "on-tertiary": "#ffffff",
+                "primary-container": "#003366",
+                "on-primary-fixed": "#001b3c",
+                "tertiary-fixed-dim": "#c5c7c8",
+                "surface-container-highest": "#d8e3fa",
+                "tertiary": "#1c1f20",
+                "tertiary-fixed": "#e1e3e4",
+                "on-tertiary-fixed-variant": "#454748",
+                "surface-bright": "#f9f9ff",
+                "surface-container": "#e7eeff",
+                "on-tertiary-container": "#9a9c9d",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#dee8ff",
+                "surface-tint": "#3a5f94",
+                "on-secondary-fixed": "#241a00",
+                "primary-fixed-dim": "#a7c8ff",
+                "on-primary-fixed-variant": "#1f477b",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed": "#191c1d",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d5e3ff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-container": "#799dd6",
+                "background": "#f9f9ff",
+                "on-secondary-container": "#745c00",
+                "secondary-container": "#fed65b",
+                "secondary": "#735c00",
+                "on-surface": "#111c2c",
+                "tertiary-container": "#313435",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#ffe088",
+                "inverse-primary": "#a7c8ff",
+                "inverse-on-surface": "#ebf1ff",
+                "on-secondary-fixed-variant": "#574500",
+                "outline-variant": "#c3c6d1",
+                "primary": "#001e40",
+                "on-surface-variant": "#43474f",
+                "on-primary": "#ffffff",
+                "surface-variant": "#d8e3fa",
+                "outline": "#737780",
+                "surface-dim": "#cfdaf1",
+                "on-background": "#111c2c"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "margin-mobile": "20px",
+                "base": "8px",
+                "margin-desktop": "64px",
+                "margin-tablet": "32px"
+              },
+              "fontFamily": {
+                "display-lg": ["Hanken Grotesk"],
+                "headline-md": ["Hanken Grotesk"],
+                "headline-sm": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "body-sm": ["Inter"],
+                "label-caps": ["Geist"],
+                "mono-technical": ["Geist"]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(233, 195, 73, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(0, 30, 64, 0.05), transparent);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Shimmer Effect for Buttons */
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 40%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 60%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            transition: all 0.3s;
+            animation: shimmer 4s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { transform: translate(-30%, -30%) rotate(45deg); }
+            100% { transform: translate(30%, 30%) rotate(45deg); }
+        }
+
+        /* Product Card Transitions */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            border-color: #e9c349;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 30, 64, 0.15);
+            z-index: 10;
+        }
+
+        /* Floating Molecule Effect */
+        .molecule {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle at 30% 30%, rgba(233, 195, 73, 0.2), rgba(0, 30, 64, 0.05));
+            animation: float-random 15s infinite ease-in-out;
+        }
+        @keyframes float-random {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 40px) scale(0.9); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="text-headline-sm font-headline-sm font-bold text-white">
+                Mediruit
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="about.html">About Us</a>
+<a class="font-label-upper text-label-upper text-white border-b-2 border-white pb-1" href="products.html">Products</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="innovation.html">Innovation</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="export.html">Exports</a>
+<a class="font-label-upper text-label-upper text-white/80 hover:text-white transition-colors" href="contact.html">Contact Us</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-upper text-label-upper hover:scale-[1.02] active:scale-95 transition-all shadow-md">
+                Enquiry Now
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden hero-gradient">
+<!-- Floating Molecules Background -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="molecule w-24 h-24 top-20 left-[10%] opacity-40" style="animation-delay: 0s;"></div>
+<div class="molecule w-16 h-16 top-1/2 left-[5%] opacity-30" style="animation-delay: -2s;"></div>
+<div class="molecule w-32 h-32 bottom-20 left-[15%] opacity-20" style="animation-delay: -5s;"></div>
+<div class="molecule w-20 h-20 top-40 right-[20%] opacity-40" style="animation-delay: -1s;"></div>
+<div class="molecule w-28 h-28 bottom-40 right-[10%] opacity-30" style="animation-delay: -7s;"></div>
+</div>
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full blur-[120px] animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-container rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative z-10">
+<div class="space-y-6 reveal active" id="hero-text">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block">Global Pharmaceutical Excellence</span>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">
+                    Innovative Pharmaceutical Solutions for <span class="text-secondary">Better Healthcare</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Discover Mediruit Lifesciences’ portfolio of scientifically developed pharmaceutical products designed to improve patient outcomes and healthcare excellence.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="shimmer-btn bg-secondary text-primary font-label-caps text-label-caps px-8 py-4 rounded transition-all hover:brightness-110 shadow-lg shadow-secondary/20" href="#products">View Product Range</a>
+<a class="border border-outline text-primary font-label-caps text-label-caps px-8 py-4 rounded transition-all hover:bg-surface-container flex items-center justify-center" href="contact.html">Contact Sales Team</a>
+</div>
+</div>
+<div class="hidden md:block relative reveal" style="transition-delay: 200ms">
+<div class="relative z-10 animate-float">
+<img alt="Laboratory Visual" class="rounded-xl shadow-2xl border border-white/50" data-alt="A high-end, futuristic laboratory setting with soft blue and white lighting. Clean glass surfaces reflect complex molecular structures projected as holograms in the foreground. Scientists in white clinical coats move through a workspace filled with state-of-the-art biotechnology equipment. The atmosphere is professional, sterile, and focused on pharmaceutical innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcOVhagMlLav9Jue7yk_PCwxuiZejgUBcPXcrwOrTZh0OW1fi4d6M6v07344fsaizEeGdu6VjJF4OB3PAMeUY92bqA8QPZephuvMtJcL-wnKDgAB3V-bmEQW3hzafmOzQPqojKAX_C_jNgFiKLeG5voclCR97k6a2sCpJeJtLaVqxRuYDJz2xzReQXGntTgIhKz2XQvltGIIntxv1aBdKfL-nZV-73_nS-N50Ixs_PMIaEsQarBPgD1Re2W3O86-Hm2hxqbjzSRps9"/>
+</div>
+<div class="absolute -top-10 -right-10 w-64 h-64 border border-secondary/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 border border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+</div>
+</div>
+</section>
+<!-- Product Categories -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Therapeutic Focus Areas</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<div class="bg-white p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal" style="transition-delay: 0ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:text-white transition-colors">widgets</span>
+<h3 class="font-headline-sm text-body-md text-primary group-hover:text-white transition-colors">Renal Care</h3>
+</div>
+<div class="bg-white p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal" style="transition-delay: 100ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:text-white transition-colors">metabolism</span>
+<h3 class="font-headline-sm text-body-md text-primary group-hover:text-white transition-colors">Metabolic Care</h3>
+</div>
+<div class="bg-white p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal" style="transition-delay: 200ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:text-white transition-colors">nutrition</span>
+<h3 class="font-headline-sm text-body-md text-primary group-hover:text-white transition-colors">Nutritional Support</h3>
+</div>
+<div class="bg-white p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal" style="transition-delay: 300ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:text-white transition-colors">vaccines</span>
+<h3 class="font-headline-sm text-body-md text-primary group-hover:text-white transition-colors">Injectable Solutions</h3>
+</div>
+<div class="bg-white p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal" style="transition-delay: 400ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 group-hover:text-white transition-colors">science</span>
+<h3 class="font-headline-sm text-body-md text-primary group-hover:text-white transition-colors">Specialty Pharma</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products Grid -->
+<section class="py-24" id="products">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4 reveal">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Precision Formulations</h2>
+<p class="text-on-surface-variant">Our comprehensive portfolio addresses critical medical needs with high-efficacy treatments and specialized care solutions.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">grid_view</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Microalbuminuria treatment</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave', 'Renal Care')">View Details</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Metabolic</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosoda 1G</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-strength formulation for metabolic acidosis management.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Metabolic acidosis management</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosoda 1G', 'Metabolic')">View Details</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Respiratory</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave-P</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Advanced pediatric formulation for efficient mucus relief.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Mucus relief therapy</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-P', 'Respiratory')">View Details</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">SEVPHOS-400</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Specialized phosphate binder for hyperphosphatemia management.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Hyperphosphatemia mgmt</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('SEVPHOS-400', 'Renal Care')">View Details</button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave-Forte</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-potency support for patients with severe renal dysfunction.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Renal dysfunction support</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-Forte', 'Renal Care')">View Details</button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Injectable</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Carniride</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Levocarnitine injection for critical metabolic deficiency correction.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Levocarnitine injection</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Carniride', 'Injectable')">View Details</button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave Plus</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Enhanced formulation for advanced microalbuminuria complications.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Advanced renal support</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave Plus', 'Renal Care')">View Details</button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Nutritional</span>
+<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-display-lg text-headline-sm text-primary mb-2">Megaklas</h3>
+<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Scientifically formulated appetite enhancer for clinical recovery.</p>
+<div class="mt-auto space-y-4">
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+<span class="text-body-sm font-medium">Appetite enhancer</span>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Megaklas', 'Nutritional')">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovation Section -->
+<section class="py-24 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Innovation Background" class="w-full h-full object-cover" data-alt="Close-up artistic view of a DNA double helix model illuminated by glowing particles in a deep navy blue and gold scientific environment. The lighting is ethereal and sophisticated, suggesting breakthrough discoveries and high-end biotechnology research. Micro-fluidic patterns and molecular diagrams are faintly visible in the background, reinforcing a high-tech corporate pharmaceutical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa9omPGVmovTuiqzE5uOPlZgbLvpDoL39SKkDNmeBDr29uDwqP_lfaF3ffelprDCXorprsGDdzcZEJjE6Lq73JYwTTjudX1lt-7KWcLS_ItFJ3aRsXNRQmcGFiQStKHcRYjg1zDstWO-UdDix0A3y1Zs_TxvCQQrm-o4x6Z7dAMJgaNUOUT-gssgBM99Xphc_FRlrz1FX-ILH2cao1dJbjhDoQ8ptDjdS0aCvXO9K89Z7SPZBNxlM-lOEVKA0a74OhH7Sifrdv8Vpk"/>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 reveal">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-4 block">R&amp;D Leadership</span>
+<h2 class="font-display-lg text-display-lg text-on-primary mb-6">Science-Driven Product Development</h2>
+<p class="text-on-primary-container font-body-lg mb-8">
+                    Our research philosophy combines advanced molecular biology with clinical insights to create formulations that aren't just effective—they're precise. Every product undergoes rigorous stability testing and clinical validation to ensure the highest standards of safety.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="block font-display-lg text-headline-md text-secondary-fixed mb-1">100+</span>
+<span class="text-on-primary font-label-caps text-[10px] uppercase">Clinical Trials</span>
+</div>
+<div>
+<span class="block font-display-lg text-headline-md text-secondary-fixed mb-1">GMP</span>
+<span class="text-on-primary font-label-caps text-[10px] uppercase">Certified Facilities</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 glass-panel p-1 border border-white/20 rounded-2xl reveal" style="transition-delay: 200ms">
+<img alt="Laboratory Tech" class="rounded-xl shadow-inner" data-alt="A precision robotic arm in a sterile pharmaceutical manufacturing facility handling delicate vials under cool white and gold LED lighting. The image captures the high-tech automation and absolute cleanliness of the production environment. Stainless steel surfaces and glass enclosures create a professional and trustworthy clinical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDteanwsGWt-82iXQwTgUznfZmNjgxKeKA2hpcPB7MxahscayWYK7-za3Ywymv7MYSKqOrRPV9eoREyrD-hbsrf4GYkQJRRWvyjrcSW7QxbeRPWPpk01SCXNgOG-xotPOhdzGsD5MxcoW-BwysQGIfxPQjkMzCd8xt6QDd4F7dcapaiuxFXC3gAIGYYeWhRU-3cyrmIYl8UcfnpDIw9G75JXYaTiRQ3mnwnLI-miHh7a4HibUi9cCOCxZrm_vcL4pPkUgUlqjEy6Jj0"/>
+</div>
+</div>
+</section>
+<!-- Why Our Products -->
+<section class="py-24 bg-surface">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">The Mediruit Advantage</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Commitment to quality that goes beyond regulatory compliance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal" style="transition-delay: 0ms">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Quality-Focused Formulations</h3>
+<p class="text-on-surface-variant text-body-sm">Utilizing premium-grade active ingredients and proprietary stabilizing agents for maximum efficacy.</p>
+</div>
+<div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal" style="transition-delay: 150ms">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">biotech</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Scientifically Developed</h3>
+<p class="text-on-surface-variant text-body-sm">Designed in collaboration with leading clinical researchers and therapeutic specialists.</p>
+</div>
+<div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal" style="transition-delay: 300ms">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">health_metrics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Patient-Centric Approach</h3>
+<p class="text-on-surface-variant text-body-sm">Optimized dosage forms and bioavailability protocols to enhance treatment compliance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary-container rounded-3xl p-12 md:p-24 relative overflow-hidden reveal">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-12 transform translate-x-1/2"></div>
+<div class="relative z-10 text-center max-w-3xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-8">Looking for Trusted Pharmaceutical Solutions?</h2>
+<p class="text-on-primary-container font-body-lg mb-12">Connect with our institutional partnership team to learn more about our distribution network and clinical support services.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<a href="contact.html" class="shimmer-btn bg-secondary text-primary font-label-caps text-label-caps px-10 py-5 rounded-lg shadow-2xl hover:scale-105 transition-all flex items-center justify-center">Contact Us</a>
+<button class="border border-white/30 text-on-primary font-label-caps text-label-caps px-10 py-5 rounded-lg hover:bg-white/10 transition-all">Request Information</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
+                    Mediruit
+                </div>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nephrology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cardiology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Global Presence</h4>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md mb-4">Exporting quality to 15+ countries across continents.</p>
+<div class="space-y-2 text-sm text-primary-fixed/80">
+<p>Terms of Service</p>
+<p>Privacy Policy</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-lg max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+    // Intersection Observer for Reveal Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Sticky Navbar logic
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-xl', 'h-16', 'bg-black/90');
+            nav.classList.remove('h-20', 'bg-black/60');
+        } else {
+            nav.classList.remove('shadow-xl', 'h-16', 'bg-black/90');
+            nav.classList.add('h-20', 'bg-black/60');
+        }
+    });
+
+    // Functional Modal Implementation
+    function openModal(productName, category) {
+        const modal = document.getElementById('productModal');
+        const backdrop = document.getElementById('modalBackdrop');
+        const content = document.getElementById('modalContent');
+        const title = document.getElementById('modalTitle');
+        const indications = document.getElementById('modalIndications');
+        const catEl = document.getElementById('modalCategory');
+        
+        title.innerText = productName;
+        catEl.innerText = category;
+        indications.innerText = `Detailed clinical specifications and pharmaceutical profile for ${productName}. This therapeutic solution is developed using high-precision molecular protocols to ensure target-specific efficacy in specialized clinical environments.`;
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        
+        // Trigger animations
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            backdrop.classList.add('opacity-100');
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        const backdrop = document.getElementById('modalBackdrop');
+        const content = document.getElementById('modalContent');
+        const modal = document.getElementById('productModal');
+        
+        backdrop.classList.add('opacity-0');
+        backdrop.classList.remove('opacity-100');
+        content.classList.add('scale-95', 'opacity-0');
+        content.classList.remove('scale-100', 'opacity-100');
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    // Scroll parallax for hero elements
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const molecules = document.querySelectorAll('.molecule');
+        molecules.forEach((molecule, index) => {
+            const speed = (index + 1) * 0.1;
+            molecule.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+        
+        const heroImage = document.querySelector('.animate-float');
+        if(heroImage) {
+            heroImage.style.transform = `translateY(${scrolled * 0.05}px)`;
+        }
+    });
+
+    // Add smooth scroll behavior for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body></html>
