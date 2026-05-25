@@ -169,6 +169,13 @@
                 height: 40px;
             }
         }
+        .iso-rotate {
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -203,11 +210,11 @@
 <span class="inline-block py-2 px-6 rounded-full bg-secondary-container text-primary font-label-upper text-label-upper mb-8 font-bold tracking-widest shadow-lg">
                     PIONEERING PHARMACEUTICAL EXCELLENCE
                 </span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight mb-8 [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)]">
-                    Advancing Healthcare Through Innovation. <br/>
-<span class="text-secondary-container">Trusted Pharmaceutical Solutions Worldwide.</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight mb-8 [text-shadow:_0_2_12px_rgba(0,0,0,0.45)]">
+                    Advancing Healthcare Through <br/>
+<span class="text-white">Innovation & Trust</span>
 </h1>
-<p class="font-body-lg text-body-lg text-white/90 mb-12 max-w-xl leading-relaxed font-medium [text-shadow:_0_2px_4px_rgba(0,0,0,0.3)]">
+<p class="font-body-lg text-body-lg text-white mb-12 max-w-xl leading-relaxed font-medium [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]">
                     Delivering high-quality pharmaceutical products with scientific precision, regulatory excellence, and a commitment to improving global health outcomes.
                 </p>
 <div class="flex flex-wrap gap-6">
@@ -215,9 +222,6 @@
                         Explore Products
                         <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </a>
-<a href="contact.html" class="border-2 border-white text-white px-12 py-5 rounded-2xl font-body-lg text-label-upper hover:bg-white/10 active:scale-95 transition-all font-bold backdrop-blur-md shadow-lg flex items-center justify-center">
-                        Contact Sales
-                    </a>
 </div>
 </div>
 </div>
@@ -283,121 +287,125 @@
 </li>
 </ul>
 </div>
-<button class="mt-10 border-b-2 border-primary text-primary pb-1 font-bold hover:text-secondary hover:border-secondary transition-all">
-                    Read Our Full Story
-                </button>
 </div>
 </div>
 </section>
-<!-- Innovation Section (Dark) -->
-<section class="bg-primary py-24 relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-<div class="absolute w-[800px] h-[800px] bg-secondary-container rounded-full blur-[120px] -top-96 -left-96"></div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
-<div class="reveal-up">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-8">Pioneering the Future <br/> of Pharma</h2>
-<p class="text-on-primary/70 text-body-lg max-w-3xl mx-auto mb-16">
-                    Our R&amp;D centers are hubs of innovation where molecules become miracles. We invest 15% of our revenue back into scientific discovery.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-on-primary reveal-up delay-200">
-<div>
-<div class="text-[56px] font-extrabold text-secondary-container mb-2">500+</div>
-<div class="text-label-upper font-bold tracking-widest">PATENTS FILED</div>
-</div>
-<div>
-<div class="text-[56px] font-extrabold text-secondary-container mb-2">12</div>
-<div class="text-label-upper font-bold tracking-widest">R&amp;D CENTERS</div>
-</div>
-<div>
-<div class="text-[56px] font-extrabold text-secondary-container mb-2">3k+</div>
-<div class="text-label-upper font-bold tracking-widest">SCIENTISTS</div>
-</div>
-<div>
-<div class="text-[56px] font-extrabold text-secondary-container mb-2">24/7</div>
-<div class="text-label-upper font-bold tracking-widest">INNOVATION</div>
-</div>
-</div>
-<div class="mt-20 flex justify-center reveal-up delay-300">
-<div class="relative p-1 bg-gradient-to-r from-secondary-container/50 to-transparent rounded-full overflow-hidden">
-<button class="bg-primary px-12 py-5 rounded-full font-bold text-on-primary flex items-center gap-4 hover:bg-surface/10 transition-all group">
-                        Enter the Innovation Lab
-                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">science</span>
-</button>
-</div>
-</div>
-</div>
+<!-- R&D & Innovation Section -->
+<section class="py-section-padding bg-surface overflow-hidden relative">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-16 relative">
+            <div class="reveal-up">
+                <span class="text-secondary font-label-upper text-label-upper mb-4 block uppercase tracking-widest">R&D & Innovation</span>
+                <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary max-w-xl">We seek out, and solve, tough challenges.</h2>
+            </div>
+            
+            <!-- ISO Rotating Badge -->
+            <div class="absolute right-0 top-0 hidden md:block reveal-up delay-300">
+                <div class="relative w-40 h-40 flex items-center justify-center">
+                    <!-- Outer Rotating Text -->
+                    <div class="absolute inset-0 iso-rotate">
+                        <svg viewBox="0 0 200 200" class="w-full h-full">
+                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent"/>
+                            <text class="text-[14px] uppercase fill-primary/40 font-bold tracking-[0.2em]">
+                                <textPath href="#circlePath">OCCUPATIONAL HEALTH & SAFETY • OCCUPATIONAL HEALTH & SAFETY • </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <!-- Center Static Text -->
+                    <div class="text-center z-10">
+                        <div class="text-xs font-bold text-primary leading-tight">ISO-45001</div>
+                        <div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">CERTIFIED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+            <!-- Card 1 -->
+            <div class="bg-surface-container-low p-10 rounded-[32px] border border-outline-variant/10 reveal-up flex flex-col justify-between h-full">
+                <div>
+                    <h4 class="text-secondary font-label-upper text-label-upper mb-10 uppercase tracking-widest">R&D Excellence</h4>
+                    <div class="text-[80px] font-extrabold text-primary leading-none mb-4">483</div>
+                </div>
+                <p class="text-on-surface-variant font-medium">Product Filings Worldwide</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-primary p-10 rounded-[32px] text-on-primary reveal-up delay-100 flex flex-col justify-between h-full">
+                <div>
+                    <h4 class="text-secondary-container font-label-upper text-label-upper mb-10 uppercase tracking-widest">Mediruit Impact</h4>
+                    <div class="text-[80px] font-extrabold text-white leading-none mb-4">43.5</div>
+                </div>
+                <p class="text-on-primary/70 font-medium">Billion units installed capacity</p>
+            </div>
+
+            <!-- Card 3 (Large Feature Card) -->
+            <div class="md:col-span-1 group relative rounded-[32px] overflow-hidden reveal-up delay-200 h-full min-h-[400px]">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCop22-1MeNUODAaQsJQqrPOvr03knZOVEhcbFMSEpICQZO4_M-M0lHv8_0EbshvS12kT223mf9PBJpoApmxWFhbS2p-V8rWG4AGzcwL27Rlc8-5yBJgEiIBZM4-q_qo21Fw0KDj_tKDKmXhNzpvSDwt289PouQD2Re8LOvEfQwanZb0dYJ0vJvqhZOvqpgBu6yu_ufq_7Fbo292I33pB8lJK3l9WZKU3n0kQ2tSTrLGn10I_q16QCe50hhsFd2hj6Rx8VU1Bkkij6R" alt="R&D" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 text-on-primary">
+                    <span class="text-secondary-container font-label-upper text-label-upper mb-4 block uppercase tracking-widest">R&D Highlights</span>
+                    <h3 class="font-headline-sm text-headline-sm mb-6 leading-tight">First in India to develop and commercialize Dydrogesterone</h3>
+                    <button class="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all group/btn">
+                        Learn More 
+                        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Global Presence -->
-<section class="py-section-padding bg-surface">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="reveal-up">
-<span class="text-secondary font-label-upper text-label-upper mb-4 block">GLOBAL NETWORK</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-8">Expanding Horizons, <br/> Healing Nations</h2>
-<p class="text-body-md text-on-surface-variant mb-10">
-                        Our export division ensures that premium quality medicines reach patients across Southeast Asia, Africa, and the Middle East. We strictly adhere to international regulatory compliances.
-                    </p>
-<div class="space-y-8">
-<div class="flex items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">public</span>
-</div>
-<div>
-<h4 class="font-bold text-primary">15+ Countries</h4>
-<p class="text-sm text-on-surface-variant">Active presence in developing and emerging markets.</p>
-</div>
-</div>
-<div class="flex items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">local_shipping</span>
-</div>
-<div>
-<h4 class="font-bold text-primary">Fast Logistics</h4>
-<p class="text-sm text-on-surface-variant">Efficient supply chain management with real-time tracking.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative reveal-up delay-200">
-<div class="bg-surface-container-high rounded-3xl p-4 aspect-square flex items-center justify-center overflow-hidden shadow-2xl">
-<img src="./assets/photos/magnific_create-a-premium-realisti_62FsFqxiJO.png" alt="Global Pharma Export" class="w-full h-full object-cover rounded-2xl">
-</div>
-</div>
-</div>
-</div>
+<!-- Our Promise Section -->
+<section class="py-section-padding bg-surface-container-lowest">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="text-center mb-16 reveal-up">
+            <span class="text-secondary font-label-upper text-label-upper mb-4 block uppercase tracking-[0.2em]">Our Promise</span>
+            <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-6">Healthcare Built on Trust, Innovation & Excellence</h2>
+            <p class="text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+                At Mediruit Lifesciences, our promise is to deliver safe, effective, and accessible pharmaceutical solutions through uncompromising quality, scientific innovation, and a patient-first approach.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Promise Card 1 -->
+            <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up">
+                <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <span class="material-symbols-outlined text-3xl">verified_user</span>
+                </div>
+                <h4 class="font-bold text-primary mb-3">Global Quality Standards</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Adhering to international regulatory compliances and WHO-GMP protocols for every formulation.</p>
+            </div>
+
+            <!-- Promise Card 2 -->
+            <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-100">
+                <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <span class="material-symbols-outlined text-3xl">biotech</span>
+                </div>
+                <h4 class="font-bold text-primary mb-3">Patient-Centric Innovation</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Driven by R&D that focuses on improving therapeutic outcomes and enhancing patient well-being.</p>
+            </div>
+
+            <!-- Promise Card 3 -->
+            <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-200">
+                <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                </div>
+                <h4 class="font-bold text-primary mb-3">Reliable Manufacturing</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed">State-of-the-art facilities ensuring consistent supply and high-precision production cycles.</p>
+            </div>
+
+            <!-- Promise Card 4 -->
+            <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-300">
+                <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <span class="material-symbols-outlined text-3xl">handshake</span>
+                </div>
+                <h4 class="font-bold text-primary mb-3">Ethical Healthcare Commitment</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Maintaining the highest standards of ethics, transparency, and integrity in all our operations.</p>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Contact CTA (Premium Diagonal) -->
-<section class="max-w-container-max mx-auto px-margin-desktop mb-20 mt-20 reveal-up">
-<div class="relative bg-primary rounded-[40px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
-<!-- Diagonal Split Background effect -->
-<div class="absolute inset-0 pointer-events-none opacity-20">
-<div class="absolute -right-20 -top-20 w-80 h-80 bg-white rotate-12"></div>
-</div>
-<div class="flex-1 p-12 md:p-20 relative z-10">
-<h2 class="font-headline-md text-headline-md text-on-primary mb-6">Partner with Excellence</h2>
-<p class="text-on-primary/70 mb-10 max-w-md">Reach out to our business development team for distribution inquiries or partnership opportunities.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-on-primary">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">mail</span>
-<span>info@mediruit.com</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">phone_in_talk</span>
-<span>+91 123 456 7890</span>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/3 bg-secondary-container p-12 flex flex-col justify-center items-center text-center">
-<span class="material-symbols-outlined text-6xl text-primary mb-6">handshake</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Inquiry Portal</h3>
-<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:scale-105 transition-transform">
-                    Submit Inquiry
-                </button>
-</div>
-</div>
-</section>
+
 <!-- From Director's Desk -->
 <section class="py-section-padding bg-surface-container-low">
 <div class="max-w-container-max mx-auto px-margin-desktop text-center">
@@ -409,17 +417,17 @@
 </div>
 <div class="reveal-up space-y-6 text-on-surface-variant text-body-md max-w-4xl mx-auto leading-relaxed">
 <p>
-                With over 25 years of extensive experience in the pharmaceutical industry, Mr. Mohit Gupta serves as a visionary Director dedicated to driving innovation, quality, and sustainable growth. His deep understanding of the sector, combined with a commitment to excellence, has played a pivotal role in shaping the company’s strategic direction and strengthening its market presence.
+                With over 25 years of extensive experience in the pharmaceutical industry, Mr. Manish Sharma serves as a visionary Director dedicated to driving innovation, quality, and sustainable growth. His deep understanding of the sector, combined with a commitment to excellence, has played a pivotal role in shaping the company’s strategic direction and strengthening its market presence.
             </p>
 <p>
-                Under his leadership, the organization has consistently focused on delivering high-quality healthcare solutions while adhering to the highest standards of ethics and compliance. Mr. Mohit Gupta is known for fostering a culture of collaboration, continuous improvement, and customer-centricity, ensuring that the company not only meets but exceeds industry expectations.
+                Under his leadership, the organization has consistently focused on delivering high-quality healthcare solutions while adhering to the highest standards of ethics and compliance. Mr. Manish Sharma is known for fostering a culture of collaboration, continuous improvement, and customer-centricity, ensuring that the company not only meets but exceeds industry expectations.
             </p>
 <p>
                 His forward-thinking approach and ability to navigate evolving market dynamics have enabled the company to expand its reach and build lasting partnerships. As a leader, he remains dedicated to advancing healthcare outcomes and contributing meaningfully to the well-being of society.
             </p>
 </div>
 <div class="reveal-up mt-12">
-<div class="font-headline-sm text-headline-sm text-primary mb-1">Mr. Mohit Gupta</div>
+<div class="font-headline-sm text-headline-sm text-primary mb-1">Mr. Manish Sharma</div>
 <div class="text-secondary font-bold tracking-widest text-label-upper">CEO & FOUNDER</div>
 </div>
 </div>
