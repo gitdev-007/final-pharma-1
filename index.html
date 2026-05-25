@@ -176,6 +176,39 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
+        /* R&D Card Interactive Styles */
+        .rd-card {
+            background-color: #ffffff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .rd-card * {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .rd-card:hover,
+        .rd-card:active,
+        .rd-card:focus {
+            background-color: #002868; /* primary color */
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 40, 104, 0.3);
+            border-color: transparent;
+        }
+        /* Handle text color changes on hover */
+        .rd-card:hover h4,
+        .rd-card:active h4,
+        .rd-card:focus h4 {
+            color: #72c0fe; /* secondary-container color for labels */
+        }
+        .rd-card:hover .rd-main-text,
+        .rd-card:active .rd-main-text,
+        .rd-card:focus .rd-main-text {
+            color: #ffffff;
+        }
+        .rd-card:hover .rd-sub-text,
+        .rd-card:active .rd-sub-text,
+        .rd-card:focus .rd-sub-text {
+            color: rgba(255, 255, 255, 0.8);
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -322,34 +355,35 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
             <!-- Card 1 -->
-            <div class="bg-surface-container-low p-10 rounded-[32px] border border-outline-variant/10 reveal-up flex flex-col justify-between h-full">
+            <div class="rd-card p-10 rounded-[32px] border border-outline-variant/10 reveal-up flex flex-col justify-between h-full">
                 <div>
                     <h4 class="text-secondary font-label-upper text-label-upper mb-10 uppercase tracking-widest">Specialized Care</h4>
-                    <div class="text-[40px] md:text-[48px] font-extrabold text-primary leading-tight mb-4">Renal & Critical Care</div>
+                    <div class="rd-main-text text-[40px] md:text-[48px] font-extrabold text-primary leading-tight mb-4">Renal & Critical Care</div>
                 </div>
-                <p class="text-on-surface-variant font-medium">Focused therapeutic expertise for better patient outcomes.</p>
+                <p class="rd-sub-text text-on-surface-variant font-medium">Focused therapeutic expertise for better patient outcomes.</p>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-primary p-10 rounded-[32px] text-on-primary reveal-up delay-100 flex flex-col justify-between h-full">
+            <div class="rd-card p-10 rounded-[32px] border border-outline-variant/10 reveal-up delay-100 flex flex-col justify-between h-full">
                 <div>
-                    <h4 class="text-secondary-container font-label-upper text-label-upper mb-10 uppercase tracking-widest">Quality Commitment</h4>
-                    <div class="text-[40px] md:text-[48px] font-extrabold text-white leading-tight mb-4">WHO-GMP Standards</div>
+                    <h4 class="text-secondary font-label-upper text-label-upper mb-10 uppercase tracking-widest">Quality Commitment</h4>
+                    <div class="rd-main-text text-[40px] md:text-[48px] font-extrabold text-primary leading-tight mb-4">WHO-GMP Standards</div>
                 </div>
-                <p class="text-on-primary/70 font-medium">Manufacturing excellence with strict quality compliance.</p>
+                <p class="rd-sub-text text-on-surface-variant font-medium">Manufacturing excellence with strict quality compliance.</p>
             </div>
 
             <!-- Card 3 (Large Feature Card) -->
-            <div class="md:col-span-1 group relative rounded-[32px] overflow-hidden reveal-up delay-200 h-full min-h-[400px]">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4DR4UxbdN16EbmenZ-p4XK0Ykmhlbc66gg5ElBXO_oOzamJ6bmnzNjKPf8o_C6LH2ZXOSFJuJzEB3YnPy-b7W0q0ZWleqlYMU5oaZCbKQwInOkQkefIGBOd05RGCif0yFI3hEJruAB3bN30KSxCdR66lEPV2cPgHdaHuTdmVj5F72xX_4ep0k-Pe0K6e-uynlhEVFemySlS5CY2eDLqYJG1WKrGfWbjivilaP__vF6rxlv1RvYSPqw3QOG38BTupDCWhbJ_Gc31o" alt="Renal Care" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-8 text-on-primary">
-                    <span class="text-secondary-container font-label-upper text-label-upper mb-4 block uppercase tracking-widest">Patient-First Approach</span>
-                    <h3 class="font-headline-sm text-headline-sm mb-6 leading-tight">Delivering dependable pharmaceutical solutions for renal healthcare.</h3>
-                    <button class="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all group/btn">
-                        Learn More 
-                        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+            <div class="rd-card group relative p-10 rounded-[32px] border border-outline-variant/10 overflow-hidden reveal-up delay-200 flex flex-col justify-between h-full min-h-[400px]">
+                <!-- Ensure the image doesn't block hover states if we switch background -->
+                <div class="relative z-10 flex flex-col h-full justify-between">
+                    <span class="text-secondary font-label-upper text-label-upper mb-4 block uppercase tracking-widest">Patient-First Approach</span>
+                    <div>
+                        <h3 class="rd-main-text font-headline-sm text-headline-sm text-primary mb-6 leading-tight">Delivering dependable pharmaceutical solutions for renal healthcare.</h3>
+                        <button class="rd-main-text flex items-center gap-2 font-bold text-primary text-xs uppercase tracking-widest hover:gap-4 transition-all group/btn">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
