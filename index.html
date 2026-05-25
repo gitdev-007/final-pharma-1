@@ -135,6 +135,17 @@
                 radial-gradient(at 0% 0%, rgba(0, 40, 104, 0.05) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(253, 188, 19, 0.05) 0px, transparent 50%);
         }
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -142,7 +153,7 @@
 <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/10 shadow-lg transition-all h-20">
 <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
 <div class="flex items-center">
-                <img src="assets/mediruit-logo.png" alt="Mediruit Lifesciences" class="navbar-logo">
+                <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="navbar-logo">
             </div>
 <div class="hidden md:flex items-center gap-8">
 <a class="font-label-upper text-label-upper text-white border-b-2 border-white pb-1" href="index.html">Home</a>
@@ -188,36 +199,7 @@
 </div>
 </div>
 </section>
-<!-- Contact CTA (Premium Diagonal) -->
-<section class="max-w-container-max mx-auto px-margin-desktop mb-20 mt-20 reveal-up">
-<div class="relative bg-primary rounded-[40px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
-<!-- Diagonal Split Background effect -->
-<div class="absolute inset-0 pointer-events-none opacity-20">
-<div class="absolute -right-20 -top-20 w-80 h-80 bg-white rotate-12"></div>
-</div>
-<div class="flex-1 p-12 md:p-20 relative z-10">
-<h2 class="font-headline-md text-headline-md text-on-primary mb-6">Partner with Excellence</h2>
-<p class="text-on-primary/70 mb-10 max-w-md">Reach out to our business development team for distribution inquiries or partnership opportunities.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-on-primary">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">mail</span>
-<span>info@mediruit.com</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">phone_in_talk</span>
-<span>+91 123 456 7890</span>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/3 bg-secondary-container p-12 flex flex-col justify-center items-center text-center">
-<span class="material-symbols-outlined text-6xl text-primary mb-6">handshake</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Inquiry Portal</h3>
-<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:scale-105 transition-transform">
-                    Submit Inquiry
-                </button>
-</div>
-</div>
-</section>
+
 <!-- Trust Bar -->
 <div class="bg-surface-container-low py-10 border-y border-outline-variant/10">
 <div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-center md:justify-between gap-8 opacity-70">
@@ -363,6 +345,36 @@
 </div>
 </div>
 </section>
+<!-- Contact CTA (Premium Diagonal) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-20 mt-20 reveal-up">
+<div class="relative bg-primary rounded-[40px] overflow-hidden flex flex-col md:flex-row shadow-2xl">
+<!-- Diagonal Split Background effect -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-white rotate-12"></div>
+</div>
+<div class="flex-1 p-12 md:p-20 relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-primary mb-6">Partner with Excellence</h2>
+<p class="text-on-primary/70 mb-10 max-w-md">Reach out to our business development team for distribution inquiries or partnership opportunities.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-on-primary">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container">mail</span>
+<span>info@mediruit.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container">phone_in_talk</span>
+<span>+91 123 456 7890</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-secondary-container p-12 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-6xl text-primary mb-6">handshake</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Inquiry Portal</h3>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:scale-105 transition-transform">
+                    Submit Inquiry
+                </button>
+</div>
+</div>
+</section>
 <!-- Footer -->
 <footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
 <div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
@@ -440,15 +452,6 @@
                 nav.classList.remove('h-20', 'bg-black/60');
             } else {
                 nav.classList.remove('shadow-xl', 'h-16', 'bg-black/90');
-                nav.classList.add('h-20', 'bg-black/60');
-            }
-        });
-    </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="main.js"></script>
-</body>
-</html>
-sList.remove('shadow-xl', 'h-16', 'bg-black/90');
                 nav.classList.add('h-20', 'bg-black/60');
             }
         });
