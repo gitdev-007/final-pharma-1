@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Cardiology | Mediruit Lifesciences</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary": "#001e40",
+                "secondary": "#735c00",
+                "surface": "#f9f9ff",
+                "on-surface": "#111c2c",
+                "on-surface-variant": "#43474f",
+                "outline-variant": "#c3c6d1",
+                "secondary-container": "#fed65b",
+                "primary-container": "#003366",
+                "surface-container-low": "#f0f3ff",
+                "surface-container-high": "#dee8ff"
+              },
+              "spacing": {
+                "gutter": "24px",
+                "container-max": "1280px",
+                "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                "display-lg": ["Hanken Grotesk"],
+                "headline-md": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(233, 195, 73, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(0, 30, 64, 0.05), transparent);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-20">
+        <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+            <div class="flex items-center">
+                <img src="../assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="navbar-logo">
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="../index.html">Home</a>
+                <a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="../about.html">About Us</a>
+                <a class="font-headline-sm text-[18px] font-bold text-primary border-b-2 border-primary pb-1" href="../products.html">Products</a>
+                <a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="../innovation.html">Innovation</a>
+                <a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="../contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <section class="relative py-24 hero-gradient">
+            <div class="px-margin-desktop max-w-container-max mx-auto">
+                <div class="max-w-3xl reveal active">
+                    <span class="text-secondary font-bold tracking-widest uppercase block mb-4">Therapeutic Area</span>
+                    <h1 class="font-display-lg text-5xl md:text-6xl text-primary leading-tight mb-6">Cardiology</h1>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">Comprehensive cardiovascular solutions targeting hypertension, lipid management, and heart health.</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white">
+            <div class="px-margin-desktop max-w-container-max mx-auto text-center">
+                <div class="reveal">
+                    <span class="material-symbols-outlined text-6xl text-primary/20 mb-6">cardiology</span>
+                    <h2 class="font-display-lg text-3xl text-primary mb-4">Portfolio Coming Soon</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto">We are currently updating our specialized cardiology product range. Please check back soon for detailed clinical specifications.</p>
+                    <a href="../products.html" class="inline-block mt-8 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-all">Back to Products</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary text-on-primary w-full">
+        <div class="w-full py-24 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <div class="col-span-1">
+                <div class="text-2xl font-bold mb-6">Mediruit</div>
+                <p class="opacity-80 leading-relaxed mb-8">Elevating pharmaceutical standards through scientific precision and patient-centric care.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4 opacity-80">
+                    <li><a href="../index.html" class="hover:text-secondary-container">Home</a></li>
+                    <li><a href="../about.html" class="hover:text-secondary-container">About Us</a></li>
+                    <li><a href="../products.html" class="hover:text-secondary-container">Products</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Therapeutic</h4>
+                <ul class="space-y-4 opacity-80">
+                    <li><a href="nephrology.html" class="hover:text-secondary-container">Nephrology</a></li>
+                    <li><a href="oncology.html" class="hover:text-secondary-container">Oncology</a></li>
+                    <li><a href="cardiology.html" class="hover:text-secondary-container">Cardiology</a></li>
+                    <li><a href="gastroenterology.html" class="hover:text-secondary-container">Gastroenterology</a></li>
+                    <li><a href="critical-care.html" class="hover:text-secondary-container">Critical Care</a></li>
+                    <li><a href="respiratory.html" class="hover:text-secondary-container">Respiratory</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Legal & Resources</h4>
+                <ul class="space-y-4 opacity-80">
+                    <li><a href="#" class="hover:text-secondary-container">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-secondary-container">Privacy Policy</a></li>
+                    <li><a href="../contact.html" class="hover:text-secondary-container">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 py-8 text-center text-sm opacity-60">© 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.</div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
