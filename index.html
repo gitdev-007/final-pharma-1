@@ -133,23 +133,18 @@
             width: 100%;
             min-height: 100vh;
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-            transform-origin: center top;
+            transform-origin: center center;
+            will-change: transform, border-radius;
         }
         .hero-contracted {
-            width: 90%;
-            min-height: 70vh;
-            margin: 40px auto 0;
+            transform: scale(0.9);
             border-radius: 40px;
-            transform: scale(0.95);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         @media (max-width: 768px) {
             .hero-contracted {
-                width: 95%;
-                min-height: 60vh;
-                margin: 20px auto 0;
+                transform: scale(0.95);
                 border-radius: 24px;
-                transform: scale(0.98);
             }
         }
         .gradient-mesh {
@@ -218,17 +213,13 @@
 <div class="flex items-center">
                 <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="navbar-logo">
             </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-upper text-label-upper text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
-<a class="font-label-upper text-label-upper text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
-<a class="font-label-upper text-label-upper text-on-surface-variant hover:text-primary transition-colors" href="products.html">Products</a>
-<a class="font-label-upper text-label-upper text-on-surface-variant hover:text-primary transition-colors" href="innovation.html">Innovation</a>
-<a class="font-label-upper text-label-upper text-on-surface-variant hover:text-primary transition-colors" href="export.html">Exports</a>
-<a class="font-label-upper text-label-upper text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact Us</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline-sm text-[18px] font-bold text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="about.html">About Us</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="products.html">Products</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="innovation.html">Innovation</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="contact.html">Contact Us</a>
 </div>
-<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-upper text-label-upper hover:scale-[1.02] active:scale-95 transition-all shadow-md">
-                Enquiry Now
-            </button>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -307,16 +298,10 @@
                     </p>
 <ul class="space-y-4 pt-4">
 <li class="flex gap-4 items-start">
-<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-[14px] text-white">check</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-[18px] text-white">check</span>
 </div>
-<span class="text-body-md font-bold text-primary">Quality First: Every batch undergoes 5-step rigorous testing.</span>
-</li>
-<li class="flex gap-4 items-start">
-<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-[14px] text-white">check</span>
-</div>
-<span class="text-body-md font-bold text-primary">Global Reach: Serving over 15+ countries with life-saving drugs.</span>
+<span class="text-xl font-bold text-primary leading-tight">Quality First: Every batch undergoes 5-step rigorous testing.</span>
 </li>
 </ul>
 </div>
@@ -373,17 +358,10 @@
             </div>
 
             <!-- Card 3 (Large Feature Card) -->
-            <div class="rd-card group relative p-10 rounded-[32px] border border-outline-variant/10 overflow-hidden reveal-up delay-200 flex flex-col justify-between h-full min-h-[400px]">
-                <!-- Ensure the image doesn't block hover states if we switch background -->
-                <div class="relative z-10 flex flex-col h-full justify-between">
+            <div class="rd-card group relative p-10 rounded-[32px] border border-outline-variant/10 reveal-up delay-200 flex flex-col justify-center h-full min-h-[400px]">
+                <div class="relative z-10 flex flex-col items-start">
                     <span class="text-secondary font-label-upper text-label-upper mb-4 block uppercase tracking-widest">Patient-First Approach</span>
-                    <div>
-                        <h3 class="rd-main-text font-headline-sm text-headline-sm text-primary mb-6 leading-tight">Delivering dependable pharmaceutical solutions for renal healthcare.</h3>
-                        <button class="rd-main-text flex items-center gap-2 font-bold text-primary text-xs uppercase tracking-widest hover:gap-4 transition-all group/btn">
-                            Learn More 
-                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                    </div>
+                    <h3 class="rd-main-text font-headline-sm text-headline-sm text-primary leading-tight">Delivering dependable pharmaceutical solutions for renal healthcare.</h3>
                 </div>
             </div>
         </div>
@@ -451,24 +429,24 @@
 </div>
 <div class="reveal-up space-y-6 text-on-surface-variant text-body-md max-w-4xl mx-auto leading-relaxed">
 <p>
-                With over 25 years of extensive experience in the pharmaceutical industry, Mr. Manish Sharma serves as a visionary Director dedicated to driving innovation, quality, and sustainable growth. His deep understanding of the sector, combined with a commitment to excellence, has played a pivotal role in shaping the company’s strategic direction and strengthening its market presence.
+                With over 18 years of extensive experience in the pharmaceutical industry, Mr. Pankaj Kumar serves as a visionary Director dedicated to driving innovation, quality, and sustainable growth. His deep understanding of the sector, combined with a commitment to excellence, has played a pivotal role in shaping the company’s strategic direction and strengthening its market presence.
             </p>
 <p>
-                Under his leadership, the organization has consistently focused on delivering high-quality healthcare solutions while adhering to the highest standards of ethics and compliance. Mr. Manish Sharma is known for fostering a culture of collaboration, continuous improvement, and customer-centricity, ensuring that the company not only meets but exceeds industry expectations.
+                Under his leadership, the organization has consistently focused on delivering high-quality healthcare solutions while adhering to the highest standards of ethics and compliance. Mr. Pankaj Kumar is known for fostering a culture of collaboration, continuous improvement, and customer-centricity, ensuring that the company not only meets but exceeds industry expectations.
             </p>
 <p>
                 His forward-thinking approach and ability to navigate evolving market dynamics have enabled the company to expand its reach and build lasting partnerships. As a leader, he remains dedicated to advancing healthcare outcomes and contributing meaningfully to the well-being of society.
             </p>
 </div>
 <div class="reveal-up mt-12">
-<div class="font-headline-sm text-headline-sm text-primary mb-1">Mr. Manish Sharma</div>
-<div class="text-secondary font-bold tracking-widest text-label-upper">CEO & FOUNDER</div>
+<div class="font-headline-sm text-headline-sm text-primary mb-1">Mr. Pankaj Kumar</div>
+<div class="text-secondary font-bold tracking-widest text-label-upper">DIRECTOR</div>
 </div>
 </div>
 </section>
 <!-- Footer -->
 <footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
-<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="col-span-1 md:col-span-1">
 <div class="text-headline-md font-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
                     Mediruit
@@ -477,11 +455,8 @@
                     Elevating pharmaceutical standards through scientific precision and patient-centric care.
                 </p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">share</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">public</span>
+<a class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">share</span>
 </a>
 </div>
 </div>
@@ -492,7 +467,6 @@
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
 </ul>
 </div>
@@ -504,14 +478,6 @@
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
 </ul>
-</div>
-<div class="md:col-span-1">
-<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Global Presence</h4>
-<p class="text-primary-fixed dark:text-on-surface-variant text-body-md mb-4">Exporting quality to 15+ countries across continents.</p>
-<div class="space-y-2 text-sm text-primary-fixed/80">
-<p>Terms of Service</p>
-<p>Privacy Policy</p>
-</div>
 </div>
 </div>
 <div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
