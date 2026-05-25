@@ -173,6 +173,80 @@
             50% { transform: translateY(-10px); }
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* View Toggle Styles */
+        .view-list {
+            display: flex !important;
+            flex-direction: column !important;
+            grid-template-columns: none !important;
+        }
+        .view-list .product-card {
+            flex-direction: row !important;
+            align-items: center !important;
+            padding: 1.5rem !important;
+            gap: 2rem !important;
+        }
+        .view-list .product-image-area {
+            display: flex !important;
+            width: 140px !important;
+            height: 140px !important;
+            margin-bottom: 0 !important;
+            flex-shrink: 0 !important;
+        }
+        .view-list .product-details {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            border-top: none !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            gap: 2rem !important;
+            width: 380px !important;
+            border-left: 1px solid rgba(0, 30, 64, 0.1) !important;
+            padding-left: 2rem !important;
+        }
+        .view-list .product-details > div {
+            border-top: none !important;
+            padding-top: 0 !important;
+            flex: 1 !important;
+        }
+        .view-list .product-details button {
+            width: auto !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            flex-shrink: 0 !important;
+        }
+        @media (max-width: 1024px) {
+            .view-list .product-details {
+                width: 300px !important;
+                gap: 1rem !important;
+                padding-left: 1rem !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .view-list .product-card {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+            .view-list .product-image-area {
+                width: 100% !important;
+                height: 180px !important;
+                margin-bottom: 1rem !important;
+            }
+            .view-list .product-details {
+                width: 100% !important;
+                flex-direction: column !important;
+                border-left: none !important;
+                padding-left: 0 !important;
+                border-top: 1px solid rgba(0, 30, 64, 0.1) !important;
+                padding-top: 1.5rem !important;
+                gap: 1rem !important;
+            }
+            .view-list .product-details button {
+                width: 100% !important;
+            }
+        }
+
         .navbar-logo {
             height: 50px;
             width: auto;
@@ -279,137 +353,182 @@
 <p class="text-on-surface-variant">Our comprehensive portfolio addresses critical medical needs with high-efficacy treatments and specialized care solutions.</p>
 </div>
 <div class="flex gap-2">
-<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">filter_list</span></button>
-<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors"><span class="material-symbols-outlined">grid_view</span></button>
+<button id="list-view-btn" class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors" title="List View">
+    <span class="material-symbols-outlined">view_list</span>
+</button>
+<button id="grid-view-btn" class="p-2 border border-outline-variant rounded-lg bg-primary text-white transition-colors" title="Grid View">
+    <span class="material-symbols-outlined">grid_view</span>
+</button>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter transition-all duration-500">
 <!-- Product Card 1 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Microalbuminuria treatment</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave', 'Renal Care')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosave</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Microalbuminuria treatment</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave', 'Renal Care')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 2 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Metabolic</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosoda 1G</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-strength formulation for metabolic acidosis management.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Metabolic acidosis management</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosoda 1G', 'Metabolic')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Metabolic</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosoda 1G</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-strength formulation for metabolic acidosis management.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Metabolic acidosis management</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosoda 1G', 'Metabolic')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 3 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Respiratory</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave-P</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Advanced pediatric formulation for efficient mucus relief.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Mucus relief therapy</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-P', 'Respiratory')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Respiratory</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosave-P</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Advanced pediatric formulation for efficient mucus relief.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Mucus relief therapy</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-P', 'Respiratory')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 4 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">SEVPHOS-400</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Specialized phosphate binder for hyperphosphatemia management.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Hyperphosphatemia mgmt</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('SEVPHOS-400', 'Renal Care')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">SEVPHOS-400</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Specialized phosphate binder for hyperphosphatemia management.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Hyperphosphatemia mgmt</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('SEVPHOS-400', 'Renal Care')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 5 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave-Forte</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-potency support for patients with severe renal dysfunction.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Renal dysfunction support</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-Forte', 'Renal Care')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosave-Forte</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">High-potency support for patients with severe renal dysfunction.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Renal dysfunction support</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave-Forte', 'Renal Care')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 6 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Injectable</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Carniride</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Levocarnitine injection for critical metabolic deficiency correction.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Levocarnitine injection</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Carniride', 'Injectable')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Injectable</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Carniride</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Levocarnitine injection for critical metabolic deficiency correction.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Levocarnitine injection</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Carniride', 'Injectable')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 7 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Neosave Plus</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Enhanced formulation for advanced microalbuminuria complications.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Advanced renal support</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave Plus', 'Renal Care')">View Details</button>
-</div>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosave Plus</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Enhanced formulation for advanced microalbuminuria complications.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Advanced renal support</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Neosave Plus', 'Renal Care')">View Details</button>
+        </div>
+    </div>
 </div>
 <!-- Product Card 8 -->
-<div class="bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
-<div class="flex justify-between items-start mb-6">
-<span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Nutritional</span>
-<span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
-</div>
-<h3 class="font-display-lg text-headline-sm text-primary mb-2">Megaklas</h3>
-<p class="text-on-surface-variant font-body-sm mb-4 line-clamp-2">Scientifically formulated appetite enhancer for clinical recovery.</p>
-<div class="mt-auto space-y-4">
-<div class="pt-4 border-t border-outline-variant/20">
-<span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-<span class="text-body-sm font-medium">Appetite enhancer</span>
-</div>
-<button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Megaklas', 'Nutritional')">View Details</button>
+<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Nutritional</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Megaklas</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Scientifically formulated appetite enhancer for clinical recovery.</p>
+        <div class="product-details mt-auto space-y-4">
+            <div class="pt-4 border-t border-outline-variant/20">
+                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
+                <span class="text-body-sm font-medium">Appetite enhancer</span>
+            </div>
+            <button class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all rounded" onclick="openModal('Megaklas', 'Nutritional')">View Details</button>
+        </div>
+    </div>
 </div>
 </div>
 </div>
@@ -427,16 +546,6 @@
 <p class="text-on-primary-container font-body-lg mb-8">
                     Our research philosophy combines advanced molecular biology with clinical insights to create formulations that aren't just effective—they're precise. Every product undergoes rigorous stability testing and clinical validation to ensure the highest standards of safety.
                 </p>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<span class="block font-display-lg text-headline-md text-secondary-fixed mb-1">100+</span>
-<span class="text-on-primary font-label-caps text-[10px] uppercase">Clinical Trials</span>
-</div>
-<div>
-<span class="block font-display-lg text-headline-md text-secondary-fixed mb-1">GMP</span>
-<span class="text-on-primary font-label-caps text-[10px] uppercase">Certified Facilities</span>
-</div>
-</div>
 </div>
 <div class="md:w-1/2 glass-panel p-1 border border-white/20 rounded-2xl reveal" style="transition-delay: 200ms">
 <img alt="Laboratory Tech" class="rounded-xl shadow-inner" data-alt="A precision robotic arm in a sterile pharmaceutical manufacturing facility handling delicate vials under cool white and gold LED lighting. The image captures the high-tech automation and absolute cleanliness of the production environment. Stainless steel surfaces and glass enclosures create a professional and trustworthy clinical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDteanwsGWt-82iXQwTgUznfZmNjgxKeKA2hpcPB7MxahscayWYK7-za3Ywymv7MYSKqOrRPV9eoREyrD-hbsrf4GYkQJRRWvyjrcSW7QxbeRPWPpk01SCXNgOG-xotPOhdzGsD5MxcoW-BwysQGIfxPQjkMzCd8xt6QDd4F7dcapaiuxFXC3gAIGYYeWhRU-3cyrmIYl8UcfnpDIw9G75JXYaTiRQ3mnwnLI-miHh7a4HibUi9cCOCxZrm_vcL4pPkUgUlqjEy6Jj0"/>
@@ -494,8 +603,8 @@
 </main>
 <!-- Footer -->
 <footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
-<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="col-span-1 md:col-span-1">
+<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1">
 <div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
                     Mediruit
                 </div>
@@ -508,7 +617,7 @@
     </a>
 </div>
 </div>
-<div class="md:col-span-1">
+<div class="col-span-1">
 <h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
 <ul class="space-y-4">
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
@@ -519,13 +628,27 @@
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
 </ul>
 </div>
-<div class="md:col-span-1">
+<div class="col-span-1">
 <h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
 <ul class="space-y-4">
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nephrology</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cardiology</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Critical Care</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Nutraceuticals</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Legal & Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Terms of Service</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Privacy Policy</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Disclaimer</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Cookie Policy</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Shipping Policy</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Return / Refund Policy</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Sitemap</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Accessibility Statement</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="#">Contact Support</a></li>
 </ul>
 </div>
 </div>
