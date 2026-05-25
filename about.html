@@ -73,6 +73,24 @@
                 height: 40px;
             }
         }
+        .hero-background-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(0, 20, 45, 0.45),
+                rgba(0, 20, 45, 0.6)
+            );
+            z-index: -1;
+            backdrop-filter: blur(1px);
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -186,10 +204,10 @@
 </nav>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-xl overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-black/45 backdrop-blur-[2px] z-10"></div>
-<img class="w-full h-full object-cover hero-floating" data-alt="A futuristic laboratory environment with soft blue glowing accents and floating holographic representations of complex molecular structures. The lighting is ethereal and high-key, creating a sense of advanced medical innovation. The aesthetic is clean, luxurious, and precision-oriented, reflecting a high-end pharmaceutical research facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgt8sY-1EJXcTLTMQbF7vWbdGoAMbyclZXpeQrctTnE-VO74_1H3afgSzY0eQqsCgXCjoM0IXnr7fJoe5rROlCG6tlUVA3r2Bn26CY3Us7YStl5SNqBgh8ql0KFAJ02cLFUFDzCKKxQ9rAEzwqTLwa_N9svCzh5Nry1sm6sifL8VslHGvkfFGGZl28RDoKcwBdXlAAgO7V2ULdWAfc5NSo1985bGSG2urCT8i5nX3BTKSvMzCWOdMO_ZOsnHl_zag1OPKTG1gCYMv8"/>
-</div>
+<video autoplay muted loop playsinline preload="auto" class="hero-background-video">
+    <source src="assets/videos/magnific_create-a-premium-cinemati_rldBRqhxtc.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
 <div class="container-max mx-auto px-lg relative z-10">
 <div class="max-w-3xl">
 <h1 class="font-display-lg text-display-lg text-white font-[800] mb-md reveal active stagger-1 [text-shadow:_0_2px_10px_rgba(0,0,0,0.45)]">
@@ -338,18 +356,18 @@
 </section>
 <!-- Footer -->
 <footer class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
-<div class="w-full py-xl px-lg max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <div class="col-span-1">
-<div class="text-headline-md font-extrabold text-on-primary dark:text-primary mb-6">
-                    Mediruit
-                </div>
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+</div>
 <p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
                     Elevating pharmaceutical standards through scientific precision and patient-centric care.
                 </p>
 <div class="flex gap-4">
-    <a class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
-        <span class="material-symbols-outlined text-2xl">share</span>
-    </a>
+<a class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">share</span>
+</a>
 </div>
 </div>
 <div class="col-span-1">
@@ -359,7 +377,6 @@
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="export.html">Exports</a></li>
 <li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact Us</a></li>
 </ul>
 </div>
@@ -383,7 +400,7 @@
 </ul>
 </div>
 </div>
-<div class="border-t border-white/10 py-8 px-lg max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
             © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
         </div>
 </footer>
