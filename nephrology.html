@@ -3,10 +3,9 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NephroCare | Nephrology Care Solutions</title>
+<title>Nephrology | Mediruit Lifesciences</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -124,26 +123,37 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- TopNavBar -->
-<nav class="bg-white/80 dark:bg-primary/80 backdrop-blur-xl fixed top-0 w-full shadow-sm z-50">
-<div class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">NephroCare</div>
-<div class="hidden md:flex items-center gap-stack-lg">
-<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary hover:scale-105 transition-all duration-200" href="#">Therapeutics</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Clinical Trials</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Insights</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Resources</a>
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="flex items-center">
+                <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="navbar-logo">
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="index.html">Home</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="about.html">About Us</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="products.html">Products</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="innovation.html">Innovation</a>
+<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="contacts.html">Contact Us</a>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:scale-105 active:scale-95 transition-all duration-200">
-                Explore Products
-            </button>
 </div>
 </nav>
 <!-- Hero Section -->
-<header class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<header class="relative h-screen min-h-[700px] flex items-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
 <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_Zvi1_NWUSE-RGNRqWZnKCO3Y3zQHkAKFgNRSWpkwjCBk54oQRlJZGsvnvWMemJ5cNOqcB3tB57SsqH1nGe_-6lHXUoffNvl11lBO_vIadMBHaosOnleDyrsKtntCWH82Di3UQnuqBOPUbuvbUdC_i46k_b-q_-HMw2NNyquUfSYp3TLn41mLNlf1YE8dKvCcdMpcsOiwc2erwGvF9j8_J0eCQAoDoR2FwoSnRoIm4bGrs0HutfnL4RjkcSakAKvS4EohT1vylhkg');"></div>
 <div class="absolute inset-0 hero-overlay"></div>
@@ -163,12 +173,12 @@
                     Our nephrology portfolio is designed to support comprehensive kidney care with trusted pharmaceutical formulations focused on renal health, treatment precision, and improved patient outcomes.
                 </p>
 <div class="flex flex-wrap gap-stack-md mt-stack-sm">
-<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:scale-105 hover:bg-secondary-fixed-dim">
+<a href="products.html" class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:scale-105 hover:bg-secondary-fixed-dim">
                         Explore Products
-                    </button>
-<button class="border border-white/40 text-white px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:bg-white/10 hover:border-white">
+                    </a>
+<a href="contacts.html" class="border border-white/40 text-white px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:bg-white/10 hover:border-white">
                         Contact Us
-                    </button>
+                    </a>
 </div>
 </div>
 </div>
@@ -182,7 +192,7 @@
 <div class="reveal">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Committed to Renal Healthcare Excellence</h2>
 <div class="flex flex-col gap-stack-md text-on-surface-variant font-body-md text-body-md">
-<p>At NephroCare, we recognize that chronic kidney disease (CKD) represents one of the most complex challenges in modern healthcare. Our commitment to nephrology is rooted in rigorous pharmaceutical research and a deep understanding of renal physiology.</p>
+<p>At Mediruit Lifesciences, we recognize that chronic kidney disease (CKD) represents one of the most complex challenges in modern healthcare. Our commitment to nephrology is rooted in rigorous pharmaceutical research and a deep understanding of renal physiology.</p>
 <p>We provide a specialized portfolio of treatments aimed at slowing disease progression and managing the systemic complications of renal impairment. Our focus extends beyond the laboratory; we strive to build therapeutic trust with clinicians and patients through transparent clinical data and consistent formulation quality.</p>
 <p>By prioritizing patient-centric renal wellness, we aim to redefine the standard of care in kidney health management, ensuring that every therapeutic intervention contributes to a higher quality of life.</p>
 </div>
@@ -196,8 +206,8 @@
 <img alt="Clinical Research Environment" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARIUvwPu2KF5-DqsQokHm_coLd4Pm3Se7jVEf2H0ZbHH0znbnw88VQGoFjcst81tJ7kxy95Nn2f8bDyVKkXzJ3hYE8DzHLi1tbS9YNXobePSYDChbp86tqwx5Jyp6GDSumJLx7fqDZNhuzlndU-teHlCfvTIUbb-b_EPuqnRXL6w7H6AKvwpyiTyk1T-3okJUV-hYUf29bLRijiCdzQOPOMLlJPB5IS31WUhj2ECTPdcpCwzgfDGMDRvyo3weT63nUvACcQONmkonP"/>
 </div>
 <div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-lg shadow-lg hidden lg:block">
-<div class="text-secondary-fixed font-headline-md text-headline-md">25+</div>
-<div class="text-white/80 font-caption text-caption uppercase tracking-tighter">Years of Research</div>
+<div class="text-secondary-fixed font-headline-md text-headline-md">18+</div>
+<div class="text-white/80 font-caption text-caption uppercase tracking-tighter">Years of Experience</div>
 </div>
 </div>
 </div>
@@ -212,7 +222,7 @@
 <!-- Card 1 -->
 <div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group">
 <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-2xl">nephrology</span>
+<span class="material-symbols-outlined text-2xl">kidneys</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Chronic Kidney Care</h3>
 <p class="text-on-surface-variant font-body-md text-body-md">Comprehensive management strategies for CKD progression and metabolic stability.</p>
@@ -248,9 +258,9 @@
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="flex flex-col md:flex-row gap-16 items-center">
 <div class="w-full md:w-1/3 reveal">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Why Partner with NephroCare?</h2>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Why Partner with Mediruit?</h2>
 <p class="text-on-surface-variant font-body-md text-body-md mb-stack-lg">We combine clinical rigor with empathetic care models to deliver excellence in every dose.</p>
-<a class="text-secondary font-label-md text-label-md flex items-center gap-2 group" href="#">
+<a class="text-secondary font-label-md text-label-md flex items-center gap-2 group" href="about.html">
                         Learn about our clinical standards
                         <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
 </a>
@@ -296,60 +306,47 @@
 <div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center flex flex-col items-center">
 <h2 class="font-display-lg text-display-lg text-white mb-stack-md max-w-3xl">Supporting Your Clinical Practice with Precision Nephrology</h2>
 <p class="text-primary-fixed-dim font-headline-md text-headline-md mb-stack-lg max-w-2xl">Connect with our Medical Affairs team for specialized product monographs and therapeutic guidance.</p>
-<div class="flex flex-col sm:flex-row gap-stack-md">
-<button class="bg-white text-primary px-10 py-4 rounded font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors">
-                    Contact Medical Affairs
-                </button>
-<button class="border border-white/20 text-white px-10 py-4 rounded font-label-md text-label-md font-bold hover:bg-white/10 transition-colors">
-                    Request Product Samples
-                </button>
+<div class="flex justify-center w-full">
+<a href="contacts.html" class="shimmer-btn bg-[#FFFFFF] font-bold uppercase tracking-[0.2em] text-lg px-20 py-8 rounded-[32px] shadow-2xl hover:scale-105 hover:bg-surface transition-all flex items-center justify-center min-w-[320px]"><span class="relative z-10 text-primary font-[800] [text-shadow:_0_2px_8px_rgba(0,0,0,0.1)]">Contact Us</span></a>
 </div>
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-primary border-t border-outline-variant">
-<div class="flex flex-col gap-stack-lg px-margin-desktop py-section-padding max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between gap-stack-lg">
-<div class="flex flex-col gap-4">
-<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">NephroCare</div>
-<p class="text-on-surface-variant dark:text-on-primary-container max-w-xs font-body-md text-body-md">
-                        Advancing renal health through innovative pharmaceutical science and patient-centered therapies.
-                    </p>
+<footer id="footer" class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
 </div>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-<div class="flex flex-col gap-3">
-<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Privacy Policy</span>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Data Protection</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Cookie Policy</a>
+<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
 </div>
-<div class="flex flex-col gap-3">
-<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Terms of Service</span>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Legal Notices</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">User Agreement</a>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contacts.html">Contact Us</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-3">
-<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Prescribing Information</span>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Product Safety</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Adverse Reporting</a>
-</div>
-<div class="flex flex-col gap-3">
-<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Contact Medical Affairs</span>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Expert Inquiry</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Education Support</a>
-</div>
-</div>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md pt-stack-lg border-t border-outline-variant/30">
-<div class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container">
-                    © 2024 NephroCare Pharmaceuticals. All rights reserved. Clinical data for professional use only.
-                </div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">science</span>
-<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">verified_user</span>
-<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">hub</span>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/oncology.html">Oncology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/cardiology.html">Cardiology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/critical-care.html">Critical Care</a></li>
+<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/respiratory.html">Respiratory</a></li>
+</ul>
 </div>
 </div>
-</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
 </footer>
 <script>
         // Scroll Reveal Logic
@@ -369,17 +366,15 @@
         // Initial check on load
         window.addEventListener("load", reveal);
         
-        // Header transparency shift on scroll
+        // Sticky Navbar logic
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                nav.classList.add('shadow-md');
-                nav.classList.remove('bg-white/80', 'dark:bg-primary/80');
-                nav.classList.add('bg-white', 'dark:bg-primary');
+                nav.classList.add('shadow-md', 'h-16');
+                nav.classList.remove('h-20', 'shadow-sm');
             } else {
-                nav.classList.remove('shadow-md');
-                nav.classList.add('bg-white/80', 'dark:bg-primary/80');
-                nav.classList.remove('bg-white', 'dark:bg-primary');
+                nav.classList.remove('shadow-md', 'h-16');
+                nav.classList.add('h-20', 'shadow-sm');
             }
         });
     </script>
