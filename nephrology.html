@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NephroCare | Nephrology Care Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "secondary-container": "#a2eded",
+                        "on-primary-container": "#86a0cd",
+                        "surface-container": "#e7eeff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-background": "#111c2c",
+                        "on-tertiary-fixed": "#081f1d",
+                        "secondary": "#13696a",
+                        "outline": "#74777f",
+                        "on-tertiary-container": "#8ca4a0",
+                        "primary-container": "#1a365d",
+                        "on-secondary-fixed": "#002020",
+                        "on-tertiary-fixed-variant": "#354b48",
+                        "tertiary-container": "#243a37",
+                        "primary-fixed-dim": "#adc7f7",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-bright": "#f9f9ff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#263142",
+                        "on-surface-variant": "#43474e",
+                        "secondary-fixed": "#a5eff0",
+                        "surface-tint": "#455f88",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#111c2c",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#004f50",
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#cfdaf1",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-high": "#dee8ff",
+                        "on-secondary-container": "#1a6d6e",
+                        "tertiary-fixed-dim": "#b3ccc7",
+                        "secondary-fixed-dim": "#89d3d4",
+                        "primary": "#002045",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "surface-variant": "#d8e3fa",
+                        "inverse-primary": "#adc7f7",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#0e2422",
+                        "on-primary-fixed": "#001b3c",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-highest": "#d8e3fa",
+                        "tertiary-fixed": "#cfe8e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "unit": "8px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-badge {
+            background: rgba(165, 239, 240, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 32, 69, 0.85), rgba(0, 32, 69, 0.4));
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-primary/80 backdrop-blur-xl fixed top-0 w-full shadow-sm z-50">
+<div class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">NephroCare</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary hover:scale-105 transition-all duration-200" href="#">Therapeutics</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Clinical Trials</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Insights</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-primary-container hover:scale-105 hover:text-secondary transition-all duration-200" href="#">Resources</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:scale-105 active:scale-95 transition-all duration-200">
+                Explore Products
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_Zvi1_NWUSE-RGNRqWZnKCO3Y3zQHkAKFgNRSWpkwjCBk54oQRlJZGsvnvWMemJ5cNOqcB3tB57SsqH1nGe_-6lHXUoffNvl11lBO_vIadMBHaosOnleDyrsKtntCWH82Di3UQnuqBOPUbuvbUdC_i46k_b-q_-HMw2NNyquUfSYp3TLn41mLNlf1YE8dKvCcdMpcsOiwc2erwGvF9j8_J0eCQAoDoR2FwoSnRoIm4bGrs0HutfnL4RjkcSakAKvS4EohT1vylhkg');"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-2xl flex flex-col gap-stack-md">
+<div class="inline-flex glass-badge text-secondary-fixed px-4 py-1 rounded-full self-start font-label-md text-label-md uppercase tracking-widest border border-white/10">
+                    Therapeutic Focus
+                </div>
+<h1 class="font-display-lg text-display-lg text-white font-extrabold tracking-tight">
+                    Nephrology Care Solutions
+                </h1>
+<p class="font-headline-md text-headline-md text-primary-fixed-dim leading-relaxed">
+                    Advanced pharmaceutical therapies supporting kidney health and renal care excellence.
+                </p>
+<p class="font-body-lg text-body-lg text-surface-container-low opacity-90 max-w-xl">
+                    Our nephrology portfolio is designed to support comprehensive kidney care with trusted pharmaceutical formulations focused on renal health, treatment precision, and improved patient outcomes.
+                </p>
+<div class="flex flex-wrap gap-stack-md mt-stack-sm">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:scale-105 hover:bg-secondary-fixed-dim">
+                        Explore Products
+                    </button>
+<button class="border border-white/40 text-white px-8 py-4 rounded-lg font-label-md text-label-md font-bold transition-all duration-200 hover:bg-white/10 hover:border-white">
+                        Contact Us
+                    </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-white/60">
+<span class="material-symbols-outlined text-3xl">expand_more</span>
+</div>
+</header>
+<!-- Section 1: About -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Committed to Renal Healthcare Excellence</h2>
+<div class="flex flex-col gap-stack-md text-on-surface-variant font-body-md text-body-md">
+<p>At NephroCare, we recognize that chronic kidney disease (CKD) represents one of the most complex challenges in modern healthcare. Our commitment to nephrology is rooted in rigorous pharmaceutical research and a deep understanding of renal physiology.</p>
+<p>We provide a specialized portfolio of treatments aimed at slowing disease progression and managing the systemic complications of renal impairment. Our focus extends beyond the laboratory; we strive to build therapeutic trust with clinicians and patients through transparent clinical data and consistent formulation quality.</p>
+<p>By prioritizing patient-centric renal wellness, we aim to redefine the standard of care in kidney health management, ensuring that every therapeutic intervention contributes to a higher quality of life.</p>
+</div>
+<div class="mt-stack-lg flex gap-4 items-center">
+<div class="w-12 h-1 bg-secondary rounded-full"></div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Scientific Integrity First</span>
+</div>
+</div>
+<div class="reveal relative">
+<div class="rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
+<img alt="Clinical Research Environment" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARIUvwPu2KF5-DqsQokHm_coLd4Pm3Se7jVEf2H0ZbHH0znbnw88VQGoFjcst81tJ7kxy95Nn2f8bDyVKkXzJ3hYE8DzHLi1tbS9YNXobePSYDChbp86tqwx5Jyp6GDSumJLx7fqDZNhuzlndU-teHlCfvTIUbb-b_EPuqnRXL6w7H6AKvwpyiTyk1T-3okJUV-hYUf29bLRijiCdzQOPOMLlJPB5IS31WUhj2ECTPdcpCwzgfDGMDRvyo3weT63nUvACcQONmkonP"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary p-6 rounded-lg shadow-lg hidden lg:block">
+<div class="text-secondary-fixed font-headline-md text-headline-md">25+</div>
+<div class="text-white/80 font-caption text-caption uppercase tracking-tighter">Years of Research</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Highlights -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Therapeutic Focus Areas</h2>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-2xl mx-auto">Providing precise pharmaceutical interventions for the most critical aspects of renal care.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">nephrology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Chronic Kidney Care</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Comprehensive management strategies for CKD progression and metabolic stability.</p>
+</div>
+<!-- Card 2 -->
+<div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 100ms;">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">find_replace</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Renal Support</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Targeted pharmaceutical support for hemodialysis and peritoneal dialysis patients.</p>
+</div>
+<!-- Card 3 -->
+<div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 200ms;">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Electrolyte Balance</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Precision management of potassium, calcium, and phosphate levels in renal patients.</p>
+</div>
+<!-- Card 4 -->
+<div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 300ms;">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">medication_liquid</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Advanced Formulations</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">High-bioavailability treatments designed for complex patient profiles and comorbidities.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Why Choose -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/3 reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Why Partner with NephroCare?</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-lg">We combine clinical rigor with empathetic care models to deliver excellence in every dose.</p>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-2 group" href="#">
+                        Learn about our clinical standards
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-2/3 grid sm:grid-cols-2 gap-stack-lg reveal">
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-1">Quality Assured Formulations</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Manufactured under strict GMP standards to ensure safety and potency.</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-secondary text-3xl">groups</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-1">Clinically Trusted Solutions</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Proven outcomes supported by peer-reviewed clinical studies and data.</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-secondary text-3xl">health_metrics</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-1">Patient-Centric Focus</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Therapies designed to integrate seamlessly into complex patient regimens.</p>
+</div>
+</div>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-secondary text-3xl">award_star</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-1">Pharmaceutical Excellence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuous innovation in renal drug delivery and therapeutic efficacy.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Contact CTA -->
+<section class="py-section-padding bg-primary relative overflow-hidden">
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-12 transform translate-x-20"></div>
+<div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-on-primary-container/10 -skew-x-12"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center flex flex-col items-center">
+<h2 class="font-display-lg text-display-lg text-white mb-stack-md max-w-3xl">Supporting Your Clinical Practice with Precision Nephrology</h2>
+<p class="text-primary-fixed-dim font-headline-md text-headline-md mb-stack-lg max-w-2xl">Connect with our Medical Affairs team for specialized product monographs and therapeutic guidance.</p>
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<button class="bg-white text-primary px-10 py-4 rounded font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors">
+                    Contact Medical Affairs
+                </button>
+<button class="border border-white/20 text-white px-10 py-4 rounded font-label-md text-label-md font-bold hover:bg-white/10 transition-colors">
+                    Request Product Samples
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-primary border-t border-outline-variant">
+<div class="flex flex-col gap-stack-lg px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between gap-stack-lg">
+<div class="flex flex-col gap-4">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">NephroCare</div>
+<p class="text-on-surface-variant dark:text-on-primary-container max-w-xs font-body-md text-body-md">
+                        Advancing renal health through innovative pharmaceutical science and patient-centered therapies.
+                    </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Privacy Policy</span>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Data Protection</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Terms of Service</span>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Legal Notices</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">User Agreement</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Prescribing Information</span>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Product Safety</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Adverse Reporting</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold">Contact Medical Affairs</span>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Expert Inquiry</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Education Support</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md pt-stack-lg border-t border-outline-variant/30">
+<div class="font-caption text-caption text-on-surface-variant dark:text-on-primary-container">
+                    © 2024 NephroCare Pharmaceuticals. All rights reserved. Clinical data for professional use only.
+                </div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">science</span>
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">verified_user</span>
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-primary-container hover:text-secondary cursor-pointer transition-colors">hub</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Initial check on load
+        window.addEventListener("load", reveal);
+        
+        // Header transparency shift on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('bg-white/80', 'dark:bg-primary/80');
+                nav.classList.add('bg-white', 'dark:bg-primary');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('bg-white/80', 'dark:bg-primary/80');
+                nav.classList.remove('bg-white', 'dark:bg-primary');
+            }
+        });
+    </script>
+</body></html>
