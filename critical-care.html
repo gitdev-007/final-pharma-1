@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Critical Care Solutions | Mediruit Lifesciences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#002020",
+                      "surface-dim": "#d9dadf",
+                      "secondary-container": "#a2eded",
+                      "tertiary-fixed": "#a5eff0",
+                      "surface": "#f9f9ff",
+                      "background": "#f9f9ff",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#004f51",
+                      "accent-soft": "#A5EFF0",
+                      "primary-container": "#002045",
+                      "surface-container-low": "#f3f3f9",
+                      "surface-bright": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#2e476e",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f0f0f6",
+                      "secondary-fixed": "#a5eff0",
+                      "surface-tint": "#465f87",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e2e2e8",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#000b0b",
+                      "primary-fixed": "#d6e3ff",
+                      "secondary": "#13696a",
+                      "outline": "#74777f",
+                      "on-secondary-fixed": "#002020",
+                      "tertiary-container": "#002526",
+                      "surface-container": "#ededf3",
+                      "surface-white": "#FFFFFF",
+                      "on-surface": "#191c20",
+                      "secondary-fixed-dim": "#89d3d4",
+                      "primary-fixed-dim": "#aec7f5",
+                      "on-secondary-fixed-variant": "#004f50",
+                      "text-primary": "#002045",
+                      "on-secondary-container": "#1a6d6e",
+                      "on-primary-container": "#7089b3",
+                      "tertiary-fixed-dim": "#8ad3d4",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#44474e",
+                      "outline-variant": "#c4c6cf",
+                      "inverse-primary": "#aec7f5",
+                      "on-background": "#191c20",
+                      "primary": "#00091b",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e2e2e8",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e7e8ee",
+                      "on-primary-fixed": "#001b3c",
+                      "on-tertiary-container": "#499394",
+                      "inverse-surface": "#2e3035"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 9, 27, 0.95) 0%, rgba(0, 9, 27, 0.7) 50%, rgba(0, 9, 27, 0.4) 100%);
+        }
+        .bento-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: #13696a;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface sticky top-0 z-50 border-b border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop py-stack-md max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-lg">
+<img alt="Mediruit Lifesciences Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhzDlT1TsUrn3zEmHgK8NAmjpCspnwf8tFBd-6O2CD58gWK8dkUvFdnz63PZv4fg4YA4krjnooF-bxu1MWuuGg7dgYxP4jyAZNLei3_jNBe07Wri28nsiLwKWYs4PsbBe7VI7SUvfJo4DjO1TACiNp-TC__cf6EOT1IFdRvMKdo5LyzTlEDJ40VGUwvjutgBo3JloERiAZtzufuXigA14qv0_1_roSeP14FWMihWB-7ZESmCQpMEtRATdnh"/>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">About Us</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-lg text-label-lg" href="#">Products</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Innovation</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-label-lg text-label-lg hover:bg-secondary transition-all active:opacity-80">Patient Portal</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-overlay z-10"></div>
+<img alt="Critical Care Environment" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTcZjx0fY29rk2npQ6mQ8-HiAOiSpnRX_cPmtMigJD5F2OZzGo6AWpHSR0rYNTto2PN_fnVxIMAUv6A0-PS-7dqbnMJgzSSTDH-PfI64YZFOde3QGS0tRJe7SMWAd4lvFsOY3mTQ3TaRBErcONTBrwSUr8glhgJDCJnw6LVudxuLZGG9pG0GfvahDgT0rCInTlIgD9Zrh6EZVXtP7JzcSUq8nm1pT1ngOp5Zjt10SaP1NOBPJpGAgPgtnGboHW4_5sNKT75PhbKAhT"/>
+</div>
+<div class="relative z-20 w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1.5 bg-secondary/20 text-secondary-fixed-dim rounded-full font-label-lg text-label-lg border border-secondary/30 mb-stack-lg animate-fade-in">
+                    THERAPY FOCUS
+                </span>
+<h1 class="font-display-lg text-display-lg text-white mb-stack-md leading-tight">
+                    Critical Care <br/><span class="text-secondary-fixed-dim">Solutions</span>
+</h1>
+<p class="font-headline-md text-headline-md text-surface-variant mb-stack-lg">
+                    Advanced therapeutic solutions supporting emergency medicine, intensive care treatment, and high-dependency patient management.
+                </p>
+<p class="font-body-lg text-body-lg text-outline-variant mb-12 opacity-80">
+                    Our critical care portfolio is designed to support fast-response clinical treatment environments with trusted pharmaceutical precision, therapeutic reliability, and patient-focused care excellence.
+                </p>
+<div class="flex items-center gap-stack-lg">
+<button class="bg-secondary text-white px-8 py-4 rounded-lg font-label-lg text-label-lg hover:scale-105 transition-transform duration-300">
+                        Contact Us
+                    </button>
+<button class="text-white flex items-center gap-2 font-label-lg text-label-lg group">
+                        Learn More <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Therapeutic Focus Areas -->
+<section class="py-section-gap bg-surface">
+<div class="w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-stack-lg">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Therapeutic Focus Areas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Specialized categories of intervention designed for the highest stakes of patient stabilization and recovery.</p>
+</div>
+<div class="h-[1px] flex-grow bg-outline-variant mx-12 hidden md:block opacity-30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
+<div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">emergency_home</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Intensive Care Therapeutics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Management of life-threatening conditions with precise pharmaceutical intervention and sustained support.</p>
+<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
+<div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">shutter_speed</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Emergency Response Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Fast-acting treatments designed for rapid clinical response in acute care and trauma settings.</p>
+<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
+<div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">monitor_heart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">ICU Treatment Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Targeted support for critically ill patients requiring continuous monitoring and clinical stabilization.</p>
+<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
+<div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">settings_input_component</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Advanced Monitoring Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Pharmaceutical solutions optimized for integration with modern life-support and monitoring systems.</p>
+<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Committed to Excellence Section -->
+<section class="py-section-gap bg-surface-container-low overflow-hidden">
+<div class="w-full px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row gap-section-gap items-center">
+<div class="w-full lg:w-1/2 relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A clean high-tech medical laboratory setting where a scientist in a white coat is examining a blue fluid in a test tube. The environment is sterile with bright white and architectural blue accents. The lighting is precise and modern, reflecting a sense of clinical excellence and pharmaceutical rigor in a corporate pharmaceutical setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPFhjCjEZmCzmB4-_PgkVo6T8i-GDFU0c8-HXq4GAUp1uy_eQ5kaV4OdHwPWLnzfNyaTBq2Yvk-d6VIxi7INZXXQ2__esL-wwwNcrMEw1meoNhQT4qTpHXw7bGvnpyXaOzJbJIpi01tsC0GA7pNUUTJ9BLhZ7FMwnjv3Syg2sGSWjHyfOs916kDgR5FKz4zyb5nOxAyYBO_xTtAZJML5Q-0IvXlE4N9lBFtIcvqVXoqBG8-Z8bymgYDBwarScHAd_SvXKxHjDf3ayx"/>
+</div>
+<!-- Stats Floating Card -->
+<div class="absolute -bottom-10 -right-10 bg-primary p-stack-lg rounded-xl text-white shadow-2xl hidden md:block border border-white/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed-dim">verified</span>
+<div>
+<p class="font-headline-md text-headline-md">15+ Years</p>
+<p class="font-label-md text-label-md opacity-70">Emergency Medicine Focus</p>
+</div>
+</div>
+<div class="h-[1px] bg-white/10 my-4"></div>
+<p class="font-body-md text-body-md italic text-outline-variant">"Redefining standards in intensive care."</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">Excellence in Critical Patient Care</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg leading-relaxed">
+                        At Mediruit Lifesciences, we understand that critical care demands the highest levels of precision and reliability. Our commitment is rooted in providing clinicians with the pharmaceutical tools needed to manage complex emergencies and high-dependency environments.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">
+                        We focus on therapeutic trust, consistent formulation quality, and patient-centric outcomes to redefine standards in intensive care through rigorous research and development.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Clinical Precision First</h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Rigorously tested formulations for critical reliability.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Patient-Centric</h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Focusing on recovery timelines and stabilization quality.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Partner Section -->
+<section class="py-section-gap bg-primary-container text-white">
+<div class="w-full px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg mb-16">Why Partner With Mediruit?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter text-left">
+<div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+<div class="text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-4xl">inventory_2</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Quality Assured</h4>
+<p class="font-body-md text-body-md text-surface-variant/80">Acute care formulations meeting the strictest international quality and safety protocols.</p>
+</div>
+<div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+<div class="text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-4xl">clinical_notes</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Clinically Trusted</h4>
+<p class="font-body-md text-body-md text-surface-variant/80">Emergency solutions used by top healthcare institutions for critical patient stabilization.</p>
+</div>
+<div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+<div class="text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Patient-Centric</h4>
+<p class="font-body-md text-body-md text-surface-variant/80">Critical focus on long-term patient outcomes and quality of care in intensive settings.</p>
+</div>
+<div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+<div class="text-secondary-fixed-dim mb-4">
+<span class="material-symbols-outlined text-4xl">workspace_premium</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">ICU Excellence</h4>
+<p class="font-body-md text-body-md text-surface-variant/80">A legacy of therapeutic innovation dedicated to the highest levels of intensive care excellence.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="footer" class="bg-primary text-white w-full rounded-none">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+</div>
+<p class="text-white/80 text-body-md leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Micro-interactions and subtle effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-stack-md');
+            } else {
+                nav.classList.remove('py-2', 'shadow-md');
+                nav.classList.add('py-stack-md');
+            }
+        });
+
+        // Add subtle reveal animation on scroll for bento cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card-hover').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

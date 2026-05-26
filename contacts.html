@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -99,269 +98,295 @@
         .premium-card-shadow {
             box-shadow: 0 20px 40px -15px rgba(0, 53, 95, 0.08);
         }
+        @keyframes pulse-ripple {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        .pulse-marker {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #001e40;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 30, 64, 0.4);
+        }
+        .pulse-ripple {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #001e40;
+            border-radius: 50%;
+            animation: pulse-ripple 2s infinite;
+        }
+        .map-bg-pattern {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .navbar-logo {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 32px;
+            }
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-20">
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
 <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<div class="flex items-center">
-                <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="navbar-logo">
-            </div>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="index.html">Home</a>
-<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="about.html">About Us</a>
-<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="products.html">Products</a>
-<a class="font-headline-sm text-[18px] font-bold text-on-surface-variant hover:text-primary transition-all px-2 py-1" href="innovation.html">Innovation</a>
-<a class="font-headline-sm text-[18px] font-bold text-primary border-b-2 border-primary pb-1" href="contacts.html">Contact Us</a>
+<a href="index.html" class="flex items-center shrink-0">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
+</a>
+<div class="hidden md:flex items-center gap-8 lg:gap-12">
+    <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="index.html">Home</a>
+    <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="about.html">About Us</a>
+    <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="products.html">Products</a>
+    <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
+    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="contacts.html">Contact Us</a>
 </div>
 </div>
 </nav>
-<main>
+<main class="pt-16">
 <!-- HERO SECTION -->
-<section class="relative min-h-[600px] flex items-center justify-center text-center overflow-hidden">
+<section class="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 hero-overlay z-10"></div>
 <img alt="Pharmaceutical facility background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQWTFQKGQch0haZf90cssGDd-NqOAt5bgpwKIOOpWIwst6rwVSHU2hfuE2wJfUP2S59poAwKX0jBB2Tk_My9KXnz8AJJ0rr_o3KMO5FMFd49ZuLnnkDGhGBceWpyXzLcyGxOr7e-fARO8h1ceOoBYnMCyazGnMPLS3TnvAyarNAOPIOmE20PDOA0_f2pzoKbq11cfmjJ2F879PJddCjSvoQoIoE6uYdsu9kKwH1bM4evseQa3Fx4JS5-KkgnWOUkvOOl34WuCbHzs"/>
 </div>
-<div class="relative z-20 max-w-4xl px-margin-mobile md:px-margin-desktop animate-fade-in-up">
-<span class="inline-block px-4 py-1.5 mb-6 text-label-sm font-label-sm bg-success-teal/20 text-success-teal rounded-full border border-success-teal/30 tracking-widest uppercase">GET IN TOUCH</span>
-<h1 class="font-headline-xl text-headline-xl text-clinical-white mb-6 leading-tight">
-                    Connect With Mediruit Lifesciences
+<div class="relative z-20 max-w-4xl px-margin-mobile md:px-margin-desktop reveal-up active">
+<span class="inline-block px-5 py-2 mb-8 text-label-sm font-bold bg-success-teal/20 text-success-teal rounded-full border border-success-teal/30 tracking-[0.2em] uppercase">GET IN TOUCH</span>
+<h1 class="font-headline-xl text-display-lg md:text-headline-xl text-white font-[800] mb-8 leading-[1.1] [text-shadow:_0_4px_12px_rgba(0,0,0,0.3)]">
+                    Connect With <br class="hidden md:block"/> Mediruit Lifesciences
                 </h1>
-<p class="font-body-lg text-body-lg text-outline-variant/90 max-w-2xl mx-auto mb-10">
-                    We’re here to support partnerships, product inquiries, therapeutic collaborations, and pharmaceutical business communication.
+<p class="font-body-lg text-lg md:text-xl text-[#D6E8FF] font-[500] max-w-2xl mx-auto leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.2)]">
+                    We’re here to support partnerships, product inquiries, therapeutic collaborations, and pharmaceutical business communication with professional excellence.
                 </p>
-<a class="inline-flex items-center justify-center px-8 py-4 bg-success-teal text-white font-label-md rounded-lg shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300" href="#contact-form">
-                    Talk To Our Team
-                </a>
 </div>
 </section>
-<!-- CONTACT SECTION -->
-<section class="py-24 md:py-32 bg-background" id="contact-form">
+<!-- CONTACT INFO SECTION -->
+<section class="py-24 bg-background">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-<!-- Left: Form -->
-<div class="lg:col-span-7 bg-clinical-white p-8 md:p-12 rounded-xl premium-card-shadow border border-outline-variant/50">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Send an Inquiry</h2>
-<form class="space-y-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Full Name</label>
-<input class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all" placeholder="John Doe" type="text"/>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up">
+<div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">location_on</span>
 </div>
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Company Name</label>
-<input class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all" placeholder="Healthcare Inc." type="text"/>
+<h4 class="font-headline-sm text-primary mb-3 text-[20px]">Corporate Office</h4>
+<p class="text-on-surface-variant text-sm">Mediruit Lifesciences Pvt. Ltd.<br/>Registered Commercial Hub, Sector 12<br/>India</p>
 </div>
+<div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up" style="transition-delay: 100ms;">
+<div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">mail</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Email Address</label>
-<input class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all" placeholder="john@example.com" type="email"/>
+<h4 class="font-headline-sm text-primary mb-3 text-[20px]">Email</h4>
+<p class="text-on-surface-variant font-bold mb-1">info@mediruit.com</p>
+<p class="text-on-surface-variant text-xs opacity-70">Response within 24 business hours</p>
 </div>
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Phone Number</label>
-<input class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all" placeholder="+91 XXXXXXXXXX" type="tel"/>
+<div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up" style="transition-delay: 200ms;">
+<div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">call</span>
 </div>
+<h4 class="font-headline-sm text-primary mb-3 text-[20px]">Phone Inquiry</h4>
+<p class="text-on-surface-variant font-bold mb-1">+91 XXXXXXXXXX</p>
+<p class="text-on-surface-variant text-xs opacity-70">Direct line for business support</p>
 </div>
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Subject</label>
-<select class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all appearance-none">
-<option>Therapeutic Partnership</option>
-<option>Product Inquiry</option>
-<option>Research Collaboration</option>
-<option>General Business</option>
-</select>
-</div>
-<div>
-<label class="block text-label-sm text-on-surface-variant mb-2">Message</label>
-<textarea class="w-full px-4 py-3 bg-surface-muted border border-outline-variant rounded-lg focus:ring-0 focus:border-primary form-focus-glow transition-all" placeholder="How can we assist your pharmaceutical needs?" rows="5"></textarea>
-</div>
-<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary font-label-md rounded-lg hover:bg-primary-container transition-colors duration-300" type="submit">
-                                Send Inquiry
-                            </button>
-</form>
-</div>
-<!-- Right: Info Cards -->
-<div class="lg:col-span-5 space-y-6">
-<div class="bg-clinical-white p-6 rounded-xl border border-outline-variant/30 flex items-start space-x-4 hover:shadow-md transition-shadow">
-<div class="bg-pharma-blue-light p-3 rounded-lg text-primary">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h4 class="font-label-md text-primary mb-1">Corporate Office</h4>
-<p class="text-on-surface-variant">Mediruit Lifesciences Pvt. Ltd.<br/>Registered Commercial Hub, Sector 12<br/>India</p>
-</div>
-</div>
-<div class="bg-clinical-white p-6 rounded-xl border border-outline-variant/30 flex items-start space-x-4 hover:shadow-md transition-shadow">
-<div class="bg-pharma-blue-light p-3 rounded-lg text-primary">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h4 class="font-label-md text-primary mb-1">Email Correspondence</h4>
-<p class="text-on-surface-variant font-medium">info@mediruit.com</p>
-<p class="text-on-surface-variant text-sm">Response within 24 business hours</p>
-</div>
-</div>
-<div class="bg-clinical-white p-6 rounded-xl border border-outline-variant/30 flex items-start space-x-4 hover:shadow-md transition-shadow">
-<div class="bg-pharma-blue-light p-3 rounded-lg text-primary">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div>
-<h4 class="font-label-md text-primary mb-1">Phone Inquiry</h4>
-<p class="text-on-surface-variant font-medium">+91 XXXXXXXXXX</p>
-<p class="text-on-surface-variant text-sm">Direct line for business support</p>
-</div>
-</div>
-<div class="bg-on-background text-clinical-white p-8 rounded-xl">
-<div class="flex items-center space-x-3 mb-4 text-success-teal">
+<div class="bg-on-background text-clinical-white p-8 rounded-xl flex flex-col justify-center reveal-up" style="transition-delay: 300ms;">
+<div class="flex items-center space-x-3 mb-6 text-success-teal">
 <span class="material-symbols-outlined">schedule</span>
-<span class="font-label-md uppercase tracking-wider">Working Hours</span>
+<span class="font-label-md uppercase tracking-widest font-bold">Working Hours</span>
 </div>
-<div class="flex justify-between items-center border-b border-outline-variant/20 pb-3 mb-3">
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-3 mb-3 text-sm">
 <span class="text-outline-variant">Mon – Sat</span>
-<span class="font-semibold">9 AM – 6 PM</span>
+<span class="font-bold">9 AM – 6 PM</span>
 </div>
-<p class="text-sm text-outline-variant">Closed on Sundays and National Holidays.</p>
-</div>
+<p class="text-xs text-outline-variant italic">Closed on Sundays and National Holidays.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- THERAPEUTIC SUPPORT GRID -->
 <section class="py-24 bg-surface-container-low overflow-hidden">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Therapeutic Support Inquiries</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Specialized support channels for our core therapeutic categories.</p>
-</div>
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16 reveal-up">Therapeutic Support Inquiries</h2>
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-<!-- Cards loop -->
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A clean line-art icon representing nephrology in pharmaceutical teal and blue, set on a minimal circular background. The style is modern, clinical, and high-end, fitting for a corporate healthcare website. Lighting is soft and even, emphasizing precision and medical expertise in a life sciences context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">kidneys</span>
 </div>
-<h4 class="font-label-md text-primary">Nephrology</h4>
+<h4 class="font-label-md text-primary font-bold">Nephrology</h4>
 </div>
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A sophisticated medical icon representing oncology, featuring a minimal and professional line-art design. The color palette uses deep navy and pharmaceutical teal. This graphic is centered in a soft, bright circular container, evoking a sense of calm and clinical assurance. The overall aesthetic is highly polished and corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 50ms;">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
 </div>
-<h4 class="font-label-md text-primary">Oncology</h4>
+<h4 class="font-label-md text-primary font-bold">Oncology</h4>
 </div>
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A professional cardiology icon designed with clean, minimalist lines in healthcare teal and primary blue. The icon is part of a premium set, presented on a clinical white background with soft, ambient lighting. It represents heart health expertise through a modern, corporate pharmaceutical design lens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 100ms;">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">cardiology</span>
 </div>
-<h4 class="font-label-md text-primary">Cardiology</h4>
+<h4 class="font-label-md text-primary font-bold">Cardiology</h4>
 </div>
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A high-quality pharmaceutical line-art icon for gastroenterology, utilizing a refined color scheme of teal and blue. The visual is crisp and intentional, designed for a modern medical portal. It sits within a circular frame that glows slightly under high-key lighting, maintaining a clean and clinical look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 150ms;">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">digestive</span>
 </div>
-<h4 class="font-label-md text-primary">Gastroenterology</h4>
+<h4 class="font-label-md text-primary font-bold">Gastro</h4>
 </div>
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A clean, authoritative icon representing critical care medicine. The design features elegant line work in corporate blue and teal. The background is a sterile, bright medical white, and the icon is presented with an architectural precision that communicates reliability and clinical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 200ms;">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">emergency</span>
 </div>
-<h4 class="font-label-md text-primary">Critical Care</h4>
+<h4 class="font-label-md text-primary font-bold">Critical Care</h4>
 </div>
-<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300">
-<div class="w-16 h-16 mx-auto mb-4 bg-surface-muted rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<img alt="Therapeutic Icon" class="w-10 h-10 object-contain opacity-80 group-hover:opacity-100" data-alt="A minimalist and elegant line-art icon for respiratory health. The color palette is composed of soft teals and professional navy. This image is part of a series of pharmaceutical icons, emphasizing a modern, concierge healthcare experience with plenty of white space and a polished, professional finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb3glwIJNKqvWiyVO3wjDjL0yGWhZ7ExVde3NVBKHqe75FGQz_xsVh5W5vJAjjfnoJesMsnPAsr4peFch1K78rJ3nZdNVNRnxNmywQ8I-Q3L3lpvt7Djf2cpVgGKh0aFvkoRhvWqRMXbsx7iC5Mk4DF7z0hB7JRYp2y9497e66NpddwRtKzRygw7i9_T5Ocadh0Kyt_2cLZybZYmaBfWZqUZA5xnWq-vXyDpPkaD-6jEnNjs9H9jGFejCDazMCOe7GmnUg2obbCPw"/>
+<div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 250ms;">
+<div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">pulmonology</span>
 </div>
-<h4 class="font-label-md text-primary">Respiratory</h4>
-</div>
+<h4 class="font-label-md text-primary font-bold">Respiratory</h4>
 </div>
 </div>
-</section>
-<!-- MAP SECTION -->
-<section class="w-full h-[450px] relative bg-surface-muted">
-<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative" data-location="Mumbai, India" style="">
-<!-- Simple placeholder for Map UI -->
-<div class="absolute inset-0 bg-pharma-blue-light/20 flex items-center justify-center">
-<div class="text-center p-12 bg-clinical-white/90 backdrop-blur-sm rounded-xl shadow-2xl border border-white max-w-md">
-<span class="material-symbols-outlined text-primary text-5xl mb-4">location_on</span>
-<h3 class="font-headline-md text-primary mb-2">Our Presence</h3>
-<p class="text-on-surface-variant mb-6">Strategic operations hubs located in prime pharmaceutical corridors.</p>
-<button class="px-6 py-2 border-2 border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-white transition-all">
-                            View on Google Maps
-                        </button>
-</div>
-</div>
-<div class="w-full h-full bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/72.8777,19.0760,12/1280x450?access_token=pk.eyJ1Ijoiam9obmRvZSIsImEiOiJjbGV4eHh4eHgifQ==')] bg-cover bg-center"></div>
 </div>
 </section>
-<!-- FINAL CTA -->
-<section class="py-20 bg-primary text-clinical-white text-center">
+<!-- OFFICE LOCATION SECTION -->
+<section class="py-24 md:py-32 bg-surface overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<h2 class="font-headline-lg text-headline-lg mb-6">Looking to Partner With a Trusted Pharmaceutical Company?</h2>
-<p class="font-body-lg text-primary-fixed-dim/80 mb-10 max-w-2xl mx-auto">Discover how Mediruit Lifesciences can elevate your clinical supply chain and therapeutic development.</p>
-<button class="px-12 py-4 bg-success-teal text-white font-label-md rounded-full hover:scale-105 transition-transform duration-300 shadow-lg">
-                    Contact Our Team
-                </button>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Office Info -->
+        <div class="reveal-up border-l-4 border-primary pl-10">
+            <span class="text-secondary font-bold tracking-widest uppercase block mb-4">Our Headquarters</span>
+            <h2 class="font-headline-xl text-primary mb-6">Jaipur, India</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-headline-sm text-primary mb-2">Mediruit Lifesciences Pvt. Ltd.</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">Jaipur, Rajasthan, India</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">call</span>
+                        </div>
+                        <span class="font-medium">+91 XXXXXXXXXX</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                        </div>
+                        <span class="font-medium">info@mediruit.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Custom World Map Panel -->
+        <div class="relative reveal-up delay-200">
+            <div class="bg-surface-container-low rounded-[40px] p-4 shadow-2xl border border-outline-variant/20 overflow-hidden group">
+                <div class="relative aspect-[4/3] bg-white rounded-[32px] overflow-hidden map-bg-pattern flex items-center justify-center">
+                    <!-- Stylized World Map Background (SVG) -->
+                    <svg class="absolute inset-0 w-full h-full opacity-[0.07] grayscale" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 200 Q 200 150 250 200 T 350 200 T 450 250 T 600 200 T 750 150 T 850 200" stroke="currentColor" fill="transparent" stroke-width="20" stroke-linecap="round"/>
+                        <path d="M100 400 Q 250 350 400 400 T 600 450 T 800 400" stroke="currentColor" fill="transparent" stroke-width="25" stroke-linecap="round"/>
+                        <circle cx="200" cy="150" r="40" fill="currentColor"/>
+                        <circle cx="800" cy="450" r="60" fill="currentColor"/>
+                        <circle cx="500" cy="300" r="100" fill="currentColor"/>
+                    </svg>
+                    
+                    <!-- Pulsing Location Marker (Jaipur, India approx) -->
+                    <div class="absolute top-[45%] left-[68%] z-20">
+                        <div class="relative">
+                            <div class="pulse-ripple"></div>
+                            <div class="pulse-marker"></div>
+                            <!-- Floating Label -->
+                            <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Jaipur Office
+                                <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
-</main>
 <!-- Footer -->
-<footer id="footer" class="bg-primary text-on-primary dark:bg-surface-container-highest w-full rounded-none">
+<footer id="footer" class="bg-primary text-white w-full rounded-none">
 <div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <div class="col-span-1">
 <div class="mb-6">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
 </div>
-<p class="text-primary-fixed dark:text-on-surface-variant text-body-md opacity-80 leading-relaxed mb-8">
+<p class="text-white/80 text-body-md leading-relaxed mb-8">
                     Elevating pharmaceutical standards through scientific precision and patient-centric care.
                 </p>
 </div>
 <div class="col-span-1 lg:pl-12">
-<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Quick Links</h4>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
 <ul class="space-y-4">
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="index.html">Home</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="about.html">About Us</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="products.html">Products</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="innovation.html">Innovation</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="contacts.html">Contact Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
 </ul>
 </div>
 <div class="col-span-1 lg:pl-12">
-<h4 class="font-headline-sm text-headline-sm mb-6 text-secondary-fixed dark:text-primary">Therapeutic</h4>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
 <ul class="space-y-4">
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="nephrology.html">Nephrology</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/oncology.html">Oncology</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/cardiology.html">Cardiology</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/gastroenterology.html">Gastroenterology</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/critical-care.html">Critical Care</a></li>
-<li><a class="text-primary-fixed dark:text-on-surface-variant hover:text-white transition-colors hover:underline decoration-secondary-fixed" href="therapeutics/respiratory.html">Respiratory</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
 </ul>
 </div>
 </div>
-<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-primary-fixed opacity-60">
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
             © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
         </div>
 </footer>
 <script>
-        // Smooth reveal interaction
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
+    // Reveal on scroll logic
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('section > div').forEach(el => {
-                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-                observer.observe(el);
-            });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
         });
-    </script>
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+    // Sticky Navbar logic
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-md', 'h-14');
+            nav.classList.remove('h-16');
+        } else {
+            nav.classList.remove('shadow-md', 'h-14');
+            nav.classList.add('h-16');
+        }
+    });
+</script>
 </body></html>

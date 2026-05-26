@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oncology Care Solutions | Mediruit Lifesciences</title>
+<meta content="Advanced pharmaceutical therapies supporting cancer care and precision oncology excellence." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#002045",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed": "#a5eff0",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#8ad3d4",
+                        "on-surface": "#191c20",
+                        "surface-white": "#FFFFFF",
+                        "on-secondary-fixed": "#002020",
+                        "secondary-fixed-dim": "#89d3d4",
+                        "border-subtle": "#E5E7EB",
+                        "on-tertiary-fixed-variant": "#004f51",
+                        "on-secondary-container": "#1a6d6e",
+                        "background": "#f9f9ff",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary-fixed-variant": "#004f50",
+                        "tertiary": "#000b0b",
+                        "secondary": "#13696a",
+                        "surface-variant": "#e2e2e8",
+                        "surface-container": "#ededf3",
+                        "surface-container-highest": "#e2e2e8",
+                        "text-muted": "#4B5563",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#74777f",
+                        "inverse-on-surface": "#f0f0f6",
+                        "surface-container-high": "#e7e8ee",
+                        "primary": "#00091b",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3035",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-container": "#002526",
+                        "inverse-primary": "#aec7f5",
+                        "on-surface-variant": "#44474e",
+                        "tertiary-fixed": "#a5eff0",
+                        "on-error-container": "#93000a",
+                        "text-primary": "#002045",
+                        "primary-fixed-dim": "#aec7f5",
+                        "on-primary-fixed-variant": "#2e476e",
+                        "surface-tint": "#465f87",
+                        "on-background": "#191c20",
+                        "on-tertiary-container": "#499394",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f9",
+                        "outline-variant": "#c4c6cf",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#002020",
+                        "surface-dim": "#d9dadf",
+                        "secondary-container": "#a2eded",
+                        "surface": "#f9f9ff",
+                        "on-primary-container": "#7089b3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-padding-mobile": "40px",
+                        "container-max": "1280px",
+                        "section-padding-desktop": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0, 9, 27, 0.9) 0%, rgba(0, 9, 27, 0.4) 100%);
+        }
+        .stat-card {
+            box-shadow: 0px 4px 12px rgba(0, 32, 69, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-white dark:bg-surface-container-lowest border-b border-border-subtle dark:border-outline-variant flat no shadows transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Mediruit</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">About Us</a>
+<a class="font-label-lg text-label-lg text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Products</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Innovation</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact Us</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded hover:opacity-90 transition-opacity">Get in Touch</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[800px] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Oncology Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLFFLL6guj1I_SH73eOp9WsJOcjTsGhjLW4in4SuALYXX4P0Fh1qI2jnHVgcF04xGqAkG28EtUsBtuZIE8lrWkOyuHm99NF9-MBnFXWgNAqccy94m8AtUbtggmjQ1IGIpn3SNLtp3y3jRy63raRCHINDWB1CUzmJf_wrDbdso9tugVESKBFpvRsx2Y4NDgi0j_4sj36WkM1RdetTJjkn15NUvIPScAGgkdZiNjKNpseQjsIoZVhr_dberBCoKecM8_FOmCZg2qTQ3_"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-white">
+<span class="inline-block bg-secondary text-white font-label-md text-label-md px-3 py-1 mb-6 rounded-sm uppercase tracking-wider">Therapy Focus</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Oncology Care Solutions</h1>
+<p class="font-headline-md text-headline-md mb-4 text-white/90">Advanced therapeutic solutions supporting cancer care, precision treatment, and patient-centered oncology excellence.</p>
+<p class="font-body-lg text-body-lg mb-10 text-white/80">Our oncology portfolio is designed to support modern cancer treatment pathways with trusted pharmaceutical innovation, clinical precision, and therapeutic reliability.</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-white font-label-lg text-label-lg px-8 py-4 rounded-sm hover:bg-secondary/90 transition-all">Contact Us</button>
+<button class="border border-white text-white font-label-lg text-label-lg px-8 py-4 rounded-sm hover:bg-white/10 transition-all">Explore Therapy</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
+<span class="material-symbols-outlined text-4xl" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Scientific Commitment Section -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Committed to Oncology Healthcare Excellence</h2>
+<div class="space-y-6 text-on-surface-variant font-body-md text-body-md">
+<p>At Mediruit Lifesciences, we recognize that oncology represents one of the most critical frontiers in modern medicine. Our commitment to cancer care is rooted in rigorous pharmaceutical research and a deep understanding of oncological pathways.</p>
+<p>We provide a specialized portfolio of treatments aimed at managing complex cancer care needs and supporting patients through their treatment journey. Our focus extends beyond the laboratory; we strive to build therapeutic trust with clinicians and patients through transparent clinical data.</p>
+<p>By prioritizing patient-centric oncology wellness, we aim to redefine the standard of care in cancer management, ensuring that every therapeutic intervention contributes to a higher quality of life and better clinical outcomes.</p>
+</div>
+<div class="mt-10 flex items-center gap-4">
+<div class="w-12 h-[2px] bg-secondary"></div>
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Scientific Integrity First</span>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<img alt="Research Lab" class="rounded-lg shadow-xl w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWLLzpz_pG9KqVKc46o_yHFvlRM3SpCGoeFz_662Up7_vOFv4-EPI-vnTQNJBHwvDJbRwGXmWCrBB2QjM96kQENjhrWaR_2yM2XEXL4bE2a2UEIeAwWv955JB3fGLbp0vcTjC9kcn6vnggGuEz1-93sabkWhhtZKuAp7L7t_DP5XOz4FsU2lTlyxqa93b-TjtPcrJEeOoXsOmHpmv4Qkj7G-W1FfkVB21bDYbl1OaQhTpJqrpgpugIjVJgCqEUNEnHbccuZ7PIK-A-"/>
+<div class="absolute -bottom-6 -left-6 bg-primary-container text-white p-8 rounded-lg stat-card">
+<div class="font-display-lg text-display-lg-mobile text-white leading-none">18+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-white/70 mt-2">Years of Experience</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Therapeutic Focus Areas -->
+<section class="bg-surface-container py-section-padding-desktop">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Therapeutic Focus Areas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Providing precise pharmaceutical interventions for the most critical aspects of cancer care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Cancer Treatment Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive management strategies for treatment stability and patient well-being during intense therapies.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="science">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Chemotherapy Adjunct Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Targeted pharmaceutical support designed to manage the side effects and systemic impact of chemotherapy regimens.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Targeted Oncology Therapies</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision management of advanced treatments focusing on molecular pathways and specialized delivery systems.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
+<div class="mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medication_liquid">medication_liquid</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Advanced Formulations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-bioavailability treatments designed for complex patient profiles and oncology-specific metabolic needs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Partner Section -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Why Partner with Mediruit?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We combine clinical rigor with empathetic care models to deliver excellence in every dose, ensuring that medical providers have the tools they need for superior oncology outcomes.</p>
+<a class="group flex items-center gap-2 font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#">
+                        Learn about our clinical standards
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified">verified</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Quality Assured Formulations</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Manufactured under strict GMP standards to ensure safety and potency across all oncology lines.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="groups">groups</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Clinically Trusted Solutions</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Proven outcomes supported by peer-reviewed clinical studies and comprehensive trial data.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="health_metrics">health_metrics</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Patient-Centric Focus</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Therapies designed to integrate seamlessly into complex oncology patient regimens for better adherence.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="award_star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">award_star</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Pharmaceutical Excellence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuous innovation in oncology drug delivery systems and enhanced therapeutic efficacy.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary-container text-white py-24">
+<div class="px-gutter max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 max-w-4xl mx-auto">Supporting Your Clinical Practice with Precision Oncology</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-12 max-w-2xl mx-auto">Connect with our Medical Affairs team for specialized product monographs, clinical documentation, and therapeutic guidance tailored to your oncology practice.</p>
+<button class="bg-white text-primary-container font-label-lg text-label-lg px-12 py-5 rounded-sm hover:bg-surface-container transition-all uppercase font-bold">Contact Us</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer id="footer" class="bg-primary text-white w-full rounded-none">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+</div>
+<p class="text-white/80 text-body-md leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+
+        // Hover effects for therapeutic cards
+        const cards = document.querySelectorAll('.bg-surface-white');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

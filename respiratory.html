@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Respiratory Care Solutions | Mediruit Lifesciences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#13696a",
+                    "surface-tint": "#465f87",
+                    "primary-container": "#002045",
+                    "on-secondary-fixed-variant": "#004f50",
+                    "on-surface-variant": "#44474e",
+                    "on-primary-container": "#7089b3",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c4c6cf",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "on-tertiary-fixed": "#002020",
+                    "on-background": "#191c20",
+                    "deep-navy": "#002045",
+                    "outline": "#74777f",
+                    "surface-container-low": "#f3f3f9",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-container": "#002526",
+                    "tertiary": "#000b0b",
+                    "on-surface": "#191c20",
+                    "inverse-primary": "#aec7f5",
+                    "tech-cyan": "#A5EFF0",
+                    "on-tertiary-container": "#499394",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f0f0f6",
+                    "surface-white": "#FFFFFF",
+                    "primary": "#00091b",
+                    "surface-dim": "#d9dadf",
+                    "on-primary-fixed-variant": "#2e476e",
+                    "tertiary-fixed": "#a5eff0",
+                    "error": "#ba1a1a",
+                    "clinical-teal": "#13696A",
+                    "surface-container": "#ededf3",
+                    "on-secondary-fixed": "#002020",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#8ad3d4",
+                    "secondary-fixed-dim": "#89d3d4",
+                    "surface": "#f9f9ff",
+                    "secondary-container": "#a2eded",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e8",
+                    "surface-container-high": "#e7e8ee",
+                    "primary-fixed-dim": "#aec7f5",
+                    "inverse-surface": "#2e3035",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9ff",
+                    "secondary-fixed": "#a5eff0",
+                    "surface-container-highest": "#e2e2e8",
+                    "on-tertiary-fixed-variant": "#004f51",
+                    "on-primary-fixed": "#001b3c",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#1a6d6e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding": "80px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "container-max-width": "1200px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "label-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(0,32,69,0.9) 0%, rgba(0,32,69,0.7) 50%, rgba(0,32,69,0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-surface-white dark:bg-primary border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none sticky top-0 z-50 transition-all h-20 flex items-center">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex items-center gap-8">
+<img alt="Mediruit Lifesciences Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhIaZKik991SkP9x9D3EC3_Gu6jAVzrUv-8FPaUmSa50bny49XmyVIJzgdxFJ-Cao1W2_xqHySUCadvi0gqzPvQWmHrwXfCSRiMqkkno3KgfQbl-nvqwVeUP7Jk2mTbOd99Hfhr7ZCmOohumLj9laDX6uwOXhJxztuOHOdAQSrxa5RtiykNJU54jHSpIppo1juiKgHgHvHSWi5o-EtjUL6HgMVI7AQ6EAGbOn0TgTE-h2FWKOrtfqnTfWE"/>
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-clinical-teal dark:text-tech-cyan border-b-2 border-clinical-teal pb-1 text-label-lg font-label-lg transition-all" href="#">Therapeutics</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal dark:hover:text-tech-cyan transition-colors duration-200 text-label-lg font-label-lg" href="#">Pipeline</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal dark:hover:text-tech-cyan transition-colors duration-200 text-label-lg font-label-lg" href="#">Clinical Trials</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal dark:hover:text-tech-cyan transition-colors duration-200 text-label-lg font-label-lg" href="#">Innovation</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal dark:hover:text-tech-cyan transition-colors duration-200 text-label-lg font-label-lg" href="#">Sustainability</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal dark:hover:text-tech-cyan transition-colors duration-200 text-label-lg font-label-lg" href="#">About Us</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-deep-navy text-surface-white px-6 py-2 rounded font-label-lg text-label-lg transition-all active:opacity-80 hover:opacity-90">Contact Us</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A clean, high-tech pharmaceutical lab environment with blue and white tones. Professional clinical equipment is visible in a blurred background, creating a sense of scientific innovation and precision. The lighting is bright and sterile, emphasizing a modern light-mode aesthetic suitable for a premium healthcare brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMBlklaLl_wGcvcJqTnWpYbuc5q6oXOzxl24NBnH-kP3Ee9flHGS-cSTIySBJYuYZA8XaExK5O9I947DSTP5BZ4sXTQ8ivbBCFW9iADO3EYOnIjTQs8RKdoRS2YU3IBitfQZzxQ4I45w49sjqNVZ2MFAEdjBxCxwJOzCkUr22P2ALdyhXjakw_DSLuWwLraW7eo-LoDQ3ktLXhd5ou6qA1t6aoS2SDcOA40fQhr6ZAVt9B-0a1WaJnYT2l9Qgc4YsoM0gNi6MoUd8"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 w-full px-margin-desktop max-w-container-max-width mx-auto">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 mb-6 bg-tech-cyan bg-opacity-20 border border-tech-cyan text-tech-cyan font-label-md text-label-md tracking-widest rounded-full">THERAPY FOCUS</span>
+<h1 class="font-display-lg text-display-lg text-surface-white mb-6">Respiratory Care Solutions</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-4">Advanced therapeutic solutions supporting pulmonary health, respiratory care, and patient-centered breathing wellness.</p>
+<p class="font-body-md text-body-md text-surface-white opacity-80 mb-8 leading-relaxed">Our respiratory portfolio is designed to support modern pulmonary treatment pathways with trusted pharmaceutical innovation, clinical precision, and therapeutic excellence.</p>
+<button class="bg-clinical-teal text-surface-white px-8 py-3 rounded-lg font-label-lg text-label-lg transition-all hover:bg-opacity-90 shadow-lg">Contact Us</button>
+</div>
+</div>
+</header>
+<!-- Content Section 1: Committed to Excellence -->
+<section class="py-section-padding px-margin-desktop bg-surface">
+<div class="max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Committed to Excellence in Respiratory Medicine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        At Mediruit Lifesciences, we understand the critical nature of pulmonary health. Our commitment extends beyond developing medications; we strive to provide comprehensive support for clinical decision-making through high-purity therapeutic agents and rigorous scientific validation.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-clinical-teal font-headline-lg text-headline-lg mb-1">98.4%</div>
+<div class="font-label-md text-label-md text-on-surface-variant">CLINICAL EFFICACY TARGET</div>
+</div>
+<div>
+<div class="text-clinical-teal font-headline-lg text-headline-lg mb-1">120+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">ACTIVE TRIALS WORLDWIDE</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-xl aspect-video">
+<img class="w-full h-full object-cover" data-alt="A female healthcare professional in a white lab coat using a digital tablet to explain lung health to a patient. The setting is a bright, modern medical consultation room with large windows and professional medical devices visible in the background. The atmosphere is professional, calm, and patient-centric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFygtQyUROXIlZNW8crhgsbLalXwEDiiuLvG9LH00_St1w_apT8VgWTRUZgJgIY99RyhYREfeAGYgLzlDZcc-0ScChtUMpqCJY3T_GN9ko5B9WYS78CE5ODhrw2JRwklkC3BefSKFkKoJ_vLKZFeYL2iRU_QxHQavnDzE-hcw8YyoJooyHQiUDm1I4ku6IrlHhVylRUmQOimNxNzupC0NX6FGr8OBT7JqqbFLBQw7HBcDJBTBRNbvHdkoZfcZlqWAJzz6OpK_s9J0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Section 2: Therapeutic Focus Areas -->
+<section class="py-section-padding px-margin-desktop bg-surface-white">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Therapeutic Focus Areas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Providing targeted solutions for the most pressing challenges in pulmonary medicine.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
+<div class="mb-6 text-clinical-teal">
+<span class="material-symbols-outlined text-[48px]" data-icon="air">air</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Asthma Management</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Precision-engineered therapeutics designed to provide consistent control and relief for chronic asthma patients.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
+<div class="mb-6 text-clinical-teal">
+<span class="material-symbols-outlined text-[48px]" data-icon="respiratory_rate">respiratory_rate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">COPD Treatment Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Comprehensive care solutions focused on improving quality of life and respiratory function in chronic obstructive pulmonary disease.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
+<div class="mb-6 text-clinical-teal">
+<span class="material-symbols-outlined text-[48px]" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Pulmonary Care Excellence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Advanced support for complex pulmonary conditions through specialized research and clinical innovation.</p>
+</div>
+<!-- Card 4 -->
+<div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
+<div class="mb-6 text-clinical-teal">
+<span class="material-symbols-outlined text-[48px]" data-icon="self_care">self_care</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Breathing Wellness</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Holistic patient education and support tools designed to promote healthy breathing habits and preventative care.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Section 3: Why Partner -->
+<section class="py-section-padding px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A modern research lab with specialized respiratory testing equipment. The scene is bright and highlights precision technology used for pharmaceutical development. Researchers in protective gear are visible in the background, reinforcing a theme of clinical excellence and safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvO-rg1RwbGLqjudLRy5wJoZTplUob3vrO98Z5bAJ9brlO1QLxNYxnTSdYqcE7kIKoofTtnJdM7nTB1IgU5T5FnTIbLitAWLW0K0x-OxrEKTeXoI31nBARdegzLYhR4ObhVECFztYJNIeQKaP2TwEgOTYRGnJEqNeQtrc3m9vzyJeyGHz3AEhbbYATh4s6WsHOMEICmt-09688urGBBurdXSDYNneGYvAes7D6zO_bQxR1RdNRqcEBjDczuAN7qJYPc7k9m07goCw"/>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-8">Why Partner with Mediruit Lifesciences?</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy mb-1">State-of-the-Art Research</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Utilizing the latest in molecular science to develop high-performance respiratory molecules.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy mb-1">Rigorous Quality Assurance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maintaining GMP standards that exceed international regulatory requirements for safety.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy mb-1">Clinical Support Network</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated teams providing 24/7 technical and clinical support to healthcare institutions.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding px-margin-desktop bg-deep-navy text-surface-white text-center">
+<div class="max-w-container-max-width mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-6">Supporting Your Clinical Practice</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-3xl mx-auto mb-10">Access our comprehensive clinical portfolio, therapeutic data, and educational resources for healthcare professionals.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-clinical-teal text-surface-white px-10 py-4 rounded font-label-lg text-label-lg hover:bg-opacity-90 transition-all">Request Clinical Data</button>
+<button class="border border-tech-cyan text-tech-cyan px-10 py-4 rounded font-label-lg text-label-lg hover:bg-tech-cyan hover:bg-opacity-10 transition-all">Healthcare Partner Login</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="footer" class="bg-primary text-white w-full rounded-none">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+</div>
+<p class="text-white/80 text-body-md leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Micro-interactions
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+
+        // Simple reveal animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

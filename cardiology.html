@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cardiology Care Solutions | CardioFlow Therapeutics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3f9",
+                        "on-primary-fixed": "#001b3c",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#89d3d4",
+                        "inverse-surface": "#2e3035",
+                        "surface-bright": "#f9f9ff",
+                        "on-surface-variant": "#44474e",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#1a6d6e",
+                        "surface-container": "#ededf3",
+                        "surface-variant": "#e2e2e8",
+                        "clinical-teal": "#13696A",
+                        "deep-navy": "#002045",
+                        "outline-variant": "#c4c6cf",
+                        "on-primary-fixed-variant": "#2e476e",
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#d9dadf",
+                        "primary-fixed-dim": "#aec7f5",
+                        "on-tertiary-container": "#499394",
+                        "on-secondary-fixed-variant": "#004f50",
+                        "primary": "#00091b",
+                        "on-primary-container": "#7089b3",
+                        "surface-container-highest": "#e2e2e8",
+                        "inverse-on-surface": "#f0f0f6",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary-fixed-variant": "#004f51",
+                        "surface-container-high": "#e7e8ee",
+                        "surface-tint": "#465f87",
+                        "on-tertiary-fixed": "#002020",
+                        "on-secondary-fixed": "#002020",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000b0b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "primary-container": "#002045",
+                        "tertiary-container": "#002526",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#a5eff0",
+                        "tertiary-fixed-dim": "#8ad3d4",
+                        "surface-white": "#FFFFFF",
+                        "oxygen-blue": "#A5EFF0",
+                        "on-background": "#191c20",
+                        "outline": "#74777f",
+                        "on-surface": "#191c20",
+                        "inverse-primary": "#aec7f5",
+                        "secondary": "#13696a",
+                        "tertiary-fixed": "#a5eff0",
+                        "secondary-container": "#a2eded"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 32, 69, 0.95) 0%, rgba(0, 32, 69, 0.7) 50%, rgba(0, 32, 69, 0.1) 100%);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-white dark:bg-deep-navy border-b border-outline-variant/15 docked full-width top-0 sticky z-50 transition-all duration-300">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<img alt="Mediruit Lifesciences Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhSc5ySoQzMdn8SAqWg5PyOzvto3eCTitLCR1JttVkZXH_WAN2iRBRb4Lvmeu0hrAS7QkFQxBaXc3VnYUrwnv1eTNRoJFwTvyvbE3geB87SA3Wt73G4xlW0uAwv1Rs45UXbzAk5tO8hJ4ppdL7ZbeA-P22qnQfY-IDXffazZl6d7wgzDW1aqkCtq4I2L63KW3RmuiKdHT_psqo-T0y1CDm34QKPrvwiXJUtwRZSonOlluem1eIGUacLtv8"/>
+<span class="font-headline-md text-headline-md font-bold text-deep-navy dark:text-primary-fixed hidden lg:block">CardioFlow Therapeutics</span>
+</div>
+<div class="hidden md:flex gap-8 items-center font-label-lg text-label-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal transition-colors duration-200 cursor-pointer active:opacity-80" href="#">About Us</a>
+<a class="text-clinical-teal border-b-2 border-clinical-teal pb-1 cursor-pointer active:opacity-80" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Innovation</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-clinical-teal transition-colors duration-200 cursor-pointer active:opacity-80" href="#">Contact Us</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 xl:w-48" placeholder="Search therapies..." type="text"/>
+</div>
+<button class="bg-deep-navy text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-DEFAULT hover:bg-clinical-teal transition-all duration-300 active:opacity-80">
+                    Request Demo
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Section 1: HERO SECTION -->
+<section class="relative h-[640px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Cardiology Center" class="w-full h-full object-cover" data-alt="A high-end, futuristic cardiology clinic interior with soft blue ambient lighting and state-of-the-art diagnostic equipment. A large digital screen in the background displays a complex, real-time electrocardiogram reading. The atmosphere is clinically sterile yet calming, featuring clean white surfaces and minimalist architectural lines, echoing a sense of advanced medical innovation and professional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5en4x2yEwgQgCW93SFZMUFQrOPOU74tT0bFnoMjrZH8k5pEYSfj3BagebpwUsfXSmtgfsx_IYchKPEjzwEYi_D4iYNC8B2Azcm1hXypL4xQ3Ugjb2eOQoQTg8OQsAgkauNtwGnudRazLRvG4MPnOgbkRy8WfYcxaJ5N_ChqEiXM-OmAf-7ALE3ixzbeP6FL3eWiuV0JQ2o9thXtFpokS6_dToOh4s3FZdVRO-oZDTViOjC5-f2mQREqNy0B2oNpQErftMfmSgoxU"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-oxygen-blue text-deep-navy px-4 py-1.5 font-label-lg text-label-lg rounded-full mb-6 tracking-widest">THERAPY FOCUS</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">Cardiology Care Solutions</h1>
+<p class="font-headline-md text-headline-md text-primary-fixed mb-4 opacity-90">Advanced therapeutic solutions supporting cardiovascular health, cardiac care, and long-term heart wellness.</p>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 max-w-xl">Our cardiology portfolio is designed to support modern cardiovascular treatment pathways with trusted pharmaceutical innovation, clinical precision, and therapeutic excellence.</p>
+<div class="flex gap-4">
+<button class="bg-clinical-teal text-white font-label-lg text-label-lg px-8 py-4 rounded-DEFAULT hover:bg-opacity-90 transition-all flex items-center gap-2 group">
+                            Contact Us
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: THERAPEUTIC FOCUS AREAS -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Item 1 -->
+<div class="group p-8 bg-surface-white border border-outline-variant/15 hover:border-clinical-teal transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 rounded-DEFAULT text-clinical-teal">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Cardiovascular Disease Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Comprehensive strategies for managing long-term heart health and vascular stability.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 opacity-0 group-hover:opacity-100 transition-opacity">
+<a class="text-clinical-teal font-label-lg text-label-lg flex items-center gap-2" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group p-8 bg-surface-white border border-outline-variant/15 hover:border-clinical-teal transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 rounded-DEFAULT text-clinical-teal">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitor_heart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Hypertension Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Targeted pharmaceutical interventions for blood pressure regulation and cardiac strain reduction.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 opacity-0 group-hover:opacity-100 transition-opacity">
+<a class="text-clinical-teal font-label-lg text-label-lg flex items-center gap-2" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group p-8 bg-surface-white border border-outline-variant/15 hover:border-clinical-teal transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 rounded-DEFAULT text-clinical-teal">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Heart Failure Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Precision management of cardiac output, fluid balance, and ventricular efficiency.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 opacity-0 group-hover:opacity-100 transition-opacity">
+<a class="text-clinical-teal font-label-lg text-label-lg flex items-center gap-2" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group p-8 bg-surface-white border border-outline-variant/15 hover:border-clinical-teal transition-all duration-500 flex flex-col h-full">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6 rounded-DEFAULT text-clinical-teal">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Cardiac Monitoring Excellence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Advanced therapeutic integration with real-time cardiac monitoring and diagnostic data.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 opacity-0 group-hover:opacity-100 transition-opacity">
+<a class="text-clinical-teal font-label-lg text-label-lg flex items-center gap-2" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: COMMITTED TO EXCELLENCE -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="lg:w-1/2 order-2 lg:order-1">
+<span class="text-clinical-teal font-label-lg text-label-lg mb-4 block">OUR COMMITMENT</span>
+<h2 class="font-display-lg text-display-lg text-deep-navy mb-8">Committed to Cardiovascular Healthcare Excellence</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
+<p>At Mediruit Lifesciences, we recognize that cardiovascular disease remains one of the most critical challenges in global healthcare. Our commitment to cardiology is rooted in rigorous pharmaceutical research and a deep understanding of heart physiology.</p>
+<p>We leverage cutting-edge science to develop therapies that not only manage symptoms but address underlying mechanisms, ensuring patients receive the highest standard of care in their journey toward recovery and long-term wellness.</p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-8">
+<div>
+<p class="text-clinical-teal font-display-lg text-display-lg mb-1">98%</p>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant">Clinical Accuracy</p>
+</div>
+<div>
+<p class="text-clinical-teal font-display-lg text-display-lg mb-1">15+</p>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant">Active Patents</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 order-1 lg:order-2 relative">
+<div class="aspect-[4/3] rounded-DEFAULT overflow-hidden shadow-2xl relative z-10 border border-outline-variant/15">
+<img alt="Clinical research and care" class="w-full h-full object-cover" data-alt="A professional cardiologist in a clean, white consultation room showing a patient a detailed 3D digital model of a human heart on a tablet. The room is brightly lit with natural daylight streaming through large windows, creating a clean and hopeful atmosphere. Both the doctor and the patient are focused on the technology, reflecting the intersection of human care and advanced therapeutic data." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlWucdJhRYylWtnadUAG0FdasX-EbytIin2cZFCUYiuVe25EOGe1w39EISYhOJb-tf4On_-vN_oghkn4jJCcfwIW8PtisVg4mU9N2nArjt-C9B0Noq3_xdAD3wjAC45Zyf-pT4HZYROBbe3wXerH9XcpGSMCfOBH3SOQ27awk3uDJSQDOpoT6UYA6W_KXo4RRn6j6QGZRl4s_uKtEtWotOzWp2eG4Ei5HwBk7Uy32vnrRRVkh5QK0ItzhyG3qNIkYNzO3whaQmHSk"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-oxygen-blue/20 -z-0 rounded-DEFAULT"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: WHY PARTNER SECTION -->
+<section class="py-24 bg-deep-navy text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
+<svg class="w-full h-full fill-current" viewbox="0 0 100 100">
+<path d="M0,50 Q25,0 50,50 T100,50" fill="none" stroke="white" stroke-width="0.5"></path>
+<path d="M0,60 Q25,10 50,60 T100,60" fill="none" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="font-display-lg text-display-lg mb-6">Why Partner with Mediruit?</h2>
+<p class="font-body-lg text-body-lg opacity-80 text-primary-fixed">We set the benchmark for cardiac therapeutic excellence through unyielding standards and collaborative innovation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Feature 1 -->
+<div class="text-center p-8 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-DEFAULT">
+<div class="w-16 h-16 bg-clinical-teal/20 text-oxygen-blue rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4">Quality Assured Formulations</h4>
+<p class="font-body-md text-body-md opacity-70">Stringent pharmaceutical manufacturing processes exceeding global safety standards.</p>
+</div>
+<!-- Feature 2 -->
+<div class="text-center p-8 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-DEFAULT">
+<div class="w-16 h-16 bg-clinical-teal/20 text-oxygen-blue rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">medical_services</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4">Clinically Trusted Solutions</h4>
+<p class="font-body-md text-body-md opacity-70">Peer-reviewed therapeutic efficacy adopted by leading cardiac hospitals nationwide.</p>
+</div>
+<!-- Feature 3 -->
+<div class="text-center p-8 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-DEFAULT">
+<div class="w-16 h-16 bg-clinical-teal/20 text-oxygen-blue rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">person_celebrate</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4">Patient-Centric Focus</h4>
+<p class="font-body-md text-body-md opacity-70">Therapies designed to minimize side effects and optimize daily quality of life.</p>
+</div>
+<!-- Feature 4 -->
+<div class="text-center p-8 bg-white/5 border border-white/10 hover:bg-white/10 transition-all rounded-DEFAULT">
+<div class="w-16 h-16 bg-clinical-teal/20 text-oxygen-blue rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl">science</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4">Pharmaceutical Excellence</h4>
+<p class="font-body-md text-body-md opacity-70">Driving next-generation cardiac research through strategic lab investments.</p>
+</div>
+</div>
+<div class="mt-20 text-center">
+<button class="border border-clinical-teal text-oxygen-blue font-label-lg text-label-lg px-10 py-4 rounded-DEFAULT hover:bg-clinical-teal hover:text-white transition-all">
+                        Join Our Network
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer id="footer" class="bg-primary text-white w-full rounded-none">
+<div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<div class="mb-6">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+</div>
+<p class="text-white/80 text-body-md leading-relaxed mb-8">
+                    Elevating pharmaceutical standards through scientific precision and patient-centric care.
+                </p>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 lg:pl-12">
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
+            © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        // Simple scroll interaction for Header elevation
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'bg-opacity-95', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-lg', 'bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+</body></html>
