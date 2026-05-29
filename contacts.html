@@ -96,41 +96,32 @@
             box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.1);
         }
         .premium-card-shadow {
-            box-shadow: 0 30px 60px -12px rgba(0, 30, 64, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(0, 53, 95, 0.08);
         }
         @keyframes pulse-ripple {
-            0% { transform: scale(0.8); opacity: 0.8; }
-            100% { transform: scale(2.5); opacity: 0; }
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(3); opacity: 0; }
         }
         .pulse-marker {
             position: absolute;
-            width: 16px;
-            height: 16px;
-            background-color: #002868;
+            width: 12px;
+            height: 12px;
+            background-color: #001e40;
             border-radius: 50%;
-            border: 3px solid #ffffff;
-            box-shadow: 0 0 20px rgba(0, 40, 104, 0.5);
-            z-index: 20;
+            box-shadow: 0 0 15px rgba(0, 30, 64, 0.4);
         }
         .pulse-ripple {
             position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 2px solid #002868;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #001e40;
             border-radius: 50%;
-            animation: pulse-ripple 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-            z-index: 10;
+            animation: pulse-ripple 2s infinite;
         }
-        .ripple-2 { animation-delay: 1s; }
-        .ripple-3 { animation-delay: 2s; }
-        
-        .location-card {
-            height: 550px;
-            background-color: #F5F5F5;
+        .map-bg-pattern {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
         }
-        @media (max-width: 1024px) { .location-card { height: 450px; } }
-        @media (max-width: 768px) { .location-card { height: 320px; } }
-        
         .navbar-logo {
             height: 36px;
             width: auto;
