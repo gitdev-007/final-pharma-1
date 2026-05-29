@@ -272,7 +272,7 @@
             <h2 class="font-headline-xl text-primary mb-6">Jaipur, India</h2>
             <div class="space-y-8">
                 <div>
-                    <h3 class="font-headline-sm text-primary mb-2">Mediruit Lifesciences Pvt. Ltd.</h3>
+                    <h3 class="font-headline-sm text-primary mb-2 text-[20px]">Mediruit Lifesciences Pvt. Ltd.</h3>
                     <p class="text-on-surface-variant text-lg leading-relaxed">Jaipur, Rajasthan, India</p>
                 </div>
                 <div class="space-y-4">
@@ -294,26 +294,29 @@
 
         <!-- Right: Custom World Map Panel -->
         <div class="relative reveal-up delay-200">
-            <div class="bg-surface-container-low rounded-[40px] p-4 shadow-2xl border border-outline-variant/20 overflow-hidden group">
-                <div class="relative aspect-[4/3] bg-white rounded-[32px] overflow-hidden map-bg-pattern flex items-center justify-center">
-                    <!-- Stylized World Map Background (SVG) -->
-                    <svg class="absolute inset-0 w-full h-full opacity-[0.07] grayscale" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M150 200 Q 200 150 250 200 T 350 200 T 450 250 T 600 200 T 750 150 T 850 200" stroke="currentColor" fill="transparent" stroke-width="20" stroke-linecap="round"/>
-                        <path d="M100 400 Q 250 350 400 400 T 600 450 T 800 400" stroke="currentColor" fill="transparent" stroke-width="25" stroke-linecap="round"/>
-                        <circle cx="200" cy="150" r="40" fill="currentColor"/>
-                        <circle cx="800" cy="450" r="60" fill="currentColor"/>
-                        <circle cx="500" cy="300" r="100" fill="currentColor"/>
+            <div class="bg-white rounded-[40px] p-6 shadow-2xl border border-outline-variant/10 overflow-hidden group">
+                <div class="relative aspect-[4/3] bg-[#F8FAFC] rounded-[32px] overflow-hidden flex items-center justify-center border border-outline-variant/5">
+                    <!-- Recognizable World Map Visual (Detailed SVG) -->
+                    <svg class="absolute inset-0 w-full h-full opacity-[0.15] grayscale" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M164,152.2c0,0.1,0,0.2,0,0.3c0,0.7-0.1,1.3-0.3,1.9c-0.1,0.6-0.3,1.1-0.6,1.6c-0.3,0.5-0.7,1-1.1,1.3c-0.5,0.4-1,0.6-1.6,0.8 c-0.6,0.2-1.2,0.3-1.8,0.3c-0.1,0-0.2,0-0.3,0l-16.1-0.2c-0.4,0-0.7-0.1-1.1-0.1c-0.4,0-0.7-0.1-1.1-0.2c-1.3-0.1-2.6-0.5-3.6-1.2 c-1.1-0.7-2-1.7-2.6-2.9c-0.6-1.1-0.9-2.5-0.9-3.8c0-1.4,0.3-2.7,0.9-3.9c0.6-1.2,1.5-2.2,2.6-2.9c1.1-0.7,2.3-1.1,3.7-1.2 c0.4-0.1,0.7-0.1,1.1-0.2c0.4,0,0.7,0,1.1-0.1l16.1-0.2c0.1,0,0.2,0,0.3,0c0.7,0,1.3,0.1,1.9,0.3c0.6,0.1,1.1,0.3,1.6,0.6 c0.5,0.3,1,0.7,1.3,1.1c0.4,0.5,0.6,1,0.8,1.6c0.2,0.6,0.3,1.2,0.3,1.8C164.1,152,164,152.1,164,152.2z"/>
+                        <!-- Simplified continent shapes for recognizability -->
+                        <path fill="currentColor" d="M220,110h80v40h-20v20h-60V110z M350,150h120v60h-40v40h-80V150z M150,220h100v100h-40v20h-60V220z M450,300h100v80h-40v20h-60V300z M600,120h150v150h-50v50h-100V120z M800,280h80v80h-40v20h-40V280z"/>
+                        <circle cx="700" cy="180" r="100" fill="currentColor" opacity="0.5"/>
+                        <circle cx="400" cy="200" r="80" fill="currentColor" opacity="0.3"/>
+                        <circle cx="200" cy="280" r="70" fill="currentColor" opacity="0.4"/>
                     </svg>
                     
-                    <!-- Pulsing Location Marker (Jaipur, India approx) -->
-                    <div class="absolute top-[45%] left-[68%] z-20">
-                        <div class="relative">
-                            <div class="pulse-ripple"></div>
-                            <div class="pulse-marker"></div>
-                            <!-- Floating Label -->
-                            <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Pulse Animation Styles for visual prominence -->
+                    <div class="absolute top-[48%] left-[67%] z-20">
+                        <div class="relative flex items-center justify-center">
+                            <div class="pulse-ripple border-[#0B2E6D] scale-[1.5]"></div>
+                            <div class="pulse-ripple border-[#0B2E6D] animation-delay-1000 scale-[2.5]"></div>
+                            <div class="pulse-marker bg-[#0B2E6D] w-4 h-4 shadow-lg ring-4 ring-white"></div>
+                            
+                            <!-- Floating Label - Updated Styling -->
+                            <div class="absolute -top-16 left-1/2 -translate-x-1/2 bg-white text-[#0B2E6D] text-[12px] font-[700] px-4 py-2 rounded-xl whitespace-nowrap shadow-[0_8px_20px_rgba(0,0,0,0.12)] border border-outline-variant/10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:-translate-y-2">
                                 Jaipur Office
-                                <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
+                                <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-outline-variant/10 rotate-45"></div>
                             </div>
                         </div>
                     </div>
@@ -323,40 +326,41 @@
     </div>
 </div>
 </section>
+</main>
 <!-- Footer -->
-<footer id="footer" class="bg-primary text-white w-full rounded-none">
+<footer id="footer" class="relative z-50 bg-[#001e40] text-white w-full rounded-none">
 <div class="w-full py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <div class="col-span-1">
 <div class="mb-6">
-    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Logo" class="h-14 w-auto object-contain brightness-0 invert opacity-100">
 </div>
-<p class="text-white/80 text-body-md leading-relaxed mb-8">
+<p class="text-white text-body-md leading-relaxed mb-8 opacity-100">
                     Elevating pharmaceutical standards through scientific precision and patient-centric care.
                 </p>
 </div>
 <div class="col-span-1 lg:pl-12">
-<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Quick Links</h4>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700] opacity-100">Quick Links</h4>
 <ul class="space-y-4">
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="index.html">Home</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="about.html">About Us</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="products.html">Products</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="innovation.html">Innovation</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="contacts.html">Contact Us</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="index.html">Home</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="about.html">About Us</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="products.html">Products</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="innovation.html">Innovation</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="contacts.html">Contact Us</a></li>
 </ul>
 </div>
 <div class="col-span-1 lg:pl-12">
-<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700]">Therapeutic</h4>
+<h4 class="font-headline-sm text-headline-sm mb-6 text-[#FFD700] opacity-100">Therapeutic</h4>
 <ul class="space-y-4">
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="nephrology.html">Nephrology</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="oncology.html">Oncology</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="cardiology.html">Cardiology</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="gastroenterology.html">Gastroenterology</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="critical-care.html">Critical Care</a></li>
-<li><a class="text-white/70 hover:text-white transition-colors hover:underline" href="respiratory.html">Respiratory</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="nephrology.html">Nephrology</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="oncology.html">Oncology</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="cardiology.html">Cardiology</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="gastroenterology.html">Gastroenterology</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="critical-care.html">Critical Care</a></li>
+<li><a class="text-white hover:text-[#FFD700] transition-colors hover:underline opacity-100" href="respiratory.html">Respiratory</a></li>
 </ul>
 </div>
 </div>
-<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white/60">
+<div class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center text-sm text-white opacity-100">
             © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
         </div>
 </footer>
