@@ -98,30 +98,6 @@
         .premium-card-shadow {
             box-shadow: 0 20px 40px -15px rgba(0, 53, 95, 0.08);
         }
-        @keyframes pulse-ripple {
-            0% { transform: scale(1); opacity: 0.5; }
-            100% { transform: scale(3); opacity: 0; }
-        }
-        .pulse-marker {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: #001e40;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0, 30, 64, 0.4);
-        }
-        .pulse-ripple {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            border: 2px solid #001e40;
-            border-radius: 50%;
-            animation: pulse-ripple 2s infinite;
-        }
-        .map-bg-pattern {
-            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
         .navbar-logo {
             height: 36px;
             width: auto;
@@ -225,7 +201,11 @@
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 <div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up">
 <div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<span class="material-symbols-outlined text-secondary text-3xl">kidneys</span>
+<svg class="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 15c-1.5 2-4 2.5-6 2-2-.5-3-2-3-4.5 0-3 2-5 5-5 2 0 4 1 5 2.5.5.8.5 2 0 3C9.5 13 9.5 14 9.5 15z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.5 15c1.5 2 4 2.5 6 2 2-.5 3-2 3-4.5 0-3-2-5-5-5-2 0-4 1-5 2.5-.5.8-.5 2 0 3C14.5 13 14.5 14 14.5 15z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 15 v5 M14.5 15 v5" />
+</svg>
 </div>
 <h4 class="font-label-md text-primary font-bold">Nephrology</h4>
 </div>
@@ -243,7 +223,9 @@
 </div>
 <div class="group bg-clinical-white p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up" style="transition-delay: 150ms;">
 <div class="w-16 h-16 mx-auto mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors">
-<span class="material-symbols-outlined text-secondary text-3xl">digestive</span>
+<svg class="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11 3v4c0 1.5-1 3-3 4s-3 3-2 5 3 4 7 3 7-4 7-7-3-5.5-6-5c-1.5.5-2.5-.5-3-2V3" />
+</svg>
 </div>
 <h4 class="font-label-md text-primary font-bold">Gastro</h4>
 </div>
@@ -262,56 +244,61 @@
 </div>
 </div>
 </section>
-<!-- PREMIUM OFFICE LOCATION SECTION -->
-<section class="py-24 md:py-32 bg-background relative overflow-hidden">
+<!-- OFFICE LOCATION SECTION -->
+<section class="py-24 md:py-32 bg-surface overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-    <div class="text-center mb-16 reveal-up">
-        <span class="text-secondary font-bold tracking-[0.2em] uppercase block mb-4">Our Global Presence</span>
-        <h2 class="font-headline-xl text-primary mb-6">Headquartered in Jaipur, India</h2>
-    </div>
-
-    <div class="reveal-up location-card w-full rounded-[32px] relative shadow-2xl border border-outline-variant/10 overflow-hidden group">
-        <!-- High-Fidelity Monochrome World Map SVG -->
-        <div class="absolute inset-0 z-0 bg-[#F5F5F5] flex items-center justify-center">
-            <svg class="w-full h-full opacity-60 grayscale" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#CCCCCC" d="M123.6,183.3c-1.4,0-2.8-0.3-4.1-0.9c-2.4-1.1-4.2-3.1-4.9-5.5c-0.1-0.3-0.1-0.6-0.2-1c0-0.4,0-0.8,0.1-1.2l0.2-1.9c0-0.1,0.1-0.3,0.1-0.4l0.1-0.4c0-0.1,0.1-0.2,0.1-0.3c0.1-0.3,0.2-0.6,0.3-0.9c0.2-0.5,0.4-1.1,0.8-1.6c0.3-0.5,0.7-1,1.1-1.3c0.5-0.4,1-0.6,1.6-0.8c0.6-0.2,1.2-0.3,1.8-0.3c0.1,0,0.2,0,0.3,0l16.1,0.2c1.3,0,2.6,0.2,3.8,0.7c1.2,0.5,2.2,1.2,3.1,2.1c0.8,0.9,1.5,1.9,1.9,3.1c0.4,1.2,0.6,2.4,0.6,3.7c0,1.3-0.2,2.5-0.6,3.7c-0.4,1.2-1.1,2.2-1.9,3.1c-0.8,0.9-1.9,1.6-3.1,2.1c-1.2,0.5-2.5,0.7-3.8,0.7L123.6,183.3z M400,100c50,0,100,50,150,50s100-50,150-50s100,50,150,50s100-50,150-50v300c-50,0-100-50-150-50s-100,50-150,50s-100-50-150-50s-100,50-150,50V100z" />
-                <!-- More realistic continent blobs -->
-                <path fill="#CCCCCC" d="M150,120c15.4-8,30-2,40,10s20,30,10,45s-30,20-45,10s-20-30-5-65z M300,180c40-10,80,10,100,50s20,80-20,100s-80-20-100-60s-20-80,20-90z M600,150c60,0,120,40,140,100s0,120-60,140s-120-40-140-100s0-120,60-140z M800,300c30,0,60,20,70,50s0,60-30,70s-60-20-70-50s0-60,30-70z M200,350c25,0,50,15,60,40s0,50-25,60s-50-15-60-40s0-50,25-60z" />
-            </svg>
-        </div>
-
-        <!-- Animated Jaipur Marker -->
-        <div class="absolute top-[48%] left-[67.5%] z-20 pointer-events-none">
-            <div class="relative flex items-center justify-center">
-                <div class="pulse-ripple border-primary opacity-30"></div>
-                <div class="pulse-ripple border-primary ripple-2 opacity-20"></div>
-                <div class="pulse-ripple border-primary ripple-3 opacity-10"></div>
-                <div class="pulse-marker ring-4 ring-white"></div>
-                
-                <!-- Floating Label (Always visible or on group hover) -->
-                <div class="absolute -top-20 left-1/2 -translate-x-1/2 bg-white px-6 py-3 rounded-2xl shadow-2xl border border-outline-variant/10 flex flex-col items-center group-hover:scale-110 transition-transform duration-500 pointer-events-auto cursor-pointer">
-                    <span class="text-[10px] text-secondary font-bold uppercase tracking-widest mb-1">Corporate Office</span>
-                    <span class="text-primary font-[800] text-sm whitespace-nowrap">Jaipur Office</span>
-                    <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-outline-variant/10 rotate-45"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Office Info -->
+        <div class="reveal-up border-l-4 border-primary pl-10">
+            <span class="text-secondary font-bold tracking-widest uppercase block mb-4">Our Headquarters</span>
+            <h2 class="font-headline-xl text-primary mb-6">Jaipur, India</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-headline-sm text-primary mb-2 text-[20px]">Mediruit Lifesciences Pvt. Ltd.</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">Jaipur, Rajasthan, India</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">call</span>
+                        </div>
+                        <span class="font-medium">+91 XXXXXXXXXX</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                        </div>
+                        <span class="font-medium">info@mediruit.com</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Simple Contact Details Overlay (Optional) -->
-        <div class="absolute bottom-8 left-8 z-10 bg-white/80 backdrop-blur-md p-8 rounded-[24px] border border-white max-w-sm hidden lg:block reveal-up">
-            <h3 class="font-headline-sm text-primary mb-2">Jaipur, India</h3>
-            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
-                Mediruit Lifesciences Pvt. Ltd.<br/>
-                Jaipur, Rajasthan, India
-            </p>
-            <div class="space-y-3">
-                <div class="flex items-center gap-3 text-primary text-sm font-bold">
-                    <span class="material-symbols-outlined text-sm">call</span>
-                    +91 XXXXXXXXXX
-                </div>
-                <div class="flex items-center gap-3 text-primary text-sm font-bold">
-                    <span class="material-symbols-outlined text-sm">mail</span>
-                    info@mediruit.com
+        <!-- Right: Custom World Map Panel -->
+        <div class="relative reveal-up delay-200">
+            <div class="bg-white rounded-[40px] p-6 shadow-2xl border border-outline-variant/10 overflow-hidden group">
+                <div class="relative aspect-[4/3] bg-[#F8FAFC] rounded-[32px] overflow-hidden map-bg-pattern flex items-center justify-center border border-outline-variant/5">
+                    <!-- Stylized World Map Background (SVG) -->
+                    <svg class="absolute inset-0 w-full h-full opacity-[0.07] grayscale" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 200 Q 200 150 250 200 T 350 200 T 450 250 T 600 200 T 750 150 T 850 200" stroke="currentColor" fill="transparent" stroke-width="20" stroke-linecap="round"/>
+                        <path d="M100 400 Q 250 350 400 400 T 600 450 T 800 400" stroke="currentColor" fill="transparent" stroke-width="25" stroke-linecap="round"/>
+                        <circle cx="200" cy="150" r="40" fill="currentColor"/>
+                        <circle cx="800" cy="450" r="60" fill="currentColor"/>
+                        <circle cx="500" cy="300" r="100" fill="currentColor"/>
+                    </svg>
+                    
+                    <!-- Pulsing Location Marker (Jaipur, India approx) -->
+                    <div class="absolute top-[45%] left-[68%] z-20">
+                        <div class="relative">
+                            <div class="pulse-ripple"></div>
+                            <div class="pulse-marker"></div>
+                            <!-- Floating Label -->
+                            <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Jaipur Office
+                                <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

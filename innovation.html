@@ -142,6 +142,30 @@
                 height: 32px;
             }
         }
+        @keyframes pulse-ripple {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        .pulse-marker {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #001e40;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 30, 64, 0.4);
+        }
+        .pulse-ripple {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #001e40;
+            border-radius: 50%;
+            animation: pulse-ripple 2s infinite;
+        }
+        .map-bg-pattern {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
@@ -182,9 +206,7 @@
 <div class="relative">
 <div class="absolute -top-20 -right-20 w-80 h-80 bg-secondary-container/20 rounded-full ambient-glow"></div>
 <div class="glass-panel p-2 rounded-xl relative overflow-hidden group">
-<video autoplay muted loop playsinline preload="auto" class="w-full h-[500px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700">
-<source src="assets/videos/innovation.mp4" type="video/mp4">
-</video>
+<img src="assets/photos/new_innovation.png" alt="Innovation at Mediruit Lifesciences" class="w-full h-[500px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700">
 </div>
 <div class="absolute -bottom-8 -left-8 glass-panel p-6 rounded-lg max-w-[240px] animate-bounce">
 <div class="flex items-center gap-base">
@@ -436,6 +458,80 @@
 <p class="font-body-md font-bold text-primary">Global Readiness</p>
 </div>
 </div>
+</div>
+</section>
+<!-- GLOBAL COMMAND CENTERS -->
+<section class="py-24 md:py-32 bg-surface overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="flex flex-col md:flex-row justify-between items-start mb-16 relative">
+        <div class="reveal">
+            <span class="text-secondary font-bold tracking-[0.2em] uppercase block mb-4">OUR GLOBAL PRESENCE</span>
+            <h2 class="font-headline-xl text-primary mb-6">Global Command Centers</h2>
+        </div>
+        <div class="md:w-1/2 reveal" style="transition-delay: 100ms;">
+            <p class="text-on-surface-variant text-lg">Strategic locations chosen for their proximity to clinical research hubs and manufacturing excellence.</p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Office Info -->
+        <div class="reveal border-l-4 border-primary pl-10">
+            <h3 class="font-headline-sm text-primary mb-6 text-[28px]">Jaipur, India</h3>
+            <div class="space-y-8">
+                <div>
+                    <h4 class="font-headline-sm text-primary mb-2 text-[20px]">Mediruit Lifesciences Pvt. Ltd.</h4>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">Jaipur, Rajasthan, India</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">call</span>
+                        </div>
+                        <span class="font-medium">+91 XXXXXXXXXX</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                        </div>
+                        <span class="font-medium">info@mediruit.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Custom World Map Panel -->
+        <div class="relative reveal" style="transition-delay: 200ms;">
+            <div class="bg-white rounded-[40px] p-6 shadow-2xl border border-outline-variant/10 overflow-hidden group">
+                <div class="relative aspect-[4/3] bg-[#F8FAFC] rounded-[32px] overflow-hidden map-bg-pattern flex items-center justify-center border border-outline-variant/5">
+                    <!-- Stylized World Map Background (SVG) -->
+                    <svg class="absolute inset-0 w-full h-full opacity-[0.07] grayscale" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 200 Q 200 150 250 200 T 350 200 T 450 250 T 600 200 T 750 150 T 850 200" stroke="currentColor" fill="transparent" stroke-width="20" stroke-linecap="round"/>
+                        <path d="M100 400 Q 250 350 400 400 T 600 450 T 800 400" stroke="currentColor" fill="transparent" stroke-width="25" stroke-linecap="round"/>
+                        <circle cx="200" cy="150" r="40" fill="currentColor"/>
+                        <circle cx="800" cy="450" r="60" fill="currentColor"/>
+                        <circle cx="500" cy="300" r="100" fill="currentColor"/>
+                    </svg>
+                    
+                    <!-- Pulsing Location Marker (Jaipur, India approx) -->
+                    <div class="absolute top-[48%] left-[67.5%] z-20 pointer-events-none">
+                        <div class="relative flex items-center justify-center">
+                            <div class="pulse-ripple border-primary opacity-30"></div>
+                            <div class="pulse-ripple border-primary ripple-2 opacity-20"></div>
+                            <div class="pulse-ripple border-primary ripple-3 opacity-10"></div>
+                            <div class="pulse-marker ring-4 ring-white"></div>
+                            
+                            <!-- Floating Label -->
+                            <div class="absolute -top-20 left-1/2 -translate-x-1/2 bg-white px-6 py-3 rounded-2xl shadow-2xl border border-outline-variant/10 flex flex-col items-center group-hover:scale-110 transition-transform duration-500 pointer-events-auto cursor-pointer">
+                                <span class="text-[10px] text-secondary font-bold uppercase tracking-widest mb-1">Corporate Office</span>
+                                <span class="text-primary font-[800] text-sm whitespace-nowrap">Jaipur Office</span>
+                                <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-outline-variant/10 rotate-45"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
 <!-- Collaboration CTA -->
