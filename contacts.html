@@ -244,65 +244,21 @@
 </div>
 </div>
 </section>
-<!-- OFFICE LOCATION SECTION -->
-<section class="py-24 md:py-32 bg-surface overflow-hidden">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Left: Office Info -->
-        <div class="reveal-up border-l-4 border-primary pl-10">
-            <span class="text-secondary font-bold tracking-widest uppercase block mb-4">Our Headquarters</span>
-            <h2 class="font-headline-xl text-primary mb-6">Jaipur, India</h2>
-            <div class="space-y-8">
-                <div>
-                    <h3 class="font-headline-sm text-primary mb-2 text-[20px]">Mediruit Lifesciences Pvt. Ltd.</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed">Jaipur, Rajasthan, India</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
-                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined text-xl">call</span>
-                        </div>
-                        <span class="font-medium">+91 XXXXXXXXXX</span>
-                    </div>
-                    <div class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors group">
-                        <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined text-xl">mail</span>
-                        </div>
-                        <span class="font-medium">info@mediruit.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right: Custom World Map Panel -->
-        <div class="relative reveal-up delay-200">
-            <div class="bg-white rounded-[40px] p-6 shadow-2xl border border-outline-variant/10 overflow-hidden group">
-                <div class="relative aspect-[4/3] bg-[#F8FAFC] rounded-[32px] overflow-hidden map-bg-pattern flex items-center justify-center border border-outline-variant/5">
-                    <!-- Stylized World Map Background (SVG) -->
-                    <svg class="absolute inset-0 w-full h-full opacity-[0.07] grayscale" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M150 200 Q 200 150 250 200 T 350 200 T 450 250 T 600 200 T 750 150 T 850 200" stroke="currentColor" fill="transparent" stroke-width="20" stroke-linecap="round"/>
-                        <path d="M100 400 Q 250 350 400 400 T 600 450 T 800 400" stroke="currentColor" fill="transparent" stroke-width="25" stroke-linecap="round"/>
-                        <circle cx="200" cy="150" r="40" fill="currentColor"/>
-                        <circle cx="800" cy="450" r="60" fill="currentColor"/>
-                        <circle cx="500" cy="300" r="100" fill="currentColor"/>
-                    </svg>
-                    
-                    <!-- Pulsing Location Marker (Jaipur, India approx) -->
-                    <div class="absolute top-[45%] left-[68%] z-20">
-                        <div class="relative">
-                            <div class="pulse-ripple"></div>
-                            <div class="pulse-marker"></div>
-                            <!-- Floating Label -->
-                            <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                Jaipur Office
-                                <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- MAP SECTION -->
+<section class="w-full h-[450px] relative bg-surface-muted">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative" data-location="Mumbai, India" style="">    
+<!-- Simple placeholder for Map UI -->
+<div class="absolute inset-0 bg-pharma-blue-light/20 flex items-center justify-center">
+<div class="text-center p-12 bg-clinical-white/90 backdrop-blur-sm rounded-xl shadow-2xl border border-white max-w-md reveal-up">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">location_on</span>
+<h3 class="font-headline-md text-primary mb-2">Our Presence</h3>
+<p class="text-on-surface-variant mb-6">Strategic operations hubs located in prime pharmaceutical corridors.</p>
+<button class="px-6 py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                            View on Google Maps
+                        </button>
+</div>
+</div>
+<div class="w-full h-full bg-[url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/72.8777,19.0760,12/1280x450?access_token=pk.eyJ1Ijoiam9obmRvZSIsImEiOiJjbGV4eHh4eHgifQ==')] bg-cover bg-center"></div>
 </div>
 </section>
 </main>
