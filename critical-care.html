@@ -126,22 +126,19 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<nav class="bg-surface sticky top-0 z-50 border-b border-outline-variant transition-all duration-300">
-<div class="flex justify-between items-center w-full px-margin-desktop py-stack-md max-w-container-max mx-auto">
-<div class="flex items-center gap-stack-lg">
-<img alt="Mediruit Lifesciences Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhzDlT1TsUrn3zEmHgK8NAmjpCspnwf8tFBd-6O2CD58gWK8dkUvFdnz63PZv4fg4YA4krjnooF-bxu1MWuuGg7dgYxP4jyAZNLei3_jNBe07Wri28nsiLwKWYs4PsbBe7VI7SUvfJo4DjO1TACiNp-TC__cf6EOT1IFdRvMKdo5LyzTlEDJ40VGUwvjutgBo3JloERiAZtzufuXigA14qv0_1_roSeP14FWMihWB-7ZESmCQpMEtRATdnh"/>
-<div class="hidden md:flex items-center gap-stack-lg">
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Home</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">About Us</a>
-<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-lg text-label-lg" href="#">Products</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Innovation</a>
-<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-lg text-label-lg" href="#">Contact Us</a>
-</div>
-</div>
-<div class="flex items-center gap-stack-md">
-<button class="bg-primary text-white px-6 py-2 rounded-lg font-label-lg text-label-lg hover:bg-secondary transition-all active:opacity-80">Patient Portal</button>
-</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out h-20">
+<div class="flex justify-between items-center h-full px-gutter max-w-container-max mx-auto">
+<a href="index.html" class="flex items-center shrink-0">
+    <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
+</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html">Products</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="innovation.html">Innovation</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Contact Us</a>
+</nav>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -168,9 +165,6 @@
 <button class="bg-secondary text-white px-8 py-4 rounded-lg font-label-lg text-label-lg hover:scale-105 transition-transform duration-300">
                         Contact Us
                     </button>
-<button class="text-white flex items-center gap-2 font-label-lg text-label-lg group">
-                        Learn More <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
 </div>
 </div>
 </div>
@@ -193,7 +187,6 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Intensive Care Therapeutics</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Management of life-threatening conditions with precise pharmaceutical intervention and sustained support.</p>
-<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 <!-- Card 2 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
@@ -202,7 +195,6 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Emergency Response Support</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Fast-acting treatments designed for rapid clinical response in acute care and trauma settings.</p>
-<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 <!-- Card 3 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
@@ -211,7 +203,6 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">ICU Treatment Excellence</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Targeted support for critically ill patients requiring continuous monitoring and clinical stabilization.</p>
-<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 <!-- Card 4 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
@@ -220,7 +211,6 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Advanced Monitoring Support</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Pharmaceutical solutions optimized for integration with modern life-support and monitoring systems.</p>
-<a class="text-secondary font-label-lg text-label-lg flex items-center gap-2 mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 </div>
 </div>
@@ -238,7 +228,7 @@
 <div class="flex items-center gap-4 mb-4">
 <span class="material-symbols-outlined text-4xl text-secondary-fixed-dim">verified</span>
 <div>
-<p class="font-headline-md text-headline-md">15+ Years</p>
+<p class="font-headline-md text-headline-md">18+ Years</p>
 <p class="font-label-md text-label-md opacity-70">Emergency Medicine Focus</p>
 </div>
 </div>
