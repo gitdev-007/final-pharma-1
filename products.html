@@ -174,79 +174,6 @@
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
         
-        /* View Toggle Styles */
-        .view-list {
-            display: flex !important;
-            flex-direction: column !important;
-            grid-template-columns: none !important;
-        }
-        .view-list .product-card {
-            flex-direction: row !important;
-            align-items: center !important;
-            padding: 1.5rem !important;
-            gap: 2rem !important;
-        }
-        .view-list .product-image-area {
-            display: flex !important;
-            width: 140px !important;
-            height: 140px !important;
-            margin-bottom: 0 !important;
-            flex-shrink: 0 !important;
-        }
-        .view-list .product-details {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            border-top: none !important;
-            padding-top: 0 !important;
-            margin-top: 0 !important;
-            gap: 2rem !important;
-            width: 380px !important;
-            border-left: 1px solid rgba(0, 30, 64, 0.1) !important;
-            padding-left: 2rem !important;
-        }
-        .view-list .product-details > div {
-            border-top: none !important;
-            padding-top: 0 !important;
-            flex: 1 !important;
-        }
-        .view-list .product-details button {
-            width: auto !important;
-            padding-left: 2rem !important;
-            padding-right: 2rem !important;
-            flex-shrink: 0 !important;
-        }
-        @media (max-width: 1024px) {
-            .view-list .product-details {
-                width: 300px !important;
-                gap: 1rem !important;
-                padding-left: 1rem !important;
-            }
-        }
-        @media (max-width: 768px) {
-            .view-list .product-card {
-                flex-direction: column !important;
-                align-items: stretch !important;
-            }
-            .view-list .product-image-area {
-                width: 100% !important;
-                height: 180px !important;
-                margin-bottom: 1rem !important;
-            }
-            .view-list .product-details {
-                width: 100% !important;
-                flex-direction: column !important;
-                border-left: none !important;
-                padding-left: 0 !important;
-                border-top: 1px solid rgba(0, 30, 64, 0.1) !important;
-                padding-top: 1.5rem !important;
-                gap: 1rem !important;
-            }
-            .view-list .product-details button {
-                width: 100% !important;
-            }
-        }
-
         .navbar-logo {
             height: 36px;
             width: auto;
@@ -367,7 +294,7 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Neosave_Forte</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave_Forte</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
     </div>
 </div>
@@ -380,7 +307,7 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Metabolic</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Polyklas_LP</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Polyklas_LP</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">High-strength formulation for metabolic acidosis management.</p>
     </div>
 </div>
@@ -393,7 +320,7 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Respiratory</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Savephos400</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Savephos400</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Advanced pediatric formulation for efficient mucus relief.</p>
     </div>
 </div>
@@ -406,7 +333,7 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Neosave_P</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave_P</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Specialized phosphate binder for hyperphosphatemia management.</p>
     </div>
 </div>
@@ -419,7 +346,7 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Megaklas</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Megaklas</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">High-potency support for patients with severe renal dysfunction.</p>
     </div>
 </div>
@@ -432,50 +359,34 @@
         <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Injectable</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3">Carnidine</h3>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Carnidine</h3>
         <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Levocarnitine injection for critical metabolic deficiency correction.</p>
     </div>
 </div>
 <!-- Product Card 7 -->
-<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
         <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
     </div>
     <div class="flex-1 flex flex-col">
-        <div class="flex justify-between items-start mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal care</span>
-            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
+        <div class="mb-4">
+            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Neosave Plus</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Enhanced formulation for advanced microalbuminuria complications.</p>
-        <div class="product-details mt-auto space-y-4">
-            <div class="pt-4 border-t border-outline-variant/20">
-                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-                <span class="text-body-sm font-medium">Advanced renal support</span>
-            </div>
-            <button class="w-full py-3 bg-gradient-to-r from-primary to-[#004d99] text-white font-label-caps text-label-caps hover:from-[#00152d] hover:to-primary hover:shadow-lg hover:-translate-y-0.5 transition-all rounded shadow-md border-none" onclick="openModal('Neosave Plus', 'Renal Care')">View Details</button>
-        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave Plus</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Enhanced formulation for advanced microalbuminuria complications.</p>
     </div>
 </div>
 <!-- Product Card 8 -->
-<div class="product-card bg-white border border-outline-variant/30 p-6 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-6 items-center justify-center">
+<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
         <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
     </div>
     <div class="flex-1 flex flex-col">
-        <div class="flex justify-between items-start mb-4">
+        <div class="mb-4">
             <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Nutritional</span>
-            <span class="material-symbols-outlined text-outline-variant hover:text-secondary cursor-pointer">bookmark</span>
         </div>
-        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-2">Megaklas</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm mb-4 line-clamp-2">Scientifically formulated appetite enhancer for clinical recovery.</p>
-        <div class="product-details mt-auto space-y-4">
-            <div class="pt-4 border-t border-outline-variant/20">
-                <span class="block text-[10px] font-label-caps text-outline uppercase mb-1">Purpose</span>
-                <span class="text-body-sm font-medium">Appetite enhancer</span>
-            </div>
-            <button class="w-full py-3 bg-gradient-to-r from-primary to-[#004d99] text-white font-label-caps text-label-caps hover:from-[#00152d] hover:to-primary hover:shadow-lg hover:-translate-y-0.5 transition-all rounded shadow-md border-none" onclick="openModal('Megaklas', 'Nutritional')">View Details</button>
-        </div>
+        <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Megaklas</h3>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Scientifically formulated appetite enhancer for clinical recovery.</p>
     </div>
 </div>
 </div>
@@ -547,43 +458,43 @@
 </main>
 <!-- Footer -->
 <footer id="footer" class="bg-[#0F172A] text-white w-full rounded-none">
-<div class="w-full py-24 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+<div class="w-full py-12 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Column 1: Company Profile -->
     <div class="col-span-1 max-w-sm">
-        <h4 class="font-headline-sm text-lg font-bold mb-8 text-[#FFD700] uppercase tracking-[0.2em]">Mediruit Lifesciences</h4>
+        <h4 class="font-headline-sm text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-[0.2em]">Mediruit Lifesciences</h4>
         <p class="text-[#E5E7EB] text-body-md leading-relaxed">
-            A research-driven pharmaceutical leader dedicated to advancing global healthcare through specialized renal care, innovative therapeutic solutions, and uncompromised quality standards.
+            A research-driven pharmaceutical leader dedicated to advancing global healthcare.
         </p>
     </div>
 
     <!-- Column 2: Navigation -->
     <div class="col-span-1 lg:pl-12">
-        <h4 class="font-headline-sm text-lg font-bold mb-8 text-[#FFD700] uppercase tracking-[0.2em]">Quick Links</h4>
-        <ul class="space-y-4">
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="index.html">Home</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="about.html">About Us</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="products.html">Products</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="innovation.html">Innovation</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="contacts.html">Contact Us</a></li>
+        <h4 class="font-headline-sm text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-[0.2em]">Quick Links</h4>
+        <ul class="space-y-2">
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="index.html">Home</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="about.html">About Us</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="products.html">Products</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="innovation.html">Innovation</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="contacts.html">Contact Us</a></li>
         </ul>
     </div>
 
     <!-- Column 3: Specialties -->
     <div class="col-span-1 lg:pl-12">
-        <h4 class="font-headline-sm text-lg font-bold mb-8 text-[#FFD700] uppercase tracking-[0.2em]">Therapeutic Areas</h4>
-        <ul class="space-y-4">
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="nephrology.html">Nephrology</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="oncology.html">Oncology</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="cardiology.html">Cardiology</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="gastroenterology.html">Gastroenterology</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="critical-care.html">Critical Care</a></li>
-            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 hover:pl-2 inline-block" href="respiratory.html">Respiratory</a></li>
+        <h4 class="font-headline-sm text-lg font-bold mb-4 text-[#FFD700] uppercase tracking-[0.2em]">Therapeutic Areas</h4>
+        <ul class="space-y-2">
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="nephrology.html">Nephrology</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="oncology.html">Oncology</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="cardiology.html">Cardiology</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="gastroenterology.html">Gastroenterology</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="critical-care.html">Critical Care</a></li>
+            <li><a class="text-[#E5E7EB] hover:text-[#FFD700] transition-all duration-300 inline-block" href="respiratory.html">Respiratory</a></li>
         </ul>
     </div>
 </div>
 
 <!-- Bottom Section -->
-<div class="border-t border-white/10 py-12 px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
         © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
     </p>
