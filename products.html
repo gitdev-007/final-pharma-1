@@ -174,6 +174,79 @@
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
         
+        /* View Toggle Styles */
+        .view-list {
+            display: flex !important;
+            flex-direction: column !important;
+            grid-template-columns: none !important;
+        }
+        .view-list .product-card {
+            flex-direction: row !important;
+            align-items: center !important;
+            padding: 1.5rem !important;
+            gap: 2rem !important;
+        }
+        .view-list .product-image-area {
+            display: flex !important;
+            width: 140px !important;
+            height: 140px !important;
+            margin-bottom: 0 !important;
+            flex-shrink: 0 !important;
+        }
+        .view-list .product-details {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            border-top: none !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            gap: 2rem !important;
+            width: 380px !important;
+            border-left: 1px solid rgba(0, 30, 64, 0.1) !important;
+            padding-left: 2rem !important;
+        }
+        .view-list .product-details > div {
+            border-top: none !important;
+            padding-top: 0 !important;
+            flex: 1 !important;
+        }
+        .view-list .product-details button {
+            width: auto !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            flex-shrink: 0 !important;
+        }
+        @media (max-width: 1024px) {
+            .view-list .product-details {
+                width: 300px !important;
+                gap: 1rem !important;
+                padding-left: 1rem !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .view-list .product-card {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+            .view-list .product-image-area {
+                width: 100% !important;
+                height: 180px !important;
+                margin-bottom: 1rem !important;
+            }
+            .view-list .product-details {
+                width: 100% !important;
+                flex-direction: column !important;
+                border-left: none !important;
+                padding-left: 0 !important;
+                border-top: 1px solid rgba(0, 30, 64, 0.1) !important;
+                padding-top: 1.5rem !important;
+                gap: 1rem !important;
+            }
+            .view-list .product-details button {
+                width: 100% !important;
+            }
+        }
+
         .navbar-logo {
             height: 36px;
             width: auto;
@@ -286,81 +359,63 @@
 </div>
 <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter transition-all duration-500">
 <!-- Product Card 1 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal overflow-hidden" style="transition-delay: 0ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Neosave_Forte.png" alt="Neosave_Forte" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave_Forte</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Premium therapeutic for clinical microalbuminuria treatment and monitoring.</p>
     </div>
 </div>
 <!-- Product Card 2 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Polyklas_LP.png" alt="Polyklas_LP" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Metabolic</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Polyklas_LP</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">High-strength formulation for metabolic acidosis management.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">High-strength formulation for metabolic acidosis management.</p>
     </div>
 </div>
 <!-- Product Card 3 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 200ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Savephos400.png" alt="Savephos400" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Respiratory</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Savephos400</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Advanced pediatric formulation for efficient mucus relief.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Advanced pediatric formulation for efficient mucus relief.</p>
     </div>
 </div>
 <!-- Product Card 4 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 300ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Neosave_P.png" alt="Neosave_P" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave_P</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Specialized phosphate binder for hyperphosphatemia management.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Specialized phosphate binder for hyperphosphatemia management.</p>
     </div>
 </div>
 <!-- Product Card 5 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 0ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Megaklas.png" alt="Megaklas" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Renal Care</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Megaklas</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">High-potency support for patients with severe renal dysfunction.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">High-potency support for patients with severe renal dysfunction.</p>
     </div>
 </div>
 <!-- Product Card 6 -->
-<div class="product-card bg-white border border-outline-variant/30 p-8 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
-    <div class="product-image-area hidden h-40 bg-surface-container-low rounded-lg mb-8 items-center justify-center">
-        <span class="material-symbols-outlined text-4xl text-primary/20">pill</span>
+<div class="product-card bg-white border border-outline-variant/30 rounded-xl card-hover flex flex-col h-full reveal" style="transition-delay: 100ms">
+    <div class="h-60 bg-white p-5 flex items-center justify-center">
+        <img src="assets/photos/Carnidine.png" alt="Carnidine" class="max-h-full max-w-full object-contain">
     </div>
-    <div class="flex-1 flex flex-col">
-        <div class="mb-4">
-            <span class="px-3 py-1 bg-surface-container text-primary rounded-full font-label-caps text-[10px] tracking-wider uppercase">Injectable</span>
-        </div>
+    <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Carnidine</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed mb-6">Levocarnitine injection for critical metabolic deficiency correction.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Levocarnitine injection for critical metabolic deficiency correction.</p>
     </div>
 </div>
 <!-- Product Card 7 -->
@@ -560,7 +615,7 @@
     function closeModal() {
         const backdrop = document.getElementById('modalBackdrop');
         const content = document.getElementById('modalContent');
-        const modal = document.getElementById('productModal');
+        const modal = document.getElementById('modalModal');
         
         backdrop.classList.add('opacity-0');
         backdrop.classList.remove('opacity-100');
@@ -573,34 +628,6 @@
             document.body.style.overflow = 'auto';
         }, 300);
     }
-
-    // Scroll parallax for hero elements
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const molecules = document.querySelectorAll('.molecule');
-        molecules.forEach((molecule, index) => {
-            const speed = (index + 1) * 0.1;
-            molecule.style.transform = `translateY(${scrolled * speed}px)`;
-        });
-        
-        const heroImage = document.querySelector('.animate-float');
-        if(heroImage) {
-            heroImage.style.transform = `translateY(${scrolled * 0.05}px)`;
-        }
-    });
-
-    // Add smooth scroll behavior for in-page links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 </script>
 </body>
 </html>
