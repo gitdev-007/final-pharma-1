@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://final-pharma-1.vercel.app/sitemap.xml
+Sitemap: https://mediruitlifesciences.com/sitemap.xml
