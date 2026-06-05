@@ -4,9 +4,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Critical Care Solutions | Mediruit Lifesciences</title>
+<meta name="description" content="Critical care pharmaceutical solutions for intensive and emergency medicine, supporting life-saving therapies and improved patient outcomes."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/critical-care.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Critical Care Solutions | Mediruit Lifesciences"/>
+<meta property="og:description" content="Critical care pharmaceutical solutions for intensive and emergency medicine, supporting life-saving therapies and improved patient outcomes."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/critical-care.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Critical Care Solutions | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Critical care pharmaceutical solutions for intensive and emergency medicine, supporting life-saving therapies and improved patient outcomes."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -124,21 +136,36 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out h-20">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center h-full px-gutter max-w-container-max mx-auto">
-<a href="index.html" class="flex items-center shrink-0">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<nav class="hidden md:flex gap-8">
+<nav class="hidden md:flex gap-8" aria-label="Primary">
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
-<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html">Products</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html" aria-current="page">Products</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="innovation.html">Innovation</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Contact Us</a>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
 </div>
-</nav>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-gutter py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="products.html" aria-current="page">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main">
 <!-- Hero Section -->
 <header class="relative min-h-[85vh] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -180,7 +207,7 @@
 <!-- Card 1 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
 <div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[32px]">emergency_home</span>
+<span class="material-symbols-outlined text-[32px]" aria-hidden="true">emergency_home</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Intensive Care Therapeutics</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Management of life-threatening conditions with precise pharmaceutical intervention and sustained support.</p>
@@ -188,7 +215,7 @@
 <!-- Card 2 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
 <div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[32px]">shutter_speed</span>
+<span class="material-symbols-outlined text-[32px]" aria-hidden="true">shutter_speed</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Emergency Response Support</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Fast-acting treatments designed for rapid clinical response in acute care and trauma settings.</p>
@@ -196,7 +223,7 @@
 <!-- Card 3 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
 <div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[32px]">monitor_heart</span>
+<span class="material-symbols-outlined text-[32px]" aria-hidden="true">monitor_heart</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">ICU Treatment Excellence</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Targeted support for critically ill patients requiring continuous monitoring and clinical stabilization.</p>
@@ -204,7 +231,7 @@
 <!-- Card 4 -->
 <div class="bg-surface-white border border-outline-variant p-stack-lg bento-card-hover transition-all duration-300 flex flex-col h-full group">
 <div class="w-14 h-14 bg-secondary-container/30 rounded-xl flex items-center justify-center text-secondary mb-stack-lg group-hover:bg-secondary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[32px]">settings_input_component</span>
+<span class="material-symbols-outlined text-[32px]" aria-hidden="true">settings_input_component</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Advanced Monitoring Support</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Pharmaceutical solutions optimized for integration with modern life-support and monitoring systems.</p>
@@ -223,7 +250,7 @@
 <!-- Stats Floating Card -->
 <div class="absolute -bottom-10 -right-10 bg-primary p-stack-lg rounded-xl text-white shadow-2xl hidden md:block border border-white/10">
 <div class="flex items-center gap-4 mb-4">
-<span class="material-symbols-outlined text-4xl text-secondary-fixed-dim">verified</span>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed-dim" aria-hidden="true">verified</span>
 <div>
 <p class="font-headline-md text-headline-md">18+ Years</p>
 <p class="font-label-md text-label-md opacity-70">Emergency Medicine Focus</p>
@@ -243,14 +270,14 @@
                     </p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg">
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="material-symbols-outlined text-secondary font-bold" aria-hidden="true">check_circle</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary">Clinical Precision First</h4>
 <p class="font-body-md text-body-md text-on-surface-variant opacity-80">Rigorously tested formulations for critical reliability.</p>
 </div>
 </div>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="material-symbols-outlined text-secondary font-bold" aria-hidden="true">check_circle</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary">Patient-Centric</h4>
 <p class="font-body-md text-body-md text-on-surface-variant opacity-80">Focusing on recovery timelines and stabilization quality.</p>
@@ -268,28 +295,28 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter text-left">
 <div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
 <div class="text-secondary-fixed-dim mb-4">
-<span class="material-symbols-outlined text-4xl">inventory_2</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true">inventory_2</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Quality Assured</h4>
 <p class="font-body-md text-body-md text-surface-variant/80">Acute care formulations meeting the strictest international quality and safety protocols.</p>
 </div>
 <div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
 <div class="text-secondary-fixed-dim mb-4">
-<span class="material-symbols-outlined text-4xl">clinical_notes</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true">clinical_notes</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Clinically Trusted</h4>
 <p class="font-body-md text-body-md text-surface-variant/80">Emergency solutions used by top healthcare institutions for critical patient stabilization.</p>
 </div>
 <div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
 <div class="text-secondary-fixed-dim mb-4">
-<span class="material-symbols-outlined text-4xl">groups</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true">groups</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">Patient-Centric</h4>
 <p class="font-body-md text-body-md text-surface-variant/80">Critical focus on long-term patient outcomes and quality of care in intensive settings.</p>
 </div>
 <div class="p-stack-lg bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
 <div class="text-secondary-fixed-dim mb-4">
-<span class="material-symbols-outlined text-4xl">workspace_premium</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true">workspace_premium</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-stack-sm text-secondary-fixed-dim">ICU Excellence</h4>
 <p class="font-body-md text-body-md text-surface-variant/80">A legacy of therapeutic innovation dedicated to the highest levels of intensive care excellence.</p>
@@ -346,46 +373,16 @@
         </ul>
     </div>
 </div>
+</main>
 
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-        // Micro-interactions and subtle effects
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-2', 'shadow-md');
-                nav.classList.remove('py-stack-md');
-            } else {
-                nav.classList.remove('py-2', 'shadow-md');
-                nav.classList.add('py-stack-md');
-            }
-        });
-
-        // Add subtle reveal animation on scroll for bento cards
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.bento-card-hover').forEach(card => {
-            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
-            observer.observe(card);
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 

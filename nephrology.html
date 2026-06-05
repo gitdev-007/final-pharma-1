@@ -4,6 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Nephrology | Mediruit Lifesciences</title>
+<meta name="description" content="Specialized nephrology pharmaceutical solutions supporting kidney care, renal therapies, and improved patient outcomes."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/nephrology.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Nephrology | Mediruit Lifesciences"/>
+<meta property="og:description" content="Specialized nephrology pharmaceutical solutions supporting kidney care, renal therapies, and improved patient outcomes."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/nephrology.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Nephrology | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Specialized nephrology pharmaceutical solutions supporting kidney care, renal therapies, and improved patient outcomes."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -134,21 +147,36 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="index.html" class="flex items-center shrink-0">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<div class="hidden md:flex items-center gap-8 lg:gap-12">
+<nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Primary">
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="index.html">Home</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="about.html">About Us</a>
-    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="products.html">Products</a>
+    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="products.html" aria-current="page">Products</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="contacts.html">Contact Us</a>
-</div>
-</div>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-margin-mobile py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="products.html" aria-current="page">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main" class="pt-16 md:pt-20">
 <!-- Hero Section -->
 <header class="relative h-screen min-h-[700px] flex items-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
@@ -180,7 +208,7 @@
 </div>
 </div>
 <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-white/60">
-<span class="material-symbols-outlined text-3xl">expand_more</span>
+<span class="material-symbols-outlined text-3xl" aria-hidden="true">expand_more</span>
 </div>
 </header>
 <!-- Section 1: About -->
@@ -230,7 +258,7 @@
 <!-- Card 2 -->
 <div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 100ms;">
 <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-2xl">find_replace</span>
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">find_replace</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Renal Support</h3>
 <p class="text-on-surface-variant font-body-md text-body-md">Targeted pharmaceutical support for hemodialysis and peritoneal dialysis patients.</p>
@@ -238,7 +266,7 @@
 <!-- Card 3 -->
 <div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 200ms;">
 <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-2xl">science</span>
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">science</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Electrolyte Balance</h3>
 <p class="text-on-surface-variant font-body-md text-body-md">Precision management of potassium, calcium, and phosphate levels in renal patients.</p>
@@ -246,7 +274,7 @@
 <!-- Card 4 -->
 <div class="reveal bg-white p-stack-lg rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(26,54,93,0.04)] hover:shadow-[0px_8px_30px_rgba(26,54,93,0.08)] transition-all group" style="transition-delay: 300ms;">
 <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary mb-stack-md group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-2xl">medication_liquid</span>
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">medication_liquid</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Advanced Formulations</h3>
 <p class="text-on-surface-variant font-body-md text-body-md">High-bioavailability treatments designed for complex patient profiles and comorbidities.</p>
@@ -263,28 +291,28 @@
 </div>
 <div class="w-full md:w-2/3 grid sm:grid-cols-2 gap-stack-lg reveal">
 <div class="flex gap-stack-md">
-<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+<span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">verified</span>
 <div>
 <h4 class="font-label-md text-label-md text-primary font-bold mb-1">Quality Assured Formulations</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Manufactured under strict GMP standards to ensure safety and potency.</p>
 </div>
 </div>
 <div class="flex gap-stack-md">
-<span class="material-symbols-outlined text-secondary text-3xl">groups</span>
+<span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">groups</span>
 <div>
 <h4 class="font-label-md text-label-md text-primary font-bold mb-1">Clinically Trusted Solutions</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Proven outcomes supported by peer-reviewed clinical studies and data.</p>
 </div>
 </div>
 <div class="flex gap-stack-md">
-<span class="material-symbols-outlined text-secondary text-3xl">health_metrics</span>
+<span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">health_metrics</span>
 <div>
 <h4 class="font-label-md text-label-md text-primary font-bold mb-1">Patient-Centric Focus</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Therapies designed to integrate seamlessly into complex patient regimens.</p>
 </div>
 </div>
 <div class="flex gap-stack-md">
-<span class="material-symbols-outlined text-secondary text-3xl">award_star</span>
+<span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">award_star</span>
 <div>
 <h4 class="font-label-md text-label-md text-primary font-bold mb-1">Pharmaceutical Excellence</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Continuous innovation in renal drug delivery and therapeutic efficacy.</p>
@@ -343,44 +371,16 @@
         </ul>
     </div>
 </div>
+</main>
 
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-        // Scroll Reveal Logic
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-        // Initial check on load
-        window.addEventListener("load", reveal);
-        
-        // Sticky Navbar logic
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-md', 'h-14');
-                nav.classList.remove('h-16');
-            } else {
-                nav.classList.remove('shadow-md', 'h-14');
-                nav.classList.add('h-16');
-            }
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 

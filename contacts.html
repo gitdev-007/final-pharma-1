@@ -4,6 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Us | Mediruit Lifesciences</title>
+<meta name="description" content="Get in touch with Mediruit Lifesciences. Reach our corporate office in Hyderabad, India, or send us a message for product inquiries, partnerships, and therapeutic collaborations."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/contacts.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Contact Us | Mediruit Lifesciences"/>
+<meta property="og:description" content="Reach our corporate office in Hyderabad, India, or send us a message for product inquiries and partnerships."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/contacts.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Contact Us | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Reach our corporate office in Hyderabad, India, or send us a message for product inquiries and partnerships."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -122,22 +135,36 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="index.html" class="flex items-center shrink-0">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<div class="hidden md:flex items-center gap-8 lg:gap-12">
+<nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Primary">
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="index.html">Home</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="about.html">About Us</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="products.html">Products</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
-    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="contacts.html">Contact Us</a>
-</div>
-</div>
+    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="contacts.html" aria-current="page">Contact Us</a>
 </nav>
-<main class="pt-16">
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-margin-mobile py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="products.html">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="contacts.html" aria-current="page">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main" class="pt-16 md:pt-20">
 <!-- HERO SECTION -->
 <section class="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -161,7 +188,7 @@
 <!-- Card 1 -->
 <div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up w-full h-full">
 <div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">location_on</span>
+<span class="material-symbols-outlined text-3xl" aria-hidden="true">location_on</span>
 </div>
 <h4 class="font-headline-sm text-primary mb-3 text-[20px]">Corporate Office</h4>
 <p class="text-on-surface-variant text-sm">MEDIRUIT LIFESCIENCES PVT. LTD.<br/>A-101, Sri Sairam Towers, Hafeezpet,<br/>Hyderabad - 500049, Telangana, India</p>
@@ -169,7 +196,7 @@
 <!-- Card 2 -->
 <div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up w-full h-full" style="transition-delay: 100ms;">
 <div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">mail</span>
+<span class="material-symbols-outlined text-3xl" aria-hidden="true">mail</span>
 </div>
 <h4 class="font-headline-sm text-primary mb-3 text-[20px]">Email</h4>
 <p class="text-on-surface-variant font-bold mb-1 break-words [overflow-wrap:anywhere] text-sm sm:text-base">info@mediruitlifesciences.com</p>
@@ -178,7 +205,7 @@
 <!-- Card 3 -->
 <div class="bg-clinical-white p-8 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group reveal-up w-full h-full" style="transition-delay: 200ms;">
 <div class="bg-pharma-blue-light w-16 h-16 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">call</span>
+<span class="material-symbols-outlined text-3xl" aria-hidden="true">call</span>
 </div>
 <h4 class="font-headline-sm text-primary mb-3 text-[20px]">Phone Inquiry</h4>
 <p class="text-on-surface-variant font-bold mb-1">+91 9376542649</p>
@@ -186,6 +213,50 @@
 </div>
 
 </div>
+</div>
+</section>
+<!-- CONTACT FORM -->
+<section class="py-24 bg-background" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+    <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12 reveal-up">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Send Us a Message</h2>
+            <p class="text-on-surface-variant text-base">Have a product inquiry, partnership opportunity, or general question? Fill out the form below and our team will respond within one business day.</p>
+        </div>
+
+        <div id="form-success" class="hidden mb-6 p-4 rounded-lg border border-primary/30 bg-primary/10 text-primary font-medium" role="status" aria-live="polite">
+            Thank you! Your message has been received. We will be in touch shortly.
+        </div>
+
+        <form id="contact-form" novalidate class="bg-clinical-white p-6 sm:p-8 rounded-2xl border border-outline-variant/30 shadow-sm reveal-up space-y-5">
+            <div>
+                <label for="cf-name" class="block text-sm font-bold text-on-surface mb-1.5">Full name <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="cf-name" name="name" required autocomplete="name" class="block w-full rounded-lg border border-outline-variant bg-background px-4 py-2.5 text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none" aria-describedby="cf-name-error"/>
+                <p id="cf-name-error" class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+
+            <div>
+                <label for="cf-email" class="block text-sm font-bold text-on-surface mb-1.5">Email <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" class="block w-full rounded-lg border border-outline-variant bg-background px-4 py-2.5 text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none" aria-describedby="cf-email-error"/>
+                <p id="cf-email-error" class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+
+            <div>
+                <label for="cf-subject" class="block text-sm font-bold text-on-surface mb-1.5">Subject</label>
+                <input type="text" id="cf-subject" name="subject" class="block w-full rounded-lg border border-outline-variant bg-background px-4 py-2.5 text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none"/>
+            </div>
+
+            <div>
+                <label for="cf-message" class="block text-sm font-bold text-on-surface mb-1.5">Message <span class="text-red-600" aria-hidden="true">*</span></label>
+                <textarea id="cf-message" name="message" required rows="5" class="block w-full rounded-lg border border-outline-variant bg-background px-4 py-2.5 text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none resize-y" aria-describedby="cf-message-error"></textarea>
+                <p id="cf-message-error" class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+
+            <button type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-white font-bold tracking-wide hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition">
+                Send Message
+            </button>
+        </form>
+    </div>
 </div>
 </section>
 <!-- THERAPEUTIC SUPPORT GRID -->
@@ -201,13 +272,13 @@
 </div>
 <div class="group bg-clinical-white p-3 sm:p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up h-full flex flex-col" style="transition-delay: 50ms;">
 <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors shrink-0">
-    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block">biotech</span>
+    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block" aria-hidden="true">biotech</span>
 </div>
 <h4 class="font-label-md text-[11px] xs:text-[12px] sm:text-label-md text-primary font-bold break-all sm:break-words leading-tight hyphens-auto mt-auto">Oncology</h4>
 </div>
 <div class="group bg-clinical-white p-3 sm:p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up h-full flex flex-col" style="transition-delay: 100ms;">
 <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors shrink-0">
-    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block">cardiology</span>
+    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block" aria-hidden="true">cardiology</span>
 </div>
 <h4 class="font-label-md text-[11px] xs:text-[12px] sm:text-label-md text-primary font-bold break-all sm:break-words leading-tight hyphens-auto mt-auto">Cardiology</h4>
 </div>
@@ -225,7 +296,7 @@
 </div>
 <div class="group bg-clinical-white p-3 sm:p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary transition-all duration-300 reveal-up h-full flex flex-col" style="transition-delay: 250ms;">
 <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-background rounded-full flex items-center justify-center group-hover:bg-primary-container transition-colors shrink-0">
-    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block">pulmonology</span>
+    <span class="material-symbols-outlined text-4xl sm:text-3xl text-secondary group-hover:text-white transition-colors block" aria-hidden="true">pulmonology</span>
 </div>
 <h4 class="font-label-md text-[11px] xs:text-[12px] sm:text-label-md text-primary font-bold break-all sm:break-words leading-tight hyphens-auto mt-auto">Respiratory</h4>
 </div>
@@ -245,7 +316,7 @@
                     <!-- Location Title & Icon -->
                     <div class="md:w-1/3 shrink-0 flex flex-col items-center sm:items-start">
                         <div class="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
-                            <span class="material-symbols-outlined text-4xl">location_on</span>
+                            <span class="material-symbols-outlined text-4xl" aria-hidden="true">location_on</span>
                         </div>
                         <h3 class="text-headline-md text-primary font-bold">Hyderabad, India</h3>
                     </div>
@@ -268,7 +339,7 @@
                             <!-- Phone Block -->
                             <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
                                 <div class="w-12 h-12 rounded-xl bg-pharma-blue-light flex items-center justify-center text-primary mb-3 sm:mb-0 sm:mr-4 shrink-0">
-                                    <span class="material-symbols-outlined text-2xl">call</span>
+                                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">call</span>
                                 </div>
                                 <div class="flex flex-col min-w-0 w-full">
                                     <span class="text-[11px] uppercase font-bold text-secondary tracking-widest mb-1 sm:mb-2">Phone</span>
@@ -279,7 +350,7 @@
                             <!-- Email Block -->
                             <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
                                 <div class="w-12 h-12 rounded-xl bg-pharma-blue-light flex items-center justify-center text-primary mb-3 sm:mb-0 sm:mr-4 shrink-0">
-                                    <span class="material-symbols-outlined text-2xl">mail</span>
+                                    <span class="material-symbols-outlined text-2xl" aria-hidden="true">mail</span>
                                 </div>
                                 <div class="flex flex-col min-w-0 w-full">
                                     <span class="text-[11px] uppercase font-bold text-secondary tracking-widest mb-1 sm:mb-2">Email</span>
@@ -334,39 +405,11 @@
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-    // Reveal on scroll logic
-    const observerOptions = {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-
-    // Sticky Navbar logic
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('shadow-md', 'h-14');
-            nav.classList.remove('h-16');
-        } else {
-            nav.classList.remove('shadow-md', 'h-14');
-            nav.classList.add('h-16');
-        }
-    });
-</script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 

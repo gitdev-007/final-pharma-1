@@ -4,6 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Products | Mediruit Lifesciences</title>
+<meta name="description" content="Explore Mediruit Lifesciences' portfolio of pharmaceutical products: Neosave, Polyklas, Sevphos, Carniride, Megaklas, and Neosoda — scientifically developed for renal, critical, and metabolic care."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/products.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Products | Mediruit Lifesciences"/>
+<meta property="og:description" content="Explore our portfolio of pharmaceutical products for renal, critical, and metabolic care."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/products.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Products | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Explore our portfolio of pharmaceutical products for renal, critical, and metabolic care."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -261,22 +274,36 @@
     </style>
 </head>
 <body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="index.html" class="flex items-center shrink-0">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<div class="hidden md:flex items-center gap-8 lg:gap-12">
+<nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Primary">
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="index.html">Home</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="about.html">About Us</a>
-    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="products.html">Products</a>
+    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="products.html" aria-current="page">Products</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="contacts.html">Contact Us</a>
-</div>
-</div>
 </nav>
-<main class="pt-20">
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-margin-mobile py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="products.html" aria-current="page">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main" class="pt-16 md:pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[819px] flex items-center overflow-hidden hero-gradient">
 <!-- Floating Molecules Background -->
@@ -326,11 +353,11 @@
     <h3 class="font-headline-sm text-[12px] sm:text-body-md text-primary group-hover:text-white transition-colors break-words leading-tight hyphens-auto">Nephrology</h3>
 </a>
 <a href="oncology.html" class="bg-white p-3 sm:p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal block" style="transition-delay: 50ms">
-    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block">biotech</span>
+    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block" aria-hidden="true">biotech</span>
     <h3 class="font-headline-sm text-[12px] sm:text-body-md text-primary group-hover:text-white transition-colors break-words leading-tight hyphens-auto">Oncology</h3>
 </a>
 <a href="cardiology.html" class="bg-white p-3 sm:p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal block" style="transition-delay: 100ms">
-    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block">cardiology</span>
+    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block" aria-hidden="true">cardiology</span>
     <h3 class="font-headline-sm text-[12px] sm:text-body-md text-primary group-hover:text-white transition-colors break-words leading-tight hyphens-auto">Cardiology</h3>
 </a>
 <a href="gastroenterology.html" class="bg-white p-3 sm:p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal block" style="transition-delay: 150ms">
@@ -342,7 +369,7 @@
     <h3 class="font-headline-sm text-[12px] sm:text-body-md text-primary group-hover:text-white transition-colors break-words leading-tight hyphens-auto">Critical Care</h3>
 </a>
 <a href="respiratory.html" class="bg-white p-3 sm:p-8 rounded-xl text-center group hover:bg-primary transition-all duration-500 cursor-pointer border border-outline-variant/30 reveal block" style="transition-delay: 250ms">
-    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block">pulmonology</span>
+    <span class="material-symbols-outlined text-4xl sm:text-4xl text-secondary mb-3 sm:mb-4 group-hover:text-white transition-colors block" aria-hidden="true">pulmonology</span>
     <h3 class="font-headline-sm text-[12px] sm:text-body-md text-primary group-hover:text-white transition-colors break-words leading-tight hyphens-auto">Respiratory</h3>
 </a>
 </div>
@@ -365,7 +392,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave-Forte</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Tablet is a combination medicine that helps delay the progression of Chronic Kidney Disease associated with diabetes and hypertension.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Tablet is a combination medicine that helps delay the progression of Chronic Kidney Disease associated with diabetes and hypertension.</p>
+        <a href="contacts.html?product=Neosave-Forte" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Neosave-Forte">Inquire</a>
     </div>
 </div>
 <!-- 2. Polyklas-LP -->
@@ -375,7 +403,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Polyklas-LP</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Polyklas-LP Tablet is an iron replacement product. You normally get iron from the foods you eat. Iron helps your body produce red blood cells that carry oxygen through your blood to tissues and organs.<br><br>POLYKLAS-LP is a brand of ferric pyrophosphate that uses liposomal technology.<br><br>POLYKLAS LP is used to treat iron deficiency.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Polyklas-LP Tablet is an iron replacement product. You normally get iron from the foods you eat. Iron helps your body produce red blood cells that carry oxygen through your blood to tissues and organs.<br><br>POLYKLAS-LP is a brand of ferric pyrophosphate that uses liposomal technology.<br><br>POLYKLAS LP is used to treat iron deficiency.</p>
+        <a href="contacts.html?product=Polyklas-LP" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Polyklas-LP">Inquire</a>
     </div>
 </div>
 <!-- 3. Sevphos-400 -->
@@ -385,7 +414,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Sevphos-400</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Sevphos Tablets is a medicine that is used to treat Hyperphosphatemia (increased phosphate levels in the blood).</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Sevphos Tablets is a medicine that is used to treat Hyperphosphatemia (increased phosphate levels in the blood).</p>
+        <a href="contacts.html?product=Sevphos-400" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Sevphos-400">Inquire</a>
     </div>
 </div>
 <!-- 4. Neosave-P -->
@@ -395,7 +425,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave-P</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Neosave-P 600 contains N-Acetylcysteine, a mucolytic agent used to thin and loosen thick mucus in the airways.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Neosave-P 600 contains N-Acetylcysteine, a mucolytic agent used to thin and loosen thick mucus in the airways.</p>
+        <a href="contacts.html?product=Neosave-P" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Neosave-P">Inquire</a>
     </div>
 </div>
 <!-- 5. Neosave Plus -->
@@ -405,7 +436,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave Plus</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Neosave-Plus Orange Flavour Sachet is used for supporting kidney health and detoxification. It replenishes essential nutrients and maintains overall balance. With a combination of N-acetylcysteine and Taurine, it supports antioxidant activity and cellular health. This sachet provides key vitamins and minerals, helping to sustain energy levels and immune function. The formulation encourages daily nutritional support, contributing to overall well-being. Its orange flavour makes it a convenient choice for incorporating essential nutrients into a balanced lifestyle.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Neosave-Plus Orange Flavour Sachet is used for supporting kidney health and detoxification. It replenishes essential nutrients and maintains overall balance. With a combination of N-acetylcysteine and Taurine, it supports antioxidant activity and cellular health. This sachet provides key vitamins and minerals, helping to sustain energy levels and immune function. The formulation encourages daily nutritional support, contributing to overall well-being. Its orange flavour makes it a convenient choice for incorporating essential nutrients into a balanced lifestyle.</p>
+        <a href="contacts.html?product=Neosave-Plus" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Neosave Plus">Inquire</a>
     </div>
 </div>
 <!-- 6. Megaklas -->
@@ -415,7 +447,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Megaklas</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Megaklas (Megestrol acetate) is the acetate salt form of megestrol. Megestrol acetate was approved to treat anorexia and cachexia. Megestrol acetate is used mainly as an appetite stimulant to promote weight gain in a variety of situations.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Megaklas (Megestrol acetate) is the acetate salt form of megestrol. Megestrol acetate was approved to treat anorexia and cachexia. Megestrol acetate is used mainly as an appetite stimulant to promote weight gain in a variety of situations.</p>
+        <a href="contacts.html?product=Megaklas" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Megaklas">Inquire</a>
     </div>
 </div>
 <!-- 7. Carniride -->
@@ -425,7 +458,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Carniride</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Carniride® Injection is used to prevent and treat kidney insufficiency in patients suffering from End-Stage Kidney Disease (ESKD) who are undergoing dialysis.<br><br>This medicine helps replenish the carnitine deficiency that can occur during dialysis, which may improve energy production and muscle function.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Carniride® Injection is used to prevent and treat kidney insufficiency in patients suffering from End-Stage Kidney Disease (ESKD) who are undergoing dialysis.<br><br>This medicine helps replenish the carnitine deficiency that can occur during dialysis, which may improve energy production and muscle function.</p>
+        <a href="contacts.html?product=Carniride" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Carniride">Inquire</a>
     </div>
 </div>
 <!-- 8. Neosave -->
@@ -435,7 +469,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosave</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Mediruit has launched N-Acetylcysteine and Taurine with TNT technology. This technique provides a modified release of the drug and masks the bitter taste and smell of amino acid providing patient ease of administration.<br><br>Neosave tablets are used as supportive therapy to protect kidney function and slow the progression of kidney damage. The medication is frequently prescribed to patients suffering from: <br>• Chronic Kidney Disease (CKD): Helps lower oxidative stress and toxic build-up in the kidneys.<br>• Diabetic Nephropathy: Protects kidney tissues from the damage caused by high blood sugar.<br>• Hypertension-Related Renal Damage: Preserves kidney function in patients with high blood pressure.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Mediruit has launched N-Acetylcysteine and Taurine with TNT technology. This technique provides a modified release of the drug and masks the bitter taste and smell of amino acid providing patient ease of administration.<br><br>Neosave tablets are used as supportive therapy to protect kidney function and slow the progression of kidney damage. The medication is frequently prescribed to patients suffering from: <br>• Chronic Kidney Disease (CKD): Helps lower oxidative stress and toxic build-up in the kidneys.<br>• Diabetic Nephropathy: Protects kidney tissues from the damage caused by high blood sugar.<br>• Hypertension-Related Renal Damage: Preserves kidney function in patients with high blood pressure.</p>
+        <a href="contacts.html?product=Neosave" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Neosave">Inquire</a>
     </div>
 </div>
 <!-- 9. Neosoda -->
@@ -445,7 +480,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Neosoda</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Neosoda 1G (Sodium Bicarbonate Sachet) is an alkali therapy used to manage metabolic acidosis and is indicated for the treatment of metabolic acidosis.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Neosoda 1G (Sodium Bicarbonate Sachet) is an alkali therapy used to manage metabolic acidosis and is indicated for the treatment of metabolic acidosis.</p>
+        <a href="contacts.html?product=Neosoda" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Neosoda">Inquire</a>
     </div>
 </div>
 <!-- 10. Polykals -->
@@ -455,7 +491,8 @@
     </div>
     <div class="p-8 flex-1 flex flex-col">
         <h3 class="product-title font-display-lg text-headline-sm text-primary mb-3 font-bold">Polyklas</h3>
-        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed">Polyklas Injection is a prescription vitamin supplement primarily used to treat significant vitamin deficiencies, particularly in patients who cannot adequately absorb nutrients orally or those undergoing hemodialysis.</p>
+        <p class="product-desc text-on-surface-variant font-body-sm leading-relaxed flex-1">Polyklas Injection is a prescription vitamin supplement primarily used to treat significant vitamin deficiencies, particularly in patients who cannot adequately absorb nutrients orally or those undergoing hemodialysis.</p>
+        <a href="contacts.html?product=Polyklas" class="mt-6 inline-flex items-center justify-center w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors" aria-label="Inquire about Polyklas">Inquire</a>
     </div>
 </div>
 </div>
@@ -486,21 +523,21 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal group" style="transition-delay: 0ms">
 <div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6 transition-all duration-350 ease-out group-hover:bg-[#0B2E6D] group-hover:shadow-[0_8px_25px_rgba(11,46,109,0.25)]">
-<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white">verified</span>
+<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white" aria-hidden="true">verified</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Quality-Focused Formulations</h3>
 <p class="text-on-surface-variant text-body-sm">Utilizing premium-grade active ingredients and proprietary stabilizing agents for maximum efficacy.</p>
 </div>
 <div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal group" style="transition-delay: 150ms">
 <div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6 transition-all duration-350 ease-out group-hover:bg-[#0B2E6D] group-hover:shadow-[0_8px_25px_rgba(11,46,109,0.25)]">
-<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white">biotech</span>
+<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white" aria-hidden="true">biotech</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Scientifically Developed</h3>
 <p class="text-on-surface-variant text-body-sm">Designed in collaboration with leading clinical researchers and therapeutic specialists.</p>
 </div>
 <div class="p-8 bg-white border border-outline-variant/30 rounded-xl hover:shadow-xl transition-all duration-500 reveal group" style="transition-delay: 300ms">
 <div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6 transition-all duration-350 ease-out group-hover:bg-[#0B2E6D] group-hover:shadow-[0_8px_25px_rgba(11,46,109,0.25)]">
-<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white">health_metrics</span>
+<span class="material-symbols-outlined text-primary transition-colors duration-350 ease-out group-hover:text-white" aria-hidden="true">health_metrics</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Patient-Centric Approach</h3>
 <p class="text-on-surface-variant text-body-sm">Optimized dosage forms and bioavailability protocols to enhance treatment compliance.</p>
@@ -564,84 +601,11 @@
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        � 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-    // Intersection Observer for Reveal Animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // Sticky Navbar logic
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('shadow-md', 'h-14');
-            nav.classList.remove('h-16');
-        } else {
-            nav.classList.remove('shadow-md', 'h-14');
-            nav.classList.add('h-16');
-        }
-    });
-
-    // Functional Modal Implementation
-    function openModal(productName, category) {
-        const modal = document.getElementById('productModal');
-        const backdrop = document.getElementById('modalBackdrop');
-        const content = document.getElementById('modalContent');
-        const title = document.getElementById('modalTitle');
-        const indications = document.getElementById('modalIndications');
-        const catEl = document.getElementById('modalCategory');
-        
-        title.innerText = productName;
-        catEl.innerText = category;
-        indications.innerText = `Detailed clinical specifications and pharmaceutical profile for ${productName}. This therapeutic solution is developed using high-precision molecular protocols to ensure target-specific efficacy in specialized clinical environments.`;
-        
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        
-        // Trigger animations
-        setTimeout(() => {
-            backdrop.classList.remove('opacity-0');
-            backdrop.classList.add('opacity-100');
-            content.classList.remove('scale-95', 'opacity-0');
-            content.classList.add('scale-100', 'opacity-100');
-        }, 10);
-        
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        const backdrop = document.getElementById('modalBackdrop');
-        const content = document.getElementById('modalContent');
-        const modal = document.getElementById('modalModal');
-        
-        backdrop.classList.add('opacity-0');
-        backdrop.classList.remove('opacity-100');
-        content.classList.add('scale-95', 'opacity-0');
-        content.classList.remove('scale-100', 'opacity-100');
-        
-        setTimeout(() => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        }, 300);
-    }
-</script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
 

@@ -1,0 +1,53 @@
+/* Mediruit Lifesciences — shared styles */
+
+/* Skip-to-content for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  background: #002868;
+  color: #ffffff;
+  padding: 0.625rem 1.25rem;
+  z-index: 100;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0; }
+
+/* Site header */
+.site-header { backdrop-filter: saturate(180%) blur(8px); }
+.site-header.scrolled { box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.12); }
+
+/* Reveal-on-scroll (used via JS) */
+.reveal, .reveal-up, [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.active, .reveal-up.active, [data-reveal].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form */
+.field-error { color: #ba1a1a; font-size: 0.875rem; margin-top: 0.25rem; }
+input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="true"] {
+  border-color: #ba1a1a !important;
+}
+
+/* Respect prefers-reduced-motion: disable animations and reveal */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .reveal-up, [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  video[autoplay] { display: none; }
+}

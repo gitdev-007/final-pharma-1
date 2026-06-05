@@ -3,6 +3,20 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Mediruit Lifesciences</title>
+<meta name="description" content="Learn about Mediruit Lifesciences — a research-driven pharmaceutical company with 18+ years of expertise, committed to integrity, scientific rigor, and patient-first healthcare."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/about.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="About Us | Mediruit Lifesciences"/>
+<meta property="og:description" content="Research-driven pharmaceutical company committed to integrity, scientific rigor, and patient-first healthcare."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/about.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="About Us | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Research-driven pharmaceutical company committed to integrity, scientific rigor, and patient-first healthcare."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -185,21 +199,36 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="index.html" class="flex items-center shrink-0">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<div class="hidden md:flex items-center gap-8 lg:gap-12">
+<nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Primary">
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="index.html">Home</a>
-    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="about.html">About Us</a>
+    <a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="about.html" aria-current="page">About Us</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="products.html">Products</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
     <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="contacts.html">Contact Us</a>
-</div>
-</div>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-margin-mobile py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="about.html" aria-current="page">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="products.html">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main">
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-xl overflow-hidden">
 <video autoplay muted loop playsinline preload="auto" class="hero-background-video">
@@ -221,7 +250,7 @@
 </div>
 </div>
 <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-<span class="material-symbols-outlined text-primary text-3xl">keyboard_double_arrow_down</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">keyboard_double_arrow_down</span>
 </div>
 </section>
 <!-- Company Overview -->
@@ -240,7 +269,7 @@
 </div>
 <div class="relative reveal stagger-2">
 <div class="absolute -inset-4 border-2 border-secondary/20 rounded-xl -z-10"></div>
-<img src="assets/photos/new_new_www.jpeg" class="rounded-xl shadow-2xl w-full h-auto lg:h-[500px] object-contain lg:object-cover" alt="Mediruit Lifesciences About" onerror="console.error('Image failed to load: assets/photos/new_new_www.jpeg'); this.style.display='none';"/>
+<img src="assets/photos/new_new_www.jpeg" class="rounded-xl shadow-2xl w-full h-auto lg:h-[500px] object-contain lg:object-cover" alt="Mediruit Lifesciences pharmaceutical research facility" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -250,17 +279,17 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="glass-card p-6 sm:p-10 flex flex-col items-center text-center reveal">
-<span class="material-symbols-outlined text-5xl text-secondary mb-md">verified_user</span>
+<span class="material-symbols-outlined text-5xl text-secondary mb-md" aria-hidden="true">verified_user</span>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm">Our Mission</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">To develop and deliver safe, effective, and affordable pharmaceutical solutions that enhance the quality of life for patients globally.</p>
 </div>
 <div class="glass-card p-6 sm:p-10 flex flex-col items-center text-center reveal stagger-1">
-<span class="material-symbols-outlined text-5xl text-secondary mb-md">public</span>
+<span class="material-symbols-outlined text-5xl text-secondary mb-md" aria-hidden="true">public</span>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm">Our Vision</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">To become a globally trusted healthcare brand recognized for groundbreaking innovation and unwavering commitment to medical ethics.</p>
 </div>
 <div class="glass-card p-6 sm:p-10 flex flex-col items-center text-center reveal stagger-2">
-<span class="material-symbols-outlined text-5xl text-secondary mb-md">diamond</span>
+<span class="material-symbols-outlined text-5xl text-secondary mb-md" aria-hidden="true">diamond</span>
 <h3 class="font-headline-md text-headline-md text-primary mb-sm">Our Values</h3>
 <div class="flex flex-wrap justify-center gap-xs mt-sm">
 <span class="bg-primary/5 text-primary px-sm py-xs text-xs font-bold uppercase rounded-full">Quality First</span>
@@ -282,7 +311,7 @@
 <!-- Large Feature -->
 <div class="md:col-span-2 glass-card p-6 sm:p-10 reveal flex gap-6 sm:p-10 items-center">
 <div class="flex-1">
-<span class="material-symbols-outlined text-4xl text-secondary mb-md">science</span>
+<span class="material-symbols-outlined text-4xl text-secondary mb-md" aria-hidden="true">science</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-sm">Advanced R&amp;D Hub</h4>
 <p class="text-on-surface-variant">Our state-of-the-art research centers leverage AI and molecular modeling to shorten drug discovery cycles while maintaining rigorous safety standards.</p>
 </div>
@@ -292,25 +321,25 @@
 </div>
 <!-- Small Feature -->
 <div class="glass-card p-6 sm:p-10 reveal stagger-1">
-<span class="material-symbols-outlined text-4xl text-secondary mb-md">precision_manufacturing</span>
+<span class="material-symbols-outlined text-4xl text-secondary mb-md" aria-hidden="true">precision_manufacturing</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-sm">Global Compliance</h4>
 <p class="text-on-surface-variant">Manufacturing units adhering to WHO-GMP and FDA-compliant protocols for zero-defect production.</p>
 </div>
 <!-- Small Feature -->
 <div class="glass-card p-6 sm:p-10 reveal stagger-2">
-<span class="material-symbols-outlined text-4xl text-secondary mb-md">health_and_safety</span>
+<span class="material-symbols-outlined text-4xl text-secondary mb-md" aria-hidden="true">health_and_safety</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-sm">Safety First</h4>
 <p class="text-on-surface-variant">Rigorous pharmacovigilance tracking every product's journey from lab to patient.</p>
 </div>
 <!-- Small Feature -->
 <div class="glass-card p-6 sm:p-10 reveal stagger-1">
-<span class="material-symbols-outlined text-4xl text-secondary mb-md">groups</span>
+<span class="material-symbols-outlined text-4xl text-secondary mb-md" aria-hidden="true">groups</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-sm">Expert Talent</h4>
 <p class="text-on-surface-variant">A diverse workforce of 500+ scientists and medical professionals dedicated to excellence.</p>
 </div>
 <!-- Small Feature -->
 <div class="glass-card p-6 sm:p-10 reveal stagger-2">
-<span class="material-symbols-outlined text-4xl text-secondary mb-md">verified</span>
+<span class="material-symbols-outlined text-4xl text-secondary mb-md" aria-hidden="true">verified</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-sm">Trust &amp; Ethics</h4>
 <p class="text-on-surface-variant">Transparent pricing and ethical marketing practices building lasting healthcare partnerships.</p>
 </div>
@@ -328,15 +357,15 @@
 <p class="font-body-lg text-on-primary-container mb-lg">We don't just follow standards; we set them. Our innovation pipeline focuses on targeted drug delivery systems and sustainable manufacturing processes.</p>
 <ul class="space-y-md">
 <li class="flex items-start gap-gutter">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="material-symbols-outlined text-secondary" aria-hidden="true">check_circle</span>
 <span>Nano-formulation research for increased bioavailability.</span>
 </li>
 <li class="flex items-start gap-gutter">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="material-symbols-outlined text-secondary" aria-hidden="true">check_circle</span>
 <span>Green chemistry initiatives for eco-friendly pharmaceutical production.</span>
 </li>
 <li class="flex items-start gap-gutter">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="material-symbols-outlined text-secondary" aria-hidden="true">check_circle</span>
 <span>Next-generation oncology and cardiology pipelines.</span>
 </li>
 </ul>
@@ -352,6 +381,7 @@
 </div>
 </div>
 </section>
+</main>
 <!-- Footer -->
 <footer id="footer" class="bg-[#0F172A] text-white w-full rounded-none">
 <div class="w-full py-12 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -392,70 +422,11 @@
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        � 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-    // Reveal on scroll logic
-    const observerOptions = {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Sticky Navbar logic
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('shadow-md', 'h-14');
-            nav.classList.remove('h-16');
-        } else {
-            nav.classList.remove('shadow-md', 'h-14');
-            nav.classList.add('h-16');
-        }
-    });
-
-    // Stats Counter logic
-    const counterObserverOptions = {
-        threshold: 0.5
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                const duration = 2000;
-                let startTimestamp = null;
-                
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    entry.target.innerText = Math.floor(progress * target);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    } else {
-                        entry.target.innerText = target;
-                    }
-                };
-                
-                window.requestAnimationFrame(step);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, counterObserverOptions);
-
-    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
-</script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 

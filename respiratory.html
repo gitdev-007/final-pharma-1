@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Respiratory Care Solutions | Mediruit Lifesciences</title>
+<meta name="description" content="Respiratory pharmaceutical solutions supporting lung health, pulmonary care, and improved patient outcomes."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/respiratory.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Respiratory Care Solutions | Mediruit Lifesciences"/>
+<meta property="og:description" content="Respiratory pharmaceutical solutions supporting lung health, pulmonary care, and improved patient outcomes."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/respiratory.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Respiratory Care Solutions | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Respiratory pharmaceutical solutions supporting lung health, pulmonary care, and improved patient outcomes."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -119,21 +131,36 @@
     </style>
 </head>
 <body class="bg-background text-on-surface">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out h-20">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center h-full px-gutter max-w-container-max mx-auto">
-<a href="index.html" class="flex items-center shrink-0">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<nav class="hidden md:flex gap-8">
+<nav class="hidden md:flex gap-8" aria-label="Primary">
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
-<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html">Products</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html" aria-current="page">Products</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="innovation.html">Innovation</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Contact Us</a>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
 </div>
-</nav>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-gutter py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="products.html" aria-current="page">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main">
 <!-- Hero Section -->
 <header class="relative min-h-[600px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -180,7 +207,7 @@
 <!-- Card 1 -->
 <div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
 <div class="mb-6 text-clinical-teal">
-<span class="material-symbols-outlined text-[48px]" data-icon="air">air</span>
+<span class="material-symbols-outlined text-[48px]" data-icon="air" aria-hidden="true">air</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Asthma Management</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Precision-engineered therapeutics designed to provide consistent control and relief for chronic asthma patients.</p>
@@ -188,7 +215,7 @@
 <!-- Card 2 -->
 <div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
 <div class="mb-6 text-clinical-teal">
-<span class="material-symbols-outlined text-[48px]" data-icon="respiratory_rate">respiratory_rate</span>
+<span class="material-symbols-outlined text-[48px]" data-icon="respiratory_rate" aria-hidden="true">respiratory_rate</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">COPD Treatment Support</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Comprehensive care solutions focused on improving quality of life and respiratory function in chronic obstructive pulmonary disease.</p>
@@ -196,7 +223,7 @@
 <!-- Card 3 -->
 <div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
 <div class="mb-6 text-clinical-teal">
-<span class="material-symbols-outlined text-[48px]" data-icon="medical_services">medical_services</span>
+<span class="material-symbols-outlined text-[48px]" data-icon="medical_services" aria-hidden="true">medical_services</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Pulmonary Care Excellence</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Advanced support for complex pulmonary conditions through specialized research and clinical innovation.</p>
@@ -204,7 +231,7 @@
 <!-- Card 4 -->
 <div class="p-8 border border-outline-variant rounded-lg hover:shadow-lg transition-all group border-t-4 border-t-clinical-teal">
 <div class="mb-6 text-clinical-teal">
-<span class="material-symbols-outlined text-[48px]" data-icon="self_care">self_care</span>
+<span class="material-symbols-outlined text-[48px]" data-icon="self_care" aria-hidden="true">self_care</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-deep-navy mb-4 group-hover:text-clinical-teal transition-colors">Breathing Wellness</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Holistic patient education and support tools designed to promote healthy breathing habits and preventative care.</p>
@@ -219,21 +246,21 @@
             <h2 class="font-headline-lg text-headline-lg text-deep-navy mb-8">Why Partner with Mediruit Lifesciences?</h2>
             <ul class="space-y-6 text-left">
                 <li class="flex gap-4">
-                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle" aria-hidden="true">check_circle</span>
                     <div>
                         <h4 class="font-label-lg text-label-lg text-deep-navy mb-1">State-of-the-Art Research</h4>
                         <p class="font-body-sm text-body-sm text-on-surface-variant">Utilizing the latest in molecular science to develop high-performance respiratory molecules.</p>
                     </div>
                 </li>
                 <li class="flex gap-4">
-                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle" aria-hidden="true">check_circle</span>
                     <div>
                         <h4 class="font-label-lg text-label-lg text-deep-navy mb-1">Rigorous Quality Assurance</h4>
                         <p class="font-body-sm text-body-sm text-on-surface-variant">Maintaining GMP standards that exceed international regulatory requirements for safety.</p>
                     </div>
                 </li>
                 <li class="flex gap-4">
-                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle">check_circle</span>
+                    <span class="material-symbols-outlined text-clinical-teal" data-icon="check_circle" aria-hidden="true">check_circle</span>
                     <div>
                         <h4 class="font-label-lg text-label-lg text-deep-navy mb-1">Clinical Support Network</h4>
                         <p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated teams providing 24/7 technical and clinical support to healthcare institutions.</p>
@@ -291,44 +318,16 @@
         </ul>
     </div>
 </div>
+</main>
 
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-        // Micro-interactions
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-md');
-                nav.classList.remove('h-20');
-                nav.classList.add('h-16');
-            } else {
-                nav.classList.remove('shadow-md');
-                nav.classList.add('h-20');
-                nav.classList.remove('h-16');
-            }
-        });
-
-        // Simple reveal animation observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
-            });
-        });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
-            observer.observe(section);
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 

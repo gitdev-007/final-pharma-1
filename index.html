@@ -4,6 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mediruit Lifesciences | Health is Wealth</title>
+<meta name="description" content="Mediruit Lifesciences is a research-driven pharmaceutical company delivering high-quality, scientifically precise healthcare solutions across renal care, oncology, cardiology, and critical care."/>
+<link rel="canonical" href="https://mediruitlifesciences.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Mediruit Lifesciences | Health is Wealth"/>
+<meta property="og:description" content="Research-driven pharmaceutical company delivering high-quality healthcare solutions globally."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Mediruit Lifesciences | Health is Wealth"/>
+<meta name="twitter:description" content="Research-driven pharmaceutical company delivering high-quality healthcare solutions globally."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -207,21 +220,36 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<a href="#main" class="skip-link">Skip to content</a>
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all h-16">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a href="index.html" class="flex items-center shrink-0">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16 md:h-20">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<div class="hidden md:flex items-center gap-8 lg:gap-12">
-<a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="index.html">Home</a>
+<nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Primary">
+<a class="text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap border-b-2 border-primary py-1" href="index.html" aria-current="page">Home</a>
 <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="about.html">About Us</a>
 <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="products.html">Products</a>
 <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="innovation.html">Innovation</a>
 <a class="text-on-surface-variant hover:text-primary font-bold text-sm lg:text-base tracking-wide whitespace-nowrap transition-all py-1" href="contacts.html">Contact Us</a>
-</div>
-</div>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-margin-mobile py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="index.html" aria-current="page">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="products.html">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
+</div>
+</header>
+<main id="main">
 <!-- Hero Section -->
 <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
     <video autoplay muted loop playsinline class="hero-video">
@@ -244,7 +272,7 @@
 <div class="flex flex-wrap gap-6">
 <a href="products.html" class="bg-white text-[#0B2E6D] px-12 py-5 rounded-2xl font-bold uppercase tracking-widest hover:scale-[1.05] hover:bg-surface-container-low active:scale-95 transition-all shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-2xl flex items-center gap-3">
                         Explore Products
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
 </a>
 <a href="contacts.html" class="bg-[#DFF4FF] text-[#0B2E6D] px-12 py-5 rounded-2xl font-bold uppercase tracking-widest hover:scale-[1.05] hover:bg-[#cbeaff] active:scale-95 transition-all shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-2xl flex items-center gap-3">
                         Contact Us
@@ -258,23 +286,23 @@
 <div class="bg-surface-container-low py-10 border-y border-outline-variant/10">
 <div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-center md:justify-between gap-8 opacity-70">
 <div class="flex items-center gap-2 text-on-surface-variant font-label-upper text-label-upper">
-<span class="material-symbols-outlined text-primary" data-weight="fill">verified_user</span>
+<span class="material-symbols-outlined text-primary" data-weight="fill" aria-hidden="true">verified_user</span>
                 WHO-GMP Standards
             </div>
 <div class="flex items-center gap-2 text-on-surface-variant font-label-upper text-label-upper">
-<span class="material-symbols-outlined text-primary" data-weight="fill">hub</span>
+<span class="material-symbols-outlined text-primary" data-weight="fill" aria-hidden="true">hub</span>
                 Trusted Distribution
             </div>
 <div class="flex items-center gap-2 text-on-surface-variant font-label-upper text-label-upper">
-<span class="material-symbols-outlined text-primary" data-weight="fill">precision_manufacturing</span>
+<span class="material-symbols-outlined text-primary" data-weight="fill" aria-hidden="true">precision_manufacturing</span>
                 Advanced Manufacturing
             </div>
 <div class="flex items-center gap-2 text-on-surface-variant font-label-upper text-label-upper">
-<span class="material-symbols-outlined text-primary" data-weight="fill">biotech</span>
+<span class="material-symbols-outlined text-primary" data-weight="fill" aria-hidden="true">biotech</span>
                 Scientific Excellence
             </div>
 <div class="flex items-center gap-2 text-on-surface-variant font-label-upper text-label-upper">
-<span class="material-symbols-outlined text-primary" data-weight="fill">groups</span>
+<span class="material-symbols-outlined text-primary" data-weight="fill" aria-hidden="true">groups</span>
                 Customer Commitment
             </div>
 </div>
@@ -302,7 +330,7 @@
 <ul class="space-y-4 pt-4">
 <li class="flex gap-4 items-start">
 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-[18px] text-white">check</span>
+<span class="material-symbols-outlined text-[18px] text-white" aria-hidden="true">check</span>
 </div>
 <span class="text-xl font-bold text-primary leading-tight">Quality First: Every batch undergoes 5-step rigorous testing.</span>
 </li>
@@ -385,7 +413,7 @@
             <!-- Promise Card 1 -->
             <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up">
                 <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                    <span class="material-symbols-outlined text-3xl">verified_user</span>
+                    <span class="material-symbols-outlined text-3xl" aria-hidden="true">verified_user</span>
                 </div>
                 <h4 class="font-bold text-primary mb-3">Global Quality Standards</h4>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Adhering to international regulatory compliances and WHO-GMP protocols for every formulation.</p>
@@ -394,7 +422,7 @@
             <!-- Promise Card 2 -->
             <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-100">
                 <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                    <span class="material-symbols-outlined text-3xl">biotech</span>
+                    <span class="material-symbols-outlined text-3xl" aria-hidden="true">biotech</span>
                 </div>
                 <h4 class="font-bold text-primary mb-3">Patient-Centric Innovation</h4>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Driven by R&D that focuses on improving therapeutic outcomes and enhancing patient well-being.</p>
@@ -403,7 +431,7 @@
             <!-- Promise Card 3 -->
             <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-200">
                 <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                    <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                    <span class="material-symbols-outlined text-3xl" aria-hidden="true">precision_manufacturing</span>
                 </div>
                 <h4 class="font-bold text-primary mb-3">Reliable Manufacturing</h4>
                 <p class="text-sm text-on-surface-variant leading-relaxed">State-of-the-art facilities ensuring consistent supply and high-precision production cycles.</p>
@@ -412,7 +440,7 @@
             <!-- Promise Card 4 -->
             <div class="group p-8 rounded-3xl bg-white border border-outline-variant/10 hover:border-primary/20 hover:shadow-xl transition-all duration-500 reveal-up delay-300">
                 <div class="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                    <span class="material-symbols-outlined text-3xl">handshake</span>
+                    <span class="material-symbols-outlined text-3xl" aria-hidden="true">handshake</span>
                 </div>
                 <h4 class="font-bold text-primary mb-3">Ethical Healthcare Commitment</h4>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Maintaining the highest standards of ethics, transparency, and integrity in all our operations.</p>
@@ -447,6 +475,7 @@
 </div>
 </div>
 </section>
+</main>
 <!-- Footer -->
 <footer id="footer" class="bg-[#0F172A] text-white w-full rounded-none">
 <div class="w-full py-12 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -487,49 +516,22 @@
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
 <script>
-        // Simple Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-
-        // Sticky Nav logic
-        const nav = document.querySelector('nav');
+    // Home page: hero contraction on scroll (specific to this page)
+    (function() {
         const hero = document.querySelector('.hero-section');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-md', 'h-16');
-                nav.classList.remove('h-20', 'shadow-sm');
-            } else {
-                nav.classList.remove('shadow-md', 'h-16');
-                nav.classList.add('h-20', 'shadow-sm');
-            }
-
-            if (window.scrollY > 100) {
-                hero.classList.add('hero-contracted');
-            } else {
-                hero.classList.remove('hero-contracted');
-            }
-        });
-    </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="main.js"></script>
+        if (!hero) return;
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) hero.classList.add('hero-contracted');
+            else hero.classList.remove('hero-contracted');
+        }, { passive: true });
+    })();
+</script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
 

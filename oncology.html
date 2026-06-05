@@ -5,9 +5,20 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Oncology Care Solutions | Mediruit Lifesciences</title>
 <meta content="Advanced pharmaceutical therapies supporting cancer care and precision oncology excellence." name="description"/>
+<link rel="canonical" href="https://mediruitlifesciences.com/oncology.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Oncology Care Solutions | Mediruit Lifesciences"/>
+<meta property="og:description" content="Advanced pharmaceutical therapies supporting cancer care and precision oncology excellence."/>
+<meta property="og:url" content="https://mediruitlifesciences.com/oncology.html"/>
+<meta property="og:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Oncology Care Solutions | Mediruit Lifesciences"/>
+<meta name="twitter:description" content="Advanced pharmaceutical therapies supporting cancer care and precision oncology excellence."/>
+<meta name="twitter:image" content="https://mediruitlifesciences.com/assets/photos/Logo%20(1).png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="stylesheet" href="assets/css/main.css"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -122,21 +133,35 @@
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out h-20">
+<header class="site-header fixed top-0 w-full z-50 bg-white border-b border-outline-variant/10 shadow-sm transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center h-full px-gutter max-w-container-max mx-auto">
-<a href="index.html" class="flex items-center shrink-0">
+<a href="index.html" class="flex items-center shrink-0" aria-label="Mediruit Lifesciences home">
     <img src="assets/photos/Logo (1).png" alt="Mediruit Lifesciences" class="h-9 w-auto object-contain">
 </a>
-<nav class="hidden md:flex gap-8">
+<nav class="hidden md:flex gap-8" aria-label="Primary">
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
-<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html">Products</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="products.html" aria-current="page">Products</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="innovation.html">Innovation</a>
 <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Contact Us</a>
 </nav>
+<button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-nav" aria-expanded="false">
+    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+    <span class="sr-only">Open menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden border-t border-outline-variant/10 bg-white">
+    <nav class="px-gutter py-3 flex flex-col gap-1" aria-label="Mobile">
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="index.html">Home</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="about.html">About Us</a>
+        <a class="block px-3 py-3 rounded-lg text-primary font-bold bg-primary/5 border-l-4 border-primary" href="products.html" aria-current="page">Products</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="innovation.html">Innovation</a>
+        <a class="block px-3 py-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-bold" href="contacts.html">Contact Us</a>
+    </nav>
 </div>
 </header>
-<main>
+<a href="#main" class="skip-link">Skip to content</a>
+<main id="main">
 <!-- Hero Section -->
 <section class="relative h-[800px] flex items-center pt-20 overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -156,7 +181,7 @@
 </div>
 </div>
 <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
-<span class="material-symbols-outlined text-4xl" data-icon="expand_more">expand_more</span>
+<span class="material-symbols-outlined text-4xl" data-icon="expand_more" aria-hidden="true">expand_more</span>
 </div>
 </section>
 <!-- Scientific Commitment Section -->
@@ -194,7 +219,7 @@
 <!-- Card 1 -->
 <div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
 <div class="mb-6">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medical_services">medical_services</span>
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medical_services" aria-hidden="true">medical_services</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Cancer Treatment Support</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Comprehensive management strategies for treatment stability and patient well-being during intense therapies.</p>
@@ -202,7 +227,7 @@
 <!-- Card 2 -->
 <div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
 <div class="mb-6">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="science">science</span>
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="science" aria-hidden="true">science</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Chemotherapy Adjunct Care</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Targeted pharmaceutical support designed to manage the side effects and systemic impact of chemotherapy regimens.</p>
@@ -210,7 +235,7 @@
 <!-- Card 3 -->
 <div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
 <div class="mb-6">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="biotech">biotech</span>
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="biotech" aria-hidden="true">biotech</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Targeted Oncology Therapies</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Precision management of advanced treatments focusing on molecular pathways and specialized delivery systems.</p>
@@ -218,7 +243,7 @@
 <!-- Card 4 -->
 <div class="bg-surface-white p-8 border border-border-subtle hover:border-secondary transition-all group h-full flex flex-col">
 <div class="mb-6">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medication_liquid">medication_liquid</span>
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="medication_liquid" aria-hidden="true">medication_liquid</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Advanced Formulations</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">High-bioavailability treatments designed for complex patient profiles and oncology-specific metabolic needs.</p>
@@ -235,28 +260,28 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified">verified</span>
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified" aria-hidden="true">verified</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary mb-2">Quality Assured Formulations</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Manufactured under strict GMP standards to ensure safety and potency across all oncology lines.</p>
 </div>
 </div>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="groups">groups</span>
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="groups" aria-hidden="true">groups</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary mb-2">Clinically Trusted Solutions</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Proven outcomes supported by peer-reviewed clinical studies and comprehensive trial data.</p>
 </div>
 </div>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="health_metrics">health_metrics</span>
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="health_metrics" aria-hidden="true">health_metrics</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary mb-2">Patient-Centric Focus</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Therapies designed to integrate seamlessly into complex oncology patient regimens for better adherence.</p>
 </div>
 </div>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="award_star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">award_star</span>
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="award_star" data-weight="fill" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">award_star</span>
 <div>
 <h4 class="font-label-lg text-label-lg text-primary mb-2">Pharmaceutical Excellence</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Continuous innovation in oncology drug delivery systems and enhanced therapeutic efficacy.</p>
@@ -310,40 +335,16 @@
         </ul>
     </div>
 </div>
+</main>
 
 <!-- Bottom Section -->
 <div class="border-t border-white/10 py-6 px-margin-desktop max-w-container-max mx-auto text-center">
     <p class="text-[#9CA3AF] text-xs font-medium tracking-[0.1em] uppercase">
-        © 2024 MEDIRUIT LIFESCIENCES PVT. LTD. All Rights Reserved.
+        &copy; 2026 Mediruit Lifesciences Pvt. Ltd. All Rights Reserved.
     </p>
 </div>
 </footer>
-<script>
-        // Simple scroll interaction for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-md');
-                header.classList.add('h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md');
-                header.classList.add('h-20');
-                header.classList.remove('h-16');
-            }
-        });
-
-        // Hover effects for therapeutic cards
-        const cards = document.querySelectorAll('.bg-surface-white');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-4px)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
+<script src="assets/js/main.js" defer></script>
 </body></html>
 
 
